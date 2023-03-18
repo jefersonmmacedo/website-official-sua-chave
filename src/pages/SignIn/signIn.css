@@ -1,0 +1,407 @@
+﻿.SignIn {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.SignIn .login {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--White);
+}
+
+.SignIn .login .form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.SignIn .login .form .imgLogo {
+    width: 150px; 
+}
+
+.SignIn .login .form .data {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px;
+}
+.SignIn .login .form .data .buttons {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.SignIn .login .form .data .buttons .button1 {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Border);
+    border: none;
+    border-radius: 0 25px 25px 0;
+    padding: 10px 20px;
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 20px 0;
+}
+.SignIn .login .form .data .buttons .button2 {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Primary);
+    border: none;
+    border-radius: 0 25px 25px 0;
+    padding: 10px 20px;
+    color: var(--White);
+    font-weight: 700;
+    margin: 20px 0;
+}
+.SignIn .login .form .data .buttons .btn {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Button);
+    border: none;
+    border-radius: 25px 0 0 25px;
+    padding: 10px 20px;
+    color: var(--White);
+    font-weight: 700;
+    margin: 20px 0;
+}
+.SignIn .login .form .data .buttons .btn2 {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Border);
+    border: none;
+    border-radius: 25px 0 0 25px;
+    padding: 10px 20px;
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.SignIn .login .form .data input {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-bottom: 2px solid var(--Border);
+    padding: 5px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.SignIn .login .form .data input::placeholder {
+    color: var(--Gray);
+}
+
+.SignIn .login .form .data .message {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--Primary);
+    font-weight: bold;
+    margin: 10px 0;
+    background-color: var(--White);
+    border: 1px solid var(--Primary);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.SignIn .login .form .data .message h5 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-align: center;
+}
+
+.SignIn .login .form .data .message h5 svg {
+    margin-right: 5px;
+}
+
+
+.SignIn .login .form .data .links {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--Gray);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.SignIn .login .form .data .links p .link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Wite);
+    border: none;
+    color: var(--Gray);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 5px;
+    width: 100%;
+    margin: 0px;
+}
+
+
+.SignIn .login .form .data button {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Button);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: var(--White);
+    font-weight: 700;
+    margin: 20px 0;
+}
+.SignIn .login .form .data .buttonCompany {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Secondary);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    color: var(--White);
+    font-weight: 700;
+    margin: 20px 0;
+}
+.SignIn .login .form .data a {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Wite);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    color: var(--Gray);
+    font-weight: 700;
+    margin: 20px 0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.SignIn .professional {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/images/background.jpg"); /* The image used */
+    background-color: var(--Primary); /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.SignIn .professional .block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(237, 50, 55, 0.3);
+}
+
+.SignIn .professional .block button {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Button);
+    color: var(--White);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+
+
+@media (max-width: 950px) {
+
+    .SignIn .login {
+        width: 60%;
+    }
+    .SignIn .professional {
+        width: 40%;
+    }
+    .SignIn .login .form {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .SignIn .login .form .data input {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-bottom: 2px solid var(--Border);
+        padding: 5px;
+        margin: 5px 0;
+        font-weight: bold;
+    }
+
+    .SignIn .login .form .data button {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Button);
+        border: none;
+        border-radius: 6px;
+        padding: 10px 20px;
+        color: var(--White);
+        font-weight: 700;
+        margin: 20px 0;
+    }
+    
+    @media (max-width: 750px) {
+
+        .SignIn .login .form {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .SignIn .login {
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .SignIn .professional {
+            display: none;
+        }
+
+        .SignIn .login .form .data {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            padding: 10px;
+        }
+        
+        .SignIn .login .form .data input {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-bottom: 2px solid var(--Border);
+            padding: 5px;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        
+        .SignIn .login .form .data input::placeholder {
+            color: var(--Gray);
+        }
+
+        .SignIn .login .form .data .buttons {
+            width: 90%;
+        }
+
+        .SignIn .login .form .data .message {
+            width: 90%;
+        }
+        .SignIn .login .form .data .links {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            color: var(--Gray);
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .SignIn .login .form .data button {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--Button);
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            color: var(--White);
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 500px) {
+            .SignIn .login .form {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .SignIn .login .form .data {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 20px 0;
+                padding: 10px;
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,120 @@
+﻿.MyAccount {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.MyAccount .main {
+    width: 100%;
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+.MyAccount .main .text {
+    width: 80%;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+.MyAccount .main .text h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.MyAccount .main .text h3 {
+    font-weight: 700;
+    color: var(--Paragraph);
+    text-align: center;
+}
+.MyAccount .main .text h3 svg{
+    font-size: 45px;
+    font-weight: 900;
+    color: var(--Primary)
+}
+.MyAccount .main .text .indicators{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.MyAccount .main .text .indicators a {
+text-decoration: none;
+}
+
+.MyAccount .main .text .indicators .indicatorUnic{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--BorderInput2);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 6px;
+    color: var(--Gray);
+}
+
+.MyAccount .main .text .indicators .indicatorUnic svg {
+    font-size: 28px;
+    color: var(--Primary);
+}
+.MyAccount .main .text .indicators .indicatorUnic .textIndicator {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.MyAccount .main .text .indicators .indicatorUnic .textIndicator h3 {
+    color: var(--Gray);
+}
+
+
+@media (max-width: 700px) {
+    .MyAccount .main {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .MyAccount .main .text form{
+        width: 100%;
+    }
+
+    .MyAccount .main .text {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: var(--BorderHover);
+        margin: 10px;
+    }
+
+    @media (max-width: 450px) {
+   
+        .MyAccount .main .text {
+            padding: 5px;
+            margin: 5px;
+        }
+    }
+}

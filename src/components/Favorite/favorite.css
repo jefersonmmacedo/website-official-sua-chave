@@ -1,0 +1,22 @@
+﻿.Favorite {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Favorite .listFavorite {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .Favorite .listFavorite {
+        width: 100%;
+    }
+}

@@ -1,0 +1,82 @@
+﻿.MostWanted {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.MostWanted h2 {
+    margin: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.MostWanted .blocks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.MostWanted a {
+    text-decoration: none;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Button);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    color: var(--White);
+    font-weight: 700;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.MostWanted .blocks .blockUnic {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 5px;
+    background-color: var(--BorderHover);
+    color: var(--Paragraph);
+    border-radius: 6px;
+    text-align: center;
+} 
+
+.MostWanted .blocks .blockUnic:hover {
+    background-color: var(--Primary);
+    color: var(--BorderHover);
+}
+
+.MostWanted .blocks .blockUnic svg {
+    font-size: 30px;
+}
+
+.MostWanted .blocks .blockUnic h5 {
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: var(--Border);
+    font-weight: 700;
+}
+
+
+@media (max-width: 750px) {
+    .MostWanted .blocks {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .MostWanted a {
+        width: 100%;
+    }
+}

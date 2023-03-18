@@ -1,0 +1,256 @@
+﻿.DownloadApp {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    width: 90%;
+    border-radius: 20px;
+    height: 100%;
+    /* background-image: url("../../assets/images/background2.jpg");
+    background-color: #cccccc; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; */
+    margin: 80px auto;
+}
+
+.DownloadApp .imageAuto1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 90%;
+}
+.DownloadApp .imageAuto1 img {
+    width: 100%;
+}
+
+.DownloadApp .imageAuto2 {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 90%;
+}
+
+.DownloadApp .back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(237,50, 55, 0.7);
+}
+
+.DownloadApp .textSession {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 100px;
+}
+
+.DownloadApp .textSession h1 {
+    color: var(--White);
+    font-weight: 700;
+    margin:  0 10px;
+}
+.DownloadApp .textSession h4 {
+    color: var(--White);
+    font-weight: 700;
+    margin: 10px;
+}
+
+.DownloadApp .textSession .Apps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px 0;
+}
+.DownloadApp .textSession .Apps .buttonsApps {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 250px;
+    height: 60px;
+    border-radius: 6px;
+    border: 1px solid var(--White);
+    background-color: rgba(255,255,255, 0.2);
+    margin: 10px;
+    cursor: pointer;
+}
+.DownloadApp .textSession .Apps .buttonsApps:hover {
+    background-color: rgba(237,50,55, 0.5);
+}
+.DownloadApp .textSession .Apps .buttonsApps .iconApp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: none;
+    border-right: 1px solid var(--White);
+    height: 60px;
+    width: 60px;
+}
+
+
+.DownloadApp .textSession .Apps .buttonsApps .iconApp svg {
+    font-size: 24px;
+    color: var(--White);
+}
+.DownloadApp .textSession .Apps .buttonsApps .TextApp {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+}
+
+.DownloadApp .textSession .Apps .buttonsApps .TextApp h4 {
+    color: var(--White);
+    font-weight: 700;
+    margin: 0px;
+}
+.DownloadApp .textSession .Apps .buttonsApps .TextApp h6 {
+    color: var(--White);
+    margin: 0px;
+}
+
+.DownloadApp .imageApp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.DownloadApp .imageApp img {
+    height: 280px;
+    margin: 0 20px;
+}
+
+@media (max-width: 1280px) {
+    /* .DownloadApp .imageApp img {
+        width: 35%;
+        margin: 0 20px;
+    }
+
+    @media (max-width: 1200px) {
+        .DownloadApp .imageApp img {
+            width: 40%;
+            margin: 0 20px;
+        }
+    } */
+
+    
+    @media (max-width: 1120px) {
+        /* .DownloadApp .imageApp img {
+            width: 35%;
+            margin: 0 20px;
+        } */
+
+        .DownloadApp .textSession {
+            padding: 50px;
+        }
+
+        @media (max-width: 1035px) {
+            /* .DownloadApp .imageApp img {
+                width: 40%;
+                margin: 0 20px;
+            } */
+            .DownloadApp {
+                width: 95%;
+            }
+
+            .DownloadApp .textSession {
+                padding: 30px;
+            }
+
+            
+        }
+
+        @media (max-width: 900px) {
+            /* .DownloadApp .imageApp img {
+                width: 40%;
+                margin: 0 20px;
+            }
+     */
+            .DownloadApp .textSession {
+                padding: 10px;
+            }
+
+            @media (max-width: 800px) {
+                .DownloadApp .imageAuto1 {
+                    display: none;
+                }
+                .DownloadApp .imageAuto2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    width:70%;
+                }
+
+                .DownloadApp .imageAuto2 img {
+                    width: 100%;
+                }
+                
+            @media (max-width: 800px) {
+                .DownloadApp .imageApp {
+                    display: none;
+                }
+                .DownloadApp .textSession {
+                    padding: 50px;
+                }
+
+                @media (max-width: 650px) {
+
+                    .DownloadApp {
+                        width: 95%;
+                        height: 100%;
+                    }
+
+                    .DownloadApp .imageAuto2 {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: row;
+                        width:90%;
+                    }
+                   
+                      .DownloadApp .textSession {
+                        width: 100%;
+                        padding: 20px;
+                        text-align: center;
+                    }
+                      .DownloadApp .textSession h1 {
+                        text-align: center;
+                    }
+                      .DownloadApp .textSession h4 {
+                        text-align: center;
+                    }
+
+                    .DownloadApp .textSession .Apps {
+                        flex-wrap: wrap;
+                    }
+                                
+                }
+            }
+
+            
+            
+        }
+        }
+            
+        }
+        
+    }
+
+
+

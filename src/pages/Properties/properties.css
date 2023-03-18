@@ -1,0 +1,248 @@
+﻿.Properties {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 0px 0px 0px;
+}
+
+
+.Properties .listPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:20px 0px;
+}
+
+
+
+.Properties .listPage .ButtomView {
+    display: none;
+}
+
+
+.Properties .listPage .topScroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: var(--Primary);
+    border-radius: 50%;
+    font-size: 20px;
+    padding:5px;
+    border: none;
+    background-color: var(--BorderHover);
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    z-index: 90;
+  }
+
+  .Properties .listPage .ListProperty {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Properties .listPage .ListProperty .topList {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+
+.Properties .listPage .ListProperty .topList .textItens {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.Properties .listPage .ListProperty .MainAbout{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.Properties .listPage .ListProperty .sentinela{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.Properties .listPage .ListProperty .MainAbout img {
+    width: 550px;
+    margin: 40px auto;
+}
+
+.Properties .listPage .ListProperty .MainAbout h3 {
+    font-weight: 600;
+    text-align: center;
+    color: var(--Paragraph);
+    margin: 10px 0;
+    text-align: center;
+}
+
+@media (max-width: 750px) {
+    .Properties .listPage .ListProperty .MainAbout img {
+        width: 60%;
+        margin: 40px auto 0 auto;
+    }
+
+    .Properties .listPage .ListProperty .MainAbout h3 {
+        margin: 40px;
+    }
+    
+
+    @media (max-width: 550px) {
+        .Properties .listPage .ListProperty .MainAbout img {
+            width: 70%;
+        }
+    }
+}
+
+
+
+
+
+.Properties .listPage .ListProperty .itens {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+@media (max-width: 980px) {
+
+    .Properties .listPage .ListProperty {
+        width: 100%;
+    }
+    .Properties .listPage .ListProperty .itens {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+
+@media (max-width: 670px) {
+
+
+@media (max-width: 600px) {
+    .Properties .listPage .ListProperty .itens {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+@media (max-width: 450px) {
+    .Properties .listPage .ListProperty .topList .textItens{
+        margin: 10px 0;
+    }
+
+    .Properties .listPage .ListProperty {
+    width: 100%;
+    margin-top: 0px;
+}
+
+
+}
+}
+}
+}
+
+@media (max-width: 880px)  {
+    .Properties .listPage {
+        padding:40px 0px;
+}
+
+.Properties .listPage .topScroll {
+    right: 5px;
+  }
+@media (max-width: 700px)  {
+    .Properties .listPage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding:10px 0;
+    }
+
+    .Properties .listPage .SearchView {
+        display: none;
+    }
+
+    .Properties .listPage .ButtomView {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .Properties .listPage .ButtomView button {
+        border: 3px solid var(--White);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 20px;
+        Background-color: var(--Primary);
+        color: var(--White);
+        font-weight: 700;
+        border-radius: 6px;
+        width: 70%;
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .Properties .listPage .ButtomView button svg {
+        margin-right: 5px;
+        font-size: 16px;
+    }
+
+    @media (max-width: 550px) {
+        .Properties .listPage .ListProperty .topList {
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        
+    }
+}
+}

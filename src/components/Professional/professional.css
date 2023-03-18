@@ -1,0 +1,101 @@
+﻿.Professional{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--Border);
+    padding: 10px;
+}
+
+.Professional .infos {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Professional .image {
+    width: 50px;
+    margin: 0 5px;
+}
+
+.Professional .image img {
+    width: 50px;
+}
+
+.Professional .infos .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5px;
+}
+.Professional .infos .text h4 {
+    font-weight: 700;
+    color: var(--Description);
+}
+
+.Professional .infos .text .professionals {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Professional .infos .text .professionals p {
+    color: var(--White);
+    background-color: var(--Gray);
+    padding: 5px 5px;
+    margin: 5px 5px 5px 0;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.Professional .stars {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Professional .stars svg {
+    color: var(--Edit);
+    margin: 0 2px;
+}
+
+@media (max-width: 900px) {
+    .Professional{
+        width: 80%;
+    }
+
+    @media (max-width: 650px) {
+        .Professional{
+            width: 90%;
+        }
+
+        @media (max-width: 550px) {
+            .Professional{
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .Professional .stars {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                margin-left: 120px
+        }
+            .Professional .infos {
+                width: 100%;
+        }
+    }
+}
+}

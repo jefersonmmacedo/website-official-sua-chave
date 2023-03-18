@@ -1,0 +1,248 @@
+﻿.Cities {
+    width: 100%;
+    paddig: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px 0;
+}
+
+.Cities h2 {
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--Primary);
+    text-align: center;
+}
+.Cities h4 {
+    color: var(--Paragraph);
+    margin:10px;
+    text-align: center;
+}
+
+.Cities .blocks {
+    width: 1000px;
+    paddig: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.Cities .blocks .block1 {
+    width: 70%;
+    height: 200px;
+    margin: 5px 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.Cities .blocks .block1 .city {
+    position: absolute;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color:rgba(237,50,55, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 5px;
+}
+.Cities .blocks .block1 .city h4 {
+    margin: 3px;
+    color: var(--White);
+    font-weight: 700;
+}
+.Cities .blocks .block1 .city h5 {
+    color: var(--White);
+    font-weight: 500;
+    margin: 3px;
+}
+
+.Cities .blocks .block1 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.Cities .blocks .block2 {
+    width: 30%;
+    margin: 5px 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.Cities .blocks .block2 .city {
+    position: absolute;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color:rgba(237,50,55, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 5px;
+}
+.Cities .blocks .block2 .city h4 {
+    margin: 3px;
+    color: var(--White);
+    font-weight: 700;
+}
+.Cities .blocks .block2 .city h5 {
+    color: var(--White);
+    font-weight: 500;
+    margin: 3px;
+}
+
+.Cities .blocks .block2 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+.Cities .blocks2 {
+    width: 1000px;
+    paddig: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    border-radius: 6px;
+}
+
+.Cities .blocks2 .block1 {
+    width: 70%;
+    height: 200px;
+    margin: 5px 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.Cities .blocks2 .block1 .city {
+    position: absolute;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color:rgba(237,50,55, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 5px;
+}
+.Cities .blocks2 .block1 .city h4 {
+    margin: 3px;
+    color: var(--White);
+    font-weight: 700;
+}
+.Cities .blocks2 .block1 .city h5 {
+    color: var(--White);
+    font-weight: 500;
+    margin: 3px;
+}
+
+.Cities .blocks2 .block1 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.Cities .blocks2 .block2 {
+    width: 30%;
+    margin: 5px 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.Cities .blocks2 .block2 .city {
+    position: absolute;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color:rgba(237,50,55, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 5px;
+}
+.Cities .blocks2 .block2 .city h4 {
+    margin: 3px;
+    color: var(--White);
+    font-weight: 700;
+}
+.Cities .blocks2 .block2 .city h5 {
+    color: var(--White);
+    font-weight: 500;
+    margin: 3px;
+}
+
+.Cities .blocks2 .block2 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+@media (max-width: 1020px) {
+    .Cities .blocks {
+        width: 95%;
+    }
+    .Cities .blocks2 {
+        width: 95%;
+    }
+
+
+    @media (max-width: 650px) {
+        .Cities .blocks {
+            width: 100%;
+            flex-direction: column;
+        }
+        .Cities .blocks .block1 {
+            width: 100%;
+            margin: 10px;
+        }
+
+        .Cities .blocks .block2 {
+            width: 100%;
+            margin: 10px;
+        }
+
+
+        .Cities .blocks2 {
+            width: 100%;
+            flex-direction: column;
+        }
+        .Cities .blocks2 .block1 {
+            width: 100%;
+            margin: 10px;
+        }
+
+        .Cities .blocks2 .block2 {
+            width: 100%;
+            margin: 10px;
+        }
+        
+    }
+}

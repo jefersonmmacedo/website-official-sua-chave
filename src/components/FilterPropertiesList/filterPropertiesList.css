@@ -1,0 +1,338 @@
+﻿ {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.FilterPropertiesList button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 15px;
+    Background-color: var(--White);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: 1px solid var(--Gray);
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.FilterPropertiesList .searchItens {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    background: var(--BorderHover);
+    border-left: 1px solid var(--Border);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    transform: translateX(0);
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 650px;
+    padding-top: 3.5rem;
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+    box-shadow: 1px 1px 20px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 1px 1px 20px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 20px 0px rgba(0,0,0,0.3);
+}
+.FilterPropertiesList .searchItensNone {
+    transform: translateX(100%);
+    flex-flow: column nowrap;
+    background: var(--White);
+    border-left: 1px solid var(--Border);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 500px;
+    padding-top: 3.5rem;
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+}
+.FilterPropertiesList .searchItens .buttons {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.FilterPropertiesList .searchItens .buttons button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 15px;
+    Background-color: var(--White);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: 1px solid var(--Gray);
+    border-radius: 6px;
+    font-size: 12px;
+    margin-top: -50px;
+}
+
+.FilterPropertiesList .searchItens .searchOptions {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.FilterPropertiesList .searchItensNone .searchOptions {
+    width: 95%;
+    display: none;
+}
+
+.FilterPropertiesList .searchItensNone .buttons {
+    width: 95%;
+    display: none;
+}
+
+.FilterPropertiesList .searchItens .searchOptions button svg {
+    margin-right: 5px;
+}
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 5px;
+}
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelects {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelects h4 {
+    width: 20%;
+    color: var(--Paragraph);
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelects input {
+    border: 1px solid var(--Gray);
+    background-color: var(--White);
+    color: var(--Paragraph);
+    border-radius: 6px;
+    padding: 15px;
+    width: 100%;
+    margin: 0px 0 20px 0;
+}
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelects .selectInput {
+    border: 1px solid var(--Primary);
+    background-color: var(--White);
+    color: var(--Primary);
+    border-radius: 6px;
+    padding: 15px;
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelects select {
+    border: 1px solid var(--Gray);
+    background-color: var(--White);
+    color: var(--Paragraph);
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 100%;
+}
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelects .select {
+    border: 1px solid var(--Primary);
+    background-color: var(--White);
+    color: var(--Primary);
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelectsButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelectsButtons button {
+    background-color: var(--White);
+    padding:15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--Primary);
+    border-radius: 6px;
+    color: var(--Primary);
+    font-size: 14px;
+    width: 50%;
+    margin: 5px;
+}
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelectsButtons .btn {
+    background-color: var(--White);
+    padding:15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--Gray2);
+    border-radius: 6px;
+    color: var(--Paragraph);
+    font-size: 14px;
+    width: 50%;
+    margin: 5px;
+}
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelectsButtonsAction {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelectsButtonsAction button {
+    background-color: var(--Primary);
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--Primary);
+    border-radius: 6px;
+    color: var(--White);
+    font-size: 14px;
+    width: 50%;
+    margin: 5px;
+}
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelectsButtonsAction .btn {
+    background-color: var(--White);
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--Gray2);
+    border-radius: 6px;
+    color: var(--Paragraph);
+    font-size: 14px;
+    width: 50%;
+    margin: 5px;
+}
+
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 5px 0;
+}
+
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation h4 {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    Background-color:var(--BorderInput2);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: none;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    Background-color:var(--BorderInput2);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: none;
+    margin: 5px 10px;
+    border-radius: 6px;
+}
+
+@media(max-width:670px) {
+    .FilterPropertiesList .searchItens {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .FilterPropertiesList .searchItens .buttons button {
+        margin-top:0px;
+    }
+
+    .FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelects h4 {
+        color: var(--Paragraph);
+        font-weight: 600;
+        margin-right: 5px;
+    }
+
+    @media(max-width: 600px) {
+        .FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelects h4 {
+            width: 30%;
+            color: var(--Paragraph);
+            font-weight: 600;
+            margin-right: 5px;
+        }
+    
+    }
+
+    
+    @media(max-width: 450px) { 
+.FilterPropertiesList .searchItens .searchOptions {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+ .FilterPropertiesList .searchItens .searchOptions button {
+            width: 70%;
+            padding: 7px;
+            margin: 5px 0;
+        }
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelects h4 {
+            width: 40%;
+            color: var(--Paragraph);
+            font-weight: 600;
+            margin-right: 5px;
+        }
+    }
+
+}

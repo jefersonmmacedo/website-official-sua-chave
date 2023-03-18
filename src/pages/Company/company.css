@@ -1,0 +1,509 @@
+﻿.Company{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Company .btnCompany {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: var(--White);
+    background-color: var(--Primary);
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+}
+
+.Company .mainCompany {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--White);
+    border-radius: 6px;
+    padding: 100px 20px 40px 20px;
+}
+.Company .mainCompany .CompanyUnic {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding-right: 20px;
+}
+
+
+.Company .mainCompany .CompanyUnic .title {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.Company .mainCompany .CompanyUnic .title .image {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    width: 200px; 
+    border-radius: 6px;
+    object-fit: cover;
+    margin: 5px 10px;
+}
+.Company .mainCompany .CompanyUnic .title .image img {
+    width: 195px; 
+    border-radius: 6px;
+    object-fit: contain;
+    margin: 3px;
+}
+
+.Company .mainCompany .CompanyUnic .title .textTitle {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.Company .mainCompany .CompanyUnic .title .textTitle h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;
+}
+
+.Company .mainCompany .CompanyUnic .title .textTitle h5 {
+    color: var(--Gray);
+    margin: 0 10px;
+}
+
+
+.Company .mainCompany .CompanyUnic .title .textTitle .iconsCompany {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 0;
+    padding: 5px 0;
+    flex-wrap: wrap;
+    border: none;
+    border-top: 1px solid var(--BorderInput);
+    flex-wrap: wrap;
+}
+
+.Company .mainCompany .CompanyUnic .title .textTitle .iconsCompany .iconCompanyUnic {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    margin: 0 3px;
+    color: var(--Gray);
+}
+
+.Company .mainCompany .CompanyUnic .title .textTitle .iconsCompany .iconCompanyUnic .simbol {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+.Company .mainCompany .CompanyUnic .title .textTitle .iconsCompany .iconCompanyUnic .simbol p {
+    color: var(--Paragraph);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.Company .mainCompany .CompanyUnic .title .textTitle .iconsCompany .iconCompanyUnic .simbol svg {
+    margin-right: 5px;
+    color: var(--Gray);
+    font-size: 18px;
+}
+
+.Company .mainCompany .CompanyUnic .title .textTitle .network {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: row;
+    width: 100%;
+    margin-top: -10px;
+    padding: 10px;
+}
+.Company .mainCompany .CompanyUnic .title .textTitle .network button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: none;
+    border-radius: 6px;
+    padding: 7px;
+    cursor: pointer;
+    background-color: var(--BorderHover);
+    border: 1px solid var(--BorderInput);
+    color: var(--Primary);
+    font-size: 20px;
+    margin-right: 5px;
+}
+.Company .mainCompany .CompanyUnic .title .textTitle .network button:hover {
+    background-color: var(--Primary);
+    color: var(--White);
+}
+
+.Company .mainCompany .CompanyUnic .title .textTitle .buttonsContactCompany {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    border-top: 1px solid var(--BorderInput);
+    padding: 10px 0;
+}
+
+.Company .mainCompany .CompanyUnic .title .textTitle .buttonsContactCompany .btnPhone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: var(--Primary);
+    background-color: var(--BorderHover);
+    border: 1px solid var(--Primary);
+    font-weight: 700;
+    border-radius: 6px;
+    width: 130px;
+    margin: 5px;
+}
+.Company .mainCompany .CompanyUnic .title .textTitle .buttonsContactCompany .btnWhats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: var(--White);
+    background-color: var(--Primary);
+    border: 1px solid var(--Primary);
+    font-weight: 700;
+    border-radius: 6px;
+    width: 130px;
+    margin: 5px;
+}
+.Company .mainCompany .CompanyUnic .title .textTitle .buttonsContactCompany .btnWhats:hover {
+    background-color: var(--ButtonHover);
+}
+.Company .mainCompany .CompanyUnic .title .textTitle .buttonsContactCompany .btnPhone:hover {
+    background-color: var(--BorderInput);
+}
+
+.Company .mainCompany .CompanyUnic .title .textTitle .buttonsContactCompany .btnPhone svg {
+margin-right: 5px;
+}
+.Company .mainCompany .CompanyUnic .title .textTitle .buttonsContactCompany .btnWhats svg {
+    margin-right: 5px;
+}
+
+.Company .mainCompany .CompanyUnic .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+.Company .mainCompany .CompanyUnic .text h4 {
+    color: var(--Paragraph);
+    margin:20px 10px;
+}
+.Company .mainCompany .CompanyUnic .text h3 {
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;
+}
+
+
+.Company .mainCompany .CompanyUnic .text .characteristics {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.Company .mainCompany .CompanyUnic .text .characteristics .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    margin: 5px;
+    color: var(--Paragraph);
+}
+.Company .mainCompany .CompanyUnic .text .characteristics .item svg {
+    color: var(--Primary);
+    margin-right: 3px;
+}
+.Company .mainCompany .CompanyUnic .text .characteristics .item p {
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+
+
+.Company .mainCompany .CompanyUnic .text .pricing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: flex-start;
+}
+
+.Company .mainCompany .CompanyUnic .text .pricing h5 {
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 5px 10px;
+}
+.Company .mainCompany .CompanyUnic .text .pricing h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 0 10px;
+}
+.Company .mainCompany .CompanyUnic .text .video {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+.Company .mainCompany .CompanyUnic .text .map {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+.Company .mainCompany .textProperties {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0 20px 0;
+}
+.Company .mainCompany .textProperties h3{
+    font-weight: 700;
+    color: var(--Gray);
+    text-align: center;
+}
+.Company .mainCompany .buttonsProperties {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.Company .mainCompany .buttonsProperties select {
+    display: none
+}
+.Company .mainCompany .buttonsProperties button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: var(--Gray);
+    background-color: var(--BorderInput);
+    border: none;
+    font-weight: 700;
+    border-radius: 6px;
+    width: 170px;
+    margin: 5px;
+}
+
+.Company .mainCompany .buttonsProperties button svg {
+    margin-right: 5px;
+}
+
+.Company .mainCompany .buttonsProperties .select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: var(--White);
+    background-color: var(--Primary);
+    border: none;
+    font-weight: 700;
+    border-radius: 6px;
+    width: 150px;
+    margin: 5px;
+}
+
+.Company .mainCompany .itens {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Company .mainCompany .MainAbout{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.Company .mainCompany .MainAbout h4 {
+    font-weight: 600;
+    text-align: center;
+    color: var(--Gray);
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 950px) {
+    .Company .mainCompany {
+        width: 100%;
+    }
+@media (max-width: 850px) {
+    .Company .mainCompany {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 20px 0;
+    }
+    
+    .Company .mainCompany .CompanyUnic {
+        width: 90%;
+    }
+}
+
+@media (max-width: 750px) {
+
+    
+    .Company .mainCompany {
+        padding: 60px 20px 40px 20px;
+    }
+
+    .Company .mainCompany .itens {
+        width: 100%;
+    }
+    
+
+    @media(max-width: 660px) {
+
+        .Company .mainCompany .CompanyUnic {
+            width: 100%;
+        }
+
+        .Company .mainCompany .CompanyUnic .title {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .Company .mainCompany .CompanyUnic .title .textTitle {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .Company .mainCompany .CompanyUnic .title .textTitle h5 {
+            text-align: center;
+        }
+
+        .Company .mainCompany .CompanyUnic .title .textTitle .iconsCompany {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+                
+        .Company .mainCompany .CompanyUnic .title .textTitle .iconsCompany .iconCompanyUnic {
+            width: 100%;
+        }
+
+        .Company .mainCompany .CompanyUnic .title .textTitle .iconsCompany .iconCompanyUnic .simbol {
+            justify-content: center;
+        }
+
+        .Company .mainCompany .CompanyUnic .title .textTitle .buttonsContactCompany {
+            justify-content: center;
+
+        }
+
+        .Company .mainCompany .CompanyUnic .title .textTitle .network {
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            flex-direction: row;
+        }
+
+        .Company .mainCompany .CompanyUnic .title .image {
+            width: 120px; 
+            margin: 10px;
+        }
+        .Company .mainCompany .CompanyUnic .title .image img {
+            width: 120px; 
+        }
+
+        .Company .mainCompany .textProperties {
+            margin: 15px 0 10px 0;
+        }
+
+        .Company .mainCompany .buttonsProperties {
+            margin-bottom: 15px;
+            flex-wrap: nowrap;
+        }
+        
+        .Company .mainCompany .buttonsProperties select {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 10px;
+            color: var(--Gray);
+            background-color: var(--BorderInput);
+            border: none;
+            font-weight: 700;
+            border-radius: 6px;
+            width: 150px;
+            margin: 5px;
+        }
+
+        .Company .mainCompany .buttonsProperties button {
+            display: none;
+        }
+
+        .Company .mainCompany .buttonsProperties .select {
+            display: none;
+        }
+
+    }
+
+}
+
+}

@@ -1,0 +1,187 @@
+﻿.UpdateAccount {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.UpdateAccount .main {
+    width: 100%;
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+.UpdateAccount .main .text {
+    width: 80%;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+.UpdateAccount .main .text h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.UpdateAccount .main .text h3 {
+    font-weight: 700;
+    color: var(--Paragraph);
+    text-align: center;
+}
+.UpdateAccount .main .text h3 svg{
+    font-size: 45px;
+    font-weight: 900;
+    color: var(--Primary)
+}
+.UpdateAccount .main .text form{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
+.UpdateAccount .main .text form .label-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.UpdateAccount .main .text form .label-avatar input {
+    display: none;
+}
+
+.UpdateAccount .main .text form .label-avatar span {
+    z-index: 99;
+    position: absolute;
+    opacity: 0.7;
+    transition: all .5s;
+}
+
+.UpdateAccount .main .text form .label-avatar span:hover{
+    opacity: 1;
+    transform: scale(1.4);
+}
+
+.UpdateAccount .main .text form .label-avatar img{
+    margin-bottom: 1em;
+    border-radius: 100px;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.UpdateAccount .main .text form .dataInputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+.UpdateAccount .main .text form .dataInputs .textSpan{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 7px 0px 0px 15px;
+}
+
+.UpdateAccount .main .text form .dataInputs .textSpan h5 {
+    color: var(--Gray);
+    font-weight: 700;
+}
+.UpdateAccount .main .text form input{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 17px;
+    margin: 5px;
+    border-radius:50px;
+    background-color: var(--BorderInput);
+    border: none;
+}
+.UpdateAccount .main .text form select{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 17px;
+    margin: 5px;
+    border-radius:50px;
+    background-color: var(--BorderInput);
+    border: none;
+}
+.UpdateAccount .main .text form button{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    border-radius:50px;
+    background-color: var(--Primary);
+    border: none;
+    color: var(--White);
+    font-weight: 700;
+}
+@media (max-width: 700px) {
+    .UpdateAccount .main {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .UpdateAccount .main .text form{
+        width: 100%;
+    }
+
+    .UpdateAccount .main .text {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: var(--BorderHover);
+        margin: 10px;
+    }
+
+    @media (max-width: 450px) {
+   
+        .UpdateAccount .main .text {
+            padding: 5px;
+            margin: 5px;
+        }
+    }
+}

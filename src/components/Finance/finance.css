@@ -1,0 +1,167 @@
+﻿.Finance  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 1200px;
+    margin: 20px auto;
+}
+
+.Finance .simulation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    border-radius: 6px;
+    color: var(--Paragraph);
+    background-color: var(--White);
+    border: 1px solid var(--Border);
+    width: 100%;
+}
+.Finance .simulation .simulationBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px;
+    border-radius: 6px;
+    color: var(--Paragraph);
+    width: 100%;
+}
+
+.Finance .simulation .simulationBox:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.Finance .simulation .simulationBox .iconFinance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    Background-color: var(--Primary);
+}
+.Finance .simulation .simulationBox .iconFinance svg {
+    font-size: 24px;
+    margin: 10px 0;
+    opacity: none;
+    color: var(--White);
+}
+.Finance .simulation .simulationBox h2 {
+    font-weight: 800;
+    opacity: none;
+    margin: 20px 0 10px 0;
+}
+.Finance .simulation .simulationBox h4{
+    font-weight: 400;
+    margin: 0px 0 20px 0;
+    opacity: none;
+}
+.Finance .simulation .simulationBox a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px 5px 0px;
+    Background-color: var(--White);
+    color: var(--Primary);
+    font-weight: 500;
+    border: none;
+    margin: 5px 0;
+    border-radius: 25px;
+    text-decoration:none;
+    font-weight: 700;
+    opacity: none;
+}
+
+.Finance .FinanceValue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 6px;
+    color: var(--Description);
+    width: 100%;
+    background-image: url("../../assets/images/background17.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+}
+.Finance .FinanceValue .FinanceBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color:  rgba(241, 241, 241, 0.7);
+    padding: 30px;
+    border-radius: 6px;
+    color: var(--Description);
+    width: 100%;
+}
+.Finance .FinanceValue .FinanceBox:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.Finance .FinanceValue .FinanceBox  svg {
+    font-size: 40px;
+    margin: 10px 0;
+}
+.Finance .FinanceValue .FinanceBox  h2 {
+    font-weight: 900;
+    font-size: 32px;
+}
+.Finance .FinanceValue .FinanceBox  h4{
+    font-weight: 600;
+    margin: 5px 0 20px 0;
+}
+.Finance .FinanceValue .FinanceBox  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    Background-color: var(--Primary);
+    color: var(--White);
+    font-weight: 500;
+    border: none;
+    margin: 10px 0;
+    border-radius: 25px;
+    text-decoration:none;
+    font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+    .Finance  {
+        width: 100%;
+    }
+    
+@media (max-width: 600px) {
+
+    .Finance  {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .Finance .FinanceValue .FinanceBox {
+       padding: 20px;
+    }
+   .Finance .simulation .simulationBox {
+        padding: 20px;
+    }
+    .Finance .FinanceValue .FinanceBox h2 {
+        font-size: 30px;
+        font-weight: 900;
+    }
+   .Finance .simulation .simulationBox h2 {
+        font-size: 30px;
+        font-weight: 900;
+    }
+}
+}

@@ -1,0 +1,314 @@
+﻿.SignUpClient {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.SignUpClient .signUp {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--White);
+}
+
+.SignUpClient .signUp .form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.SignUpClient .signUp .form .data {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.SignUpClient .signUp .form .data input {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-bottom: 2px solid var(--Border);
+    padding: 5px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.SignUpClient .signUp .form .data .dataInputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border-bottom: 2px solid var(--Border);
+}
+.SignUpClient .signUp .form .data .dataInputs .icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.SignUpClient .signUp .form .data .dataInputs input {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 3px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+.SignUpClient .signUp .form .data select {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-bottom: 2px solid var(--Border);
+    padding: 5px;
+    margin: 5px 0;
+    font-weight: bold;
+    background-color: var(--White);
+}
+.SignUpClient .signUp .form .data textarea {
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid var(--Border);
+    padding: 5px;
+    margin: 5px 0;
+    font-weight: bold;
+    resize: none;
+}
+
+.SignUpClient .signUp .form .data input::placeholder {
+    color: var(--Gray);
+}
+.SignUpClient .signUp .form .data .links {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--Gray);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.SignUpClient .signUp .form .data button {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Button);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: var(--White);
+    font-weight: 700;
+    margin: 10px 0;
+}
+.SignUpClient .signUp .form .data .btn {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Secondary);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: var(--White);
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+
+.SignUpClient .signUp .form .data .label-avatar{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.SignUpClient .signUp .form .data .label-avatar input {
+    display: none;
+}
+
+.SignUpClient .signUp .form .data .label-avatar span {
+    z-index: 99;
+    position: absolute;
+    opacity: 0.7;
+    transition: all .5s;
+}
+
+.SignUpClient .signUp .form .data .label-avatar span:hover{
+    opacity: 1;
+    transform: scale(1.4);
+}
+
+.SignUpClient .signUp .form .data .label-avatar img{
+    margin-bottom: 1em;
+    border-radius: 50px;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.SignUpClient .Client {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/images/background6.jpg"); /* The image used */
+    background-color: var(--Primary); /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.SignUpClient .Client .block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(237, 50, 55, 0.3);
+}
+
+.SignUpClient .Client .block button {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Button);
+    color: var(--White);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+
+
+
+@media (max-width: 850px) {
+
+    
+    .SignUpClient .signUp .form .data {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    .SignUpClient .signUp .form .data .dataInputs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        border-bottom: 2px solid var(--Border);
+    }
+
+
+    
+    .SignUpClient .signUp .form .data input {
+        width: 90%;
+    }
+    .SignUpClient .signUp .form .data select {
+        width: 90%;
+    }
+    .SignUpClient .signUp .form .data textarea {
+        width: 90%;
+    }
+    
+    .SignUpClient .signUp .form .data input::placeholder {
+        color: var(--Gray);
+    }
+    .SignUpClient .signUp .form .data .links {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        color: var(--Gray);
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    
+    .SignUpClient .signUp .form .data button {
+        width: 90%;
+    }
+
+@media (max-width: 800px) {
+
+    .SignUpClient .signUp .form {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .SignUpClient .signUp {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .SignUpClient .Client {
+        display: none;
+    }
+
+    
+    @media (max-width: 500px) {
+        .SignUpClient .signUp .form {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .SignUpClient .signUp .form .data {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            padding: 10px;
+        }
+        
+    }
+}
+}

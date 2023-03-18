@@ -1,0 +1,71 @@
+﻿.ComingSoon {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--BorderHover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ComingSoon h2 {
+    text-align: center;
+    color: var(--Primary);
+    font-weight: 900;
+    margin: 10px;
+}
+.ComingSoon img {
+    width: 350px;
+    margin: 10px;
+}
+
+.ComingSoon .coming {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 10px;
+}
+.ComingSoon .coming h4 {
+    text-align: center;
+    color: var(--Gray);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.ComingSoon .coming h4 svg {
+    margin-right: 3px;
+    margin-bottom: -2px;
+    margin-top: 0px;
+}
+.ComingSoon .logo {
+    width: 150px;
+    margin: 20px;
+}
+.ComingSoon .logo img {
+    width: 100%;
+}
+
+
+@media (max-width: 600px) {
+
+    .ComingSoon h2 {
+        font-size: 20px;
+    }
+
+    .ComingSoon img {
+        width: 300px;
+        margin: 10px;
+    }
+
+    .ComingSoon .image {
+        width: 261px;
+        height: 164px;
+        margin-top: 63px;
+        margin-left: 1px;
+    }
+
+
+    .ComingSoon .coming {
+        width: 200px;
+    }
+}
