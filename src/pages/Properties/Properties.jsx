@@ -151,12 +151,12 @@ export function Properties(){
 
         {properties?.length > 0 ?
          <div className="itens">
-            {filterEmphasis?.map((property) => {
+            {/* {filterEmphasis?.map((property) => {
                     return (
                         <PropertyUnicBlock id={property.id} key={property.id} style="Emphasis"/>
                     )
-                })}
-            {filterNotEmphasis?.map((property) => {
+                })} */}
+            {properties?.map((property) => {
                     return (
                         <PropertyUnicBlock id={property.id} key={property.id}/>
                     )
