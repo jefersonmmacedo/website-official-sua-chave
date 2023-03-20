@@ -64,7 +64,7 @@ export function Announce() {
             <div className="moviePlay">
                 <div className="box1"></div>
                 <div className="play">
-                    <FaPlay />
+                    <FaPlay onClick={handleOpenModal}/>
                 </div>
                 <div className="box2"></div>
             </div>
@@ -220,7 +220,7 @@ export function Announce() {
             </button>
             <div className="content-modal">
    
-    <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/4lRRANhqnog" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/spafR9XKFXc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
             </div>
             </Modal>
