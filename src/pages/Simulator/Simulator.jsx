@@ -22,7 +22,7 @@ export function Simulator() {
             </div>
 
             <div className="financer">
-            <h2>Porque <span>financiar</span> um imóvel?</h2>
+            <h2>Por que <span>financiar</span> um imóvel?</h2>
                 <h4>Veja 6 vantagens de realizar um financiamento imobiliário.</h4>
 
                 <div className="benefits">

@@ -24,11 +24,11 @@
 }
 .TermsOfUse .text h4 {
     font-weight: 700;
-    margin: 10px 0;
+    margin: 15px 0 5px 0;
     color: var(--Primary)
 }
 .TermsOfUse .text p {
     font-weight: 500;
-    margin: 5px 0;
+    margin: 2px 0;
     color: var(--Paragraph)
 }
