@@ -234,7 +234,7 @@ export function Property() {
                     <div className="infosCompanyMobile">
                     {data[0]?.status === "Aluguel" ?
                     <>
-                     {data[0]?.priceRent === "" ? "" :
+                     {data[0]?.priceRent === "" ? "Consultar valor" :
                     <div className="pricing">
                         <h5>{data[0]?.status} / <span> {data[0]?.textRent}</span></h5>
                         <h2>R$ <span>{data[0]?.priceRent}</span></h2>
@@ -273,7 +273,7 @@ export function Property() {
                     </>
                     :
                     <>
-                    {data[0]?.priceSale === "" ? "" :
+                    {data[0]?.priceSale === "" ? "Consultar valor" :
                     <div className="pricing">
                         <h5>Venda</h5>
                         <h2>R$ <span>{data[0]?.priceSale}</span></h2>
@@ -338,7 +338,7 @@ export function Property() {
                 <div className="infosCompany">
                 {data[0]?.status === "Aluguel" ?
                     <>
-                     {data[0]?.priceRent === "" ? "" :
+                     {data[0]?.priceRent === "" ? "Consultar valor" :
                     <div className="pricing">
                         <h5>{data[0]?.status} / <span> {data[0]?.textRent}</span></h5>
                         <h2>R$ <span>{data[0]?.priceRent}</span></h2>
@@ -377,7 +377,7 @@ export function Property() {
                     </>
                     :
                     <>
-                    {data[0]?.priceSale === "" ? "" :
+                    {data[0]?.priceSale === "" ? "Consultar valor" :
                     <div className="pricing">
                         <h5>Venda</h5>
                         <h2>R$ <span>{data[0]?.priceSale}</span></h2>

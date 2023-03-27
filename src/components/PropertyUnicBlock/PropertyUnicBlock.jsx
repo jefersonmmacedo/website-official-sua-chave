@@ -29,7 +29,8 @@ export function PropertyUnicBlock({id, style}) {
     const titleProperty = `${property?.title}`
     const company = `${property?.nameCompany}`
     const nameSlug = slugify(property?.nameCompany);
-    const cityProperty = `${property?.subType} ${property?.status === "Venda" ? "à venda" : "para aluguel"}`
+    const bedroom =  property?.bedroom === "" || property?.bedroom === "0"? "" : property?.bedroom === "1" ? `com ${property?.bedroom} quarto` : property?.bedroom !== "1" || property?.bedroom !== ""  || property?.bedroom !== "0"? `com ${property?.bedroom} quartos` : ""
+    const StatusProperty = `${property?.subType} ${property?.status === "Venda" ? "à venda" : "para aluguel"} ${bedroom}`
     return (
         <div className={style === "Emphasis" ? "PropertyUnicEmphasis": "PropertyUnicBlock"}>
                     <div className={style === "Emphasis" ? "imageSliderEmphasis": "imageSlider"}>
@@ -82,9 +83,9 @@ export function PropertyUnicBlock({id, style}) {
                     <div className="text">
                     <div className="textInfos">
                     <a href={`/imovel/${property?.id}`}>
-                    <h4>{titleProperty !== undefined ? titleProperty.slice(0,27) : titleProperty}</h4>
+                    <h4>{StatusProperty !== undefined ? StatusProperty.slice(0,28) : StatusProperty}</h4>
                         </a>
-                    <h5>{cityProperty}</h5>
+                    {/* <h5>{StatusProperty}</h5> */}
                     <h6><IoLocationOutline />{property?.district} - {property?.city} - {property?.uf}</h6>
                     </div>
                     <div className="iconsBox">
@@ -142,7 +143,11 @@ export function PropertyUnicBlock({id, style}) {
                     </div>
                     <div className="pricing">
                         <h6>{property?.status} {property?.textRent !==  "" ? "/" : "" }<span> {property?.textRent}</span></h6>
+                        {property?.priceSale === "" && property?.priceRent === ""  ?
+                        <h3><span>Consultar valor</span></h3>
+                        :
                         <h3>R$ <span>{property?.status === "Venda" ? property?.priceSale : property?.priceRent}</span></h3>
+                        }
                     </div>
                     </div>
                 </div>

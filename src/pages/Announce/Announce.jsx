@@ -47,7 +47,7 @@ export function Announce() {
                 </div>
                 <div className="textAnnounce">
                     <h1>A sua <span>imobiliária</span> <br />merece ser 100% <span>digital!</span></h1>
-                    <h3>Portal + CRM + Site para imobiliárias e corretores. <br /> Tudo preparado para conectar seus imóveis a novos clientes.</h3>
+                    <h3>Portal imobiliário + Sistema de gestão completo + Site para imobiliárias e corretores. <br /> Tudo preparado para conectar seus imóveis a novos clientes.</h3>
 
                     <div className="buttonsText">
                         <button onClick={HandleOpen}><IoLogoWhatsapp /> Falar com time comercial</button>

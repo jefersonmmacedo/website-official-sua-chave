@@ -113,6 +113,7 @@ export function Simulator() {
                 <div className="back2">
                 <h2>Escolha um banco para a simulação</h2>
                 <h4>Estamos trabalhando para trazer as simulações direto em nosso site.</h4>
+              
                 <div className="logosBank">
                         <a href="https://www8.caixa.gov.br/siopiinternet-web/simulaOperacaoInternet.do?method=inicializarCasoUso" target="_blank" rel="noreferrer">
                     <div className="logoUnicBank">
@@ -145,6 +146,7 @@ export function Simulator() {
                     </div>
                         </a>
                 </div>
+                <h6>*Não somos responáveis pelas informações solicitadas e informadas pelos sites acima. Apenas disponibilizamos os links dos sites para que nossos clientem tenham acesso a várias opções de simulação de financiamento</h6>
                 </div>
                 </div>
                 <Footer />
