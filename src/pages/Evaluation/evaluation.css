@@ -109,7 +109,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    width: 450px;
+    width: 550px;
     overflow: auto;
 }
 .Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluation {
@@ -175,6 +175,14 @@
     margin: 0 10px;
 }
 
+.Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluation .text h4 {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 0px;
+}
 .Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluation .text h3 {
     font-weight: 700;
     display: flex;
@@ -204,6 +212,15 @@
     margin: 0 10px;
 }
 
+.Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluationSelected .text h4 {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 0px;
+    color: var(--White);
+}
 .Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluationSelected .text h3 {
     font-weight: 700;
     display: flex;
@@ -760,6 +777,10 @@
         margin: 40px 20px;
         width: 100%;
     }
+
+    .Evaluation .CompaniesEvaluation .listCompaniesEvaluation {
+        width: 100%;
+    }
     
 
     
@@ -816,9 +837,7 @@
         .Evaluation .searchBrokers {
             flex-direction: column;
         }
-        .Evaluation .CompaniesEvaluation .listCompaniesEvaluation {
-            width: 100%;
-        }
+
 
         .Evaluation .buttonsStepesPage {
             width: 100%;

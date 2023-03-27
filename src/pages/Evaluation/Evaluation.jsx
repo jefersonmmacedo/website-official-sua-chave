@@ -272,7 +272,7 @@ export function Evaluation() {
             <>
             <div className="Address">
             <div className="text">
-                    <h3>CEP</h3>
+                    <h4>CEP do imóvel</h4>
                 </div>
             <div className="cep">
                 <input type="text" placeholder="XXXXX-XXX" value={cep} onChange={e => setCep(e.target.value)}/>
@@ -280,7 +280,7 @@ export function Evaluation() {
             </div>
             <div className={city === "" && uf === "" ? "data2" : "data"}>
                 <div className="text">
-                    <h3>Endereço</h3>
+                    <h4>Endereço do imóvel</h4>
                 </div>
             <input type="text" placeholder="Rua" value={road} onChange={e => setRoad(e.target.value)}/>
             <div className="dataInputs">
@@ -290,7 +290,7 @@ export function Evaluation() {
             <input type="text" placeholder="Cidade" value={city} onChange={e => setCity(e.target.value)}/>
             <input type="text" placeholder="Estado" value={uf} onChange={e => setUf(e.target.value)}/>
             <div className="text">
-                <h3>Dados pessoais</h3>
+                <h4>Dados pessoais do proprietário</h4>
             </div>
             <div className="dataInputs">
             <input type="text" placeholder="Nome" value={name} onChange={e => setName(e.target.value)}/>
@@ -315,7 +315,7 @@ export function Evaluation() {
            
             <div className={"data"}>
             <div className="text">
-            <h3>Sobre o Imóvel</h3>
+            <h4>Sobre o Imóvel</h4>
             </div>
             
             <input type="text" placeholder="Título" value={title} onChange={e => setTitle(e.target.value)}/>
@@ -564,13 +564,17 @@ export function Evaluation() {
                     <div className="listCompaniesEvaluation">
                         {filterData.map((company) => {
                             return (
+                                company.verified !== true ? "" :
                             <div className={company.id === idCompany ? "CompanieUnicEvaluationSelected" : "CompanieUnicEvaluation"} key={company.id}>
                                 <div className="imageEvaluation">
                                     <img src={company.logo} alt="" />
                                 </div>
                                 <div className="text">
-                                <h3>{company.fantasyName}</h3>
-                                <h5>{company.road}, Nº {company.number}, {company.district} - {company.city} - {company.uf}</h5>
+                                <h4>{company.fantasyName}</h4>
+                                {company.viewAddress === false ? ""
+                                :
+                                <h5><IoLocationOutline />{company.road}, Nº {company.number}, {company.district} - {company.city} - {company.uf}</h5>
+                                }
                                 <h5><IoBusinessOutline />{company.type}</h5>
                                 </div>
                                 <div className="buttonCompany">
@@ -679,6 +683,7 @@ export function Evaluation() {
                             <h4>Imobiliária/Corretor:</h4>
                             <h5><IoBusinessOutline/> {searchCompanySelected[0]?.fantasyName}</h5>
                             <h5><IoMailOutline/> {searchCompanySelected[0]?.email}</h5>
+                            <h5><IoLocationOutline /> {searchCompanySelected[0]?.road}, Nº {searchCompanySelected[0]?.number}, {searchCompanySelected[0]?.district} - {searchCompanySelected[0]?.city} - {searchCompanySelected[0]?.uf}</h5>
                             <h5><IoCallOutline/> {searchCompanySelected[0]?.phone} - <IoLogoWhatsapp/> {searchCompanySelected[0]?.whatsapp}</h5>
                         </div>
      
