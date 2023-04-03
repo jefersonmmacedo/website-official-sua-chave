@@ -52,7 +52,7 @@ export function Announce() {
                     <div className="buttonsText">
                         <button onClick={HandleOpen}><IoLogoWhatsapp /> Falar com time comercial</button>
                         {/* <a href="/cadastro-profissional" className="btn"><IoCheckboxOutline /> Criar minha conta agora</a> */}
-                        <a href="/em-breve" className="btn"><IoCheckboxOutline /> Avise-me quando estiverem prontos</a>
+                        <a href="https://adm.suachave.com.br/cadastro/novocadastro" className="btn" target="_Blank"><IoCheckboxOutline /> Crie sua conta agora!</a>
                     </div>
                 </div>
         </div>
