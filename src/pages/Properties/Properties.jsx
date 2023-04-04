@@ -54,7 +54,7 @@ export function Properties(){
         : status !== undefined &&  district !== "" && city !== "" && uf !== "" ?
         `/property/listsadressstatuscomplete/${availability}/${status}?district=${district}&city=${city}&uf=${uf}&page=${currentPage}&limit=${perPage}`
         : status !== undefined  && city !== "" && uf !== "" ?
-        `/property/listsadressstatus/${availability}/${status}?city=${city}&uf=${uf}?page=${currentPage}&limit=${perPage}`
+        `/property/listsadressstatus/${availability}/${status}?city=${city}&uf=${uf}&page=${currentPage}&limit=${perPage}`
         : status !== undefined && subType !== "" ?
         `/property/listtypesubstatus/${availability}/${status}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&page=${currentPage}&limit=${perPage}`
         : subType !== "" ?
