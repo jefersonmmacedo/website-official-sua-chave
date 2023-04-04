@@ -38,7 +38,7 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
 
     data?.forEach((item) => {
         var duplicated  = districtList.findIndex(redItem => {
-            return item.district === redItem.district;
+            return item.district === redItem.district && item.city === redItem.city;
         }) > -1;
     
         if(!duplicated) {

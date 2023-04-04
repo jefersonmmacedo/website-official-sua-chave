@@ -1,20 +1,73 @@
 import "./plains.css"
-import {IoCheckmarkOutline} from "react-icons/io5";
+import {IoArrowBackOutline, IoArrowForwardOutline, IoCheckmarkOutline} from "react-icons/io5";
 import { useFetch } from "../../hooks/useFetch";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
 
 
 export function Plains() {
 
-    const { data } = useFetch("/plains")
+    const { data } = useFetch("/plains");
 
 
+    if(!data) {
+        return (
+            <div className="loader">
+           carregando...
+            </div>
+        )
+    }
+
+    const buttonStyle = {
+        display:'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row',
+        backgroundColor: 'var(--Primary)',
+        color: 'var(--White)',
+        borderRadius: '100px',
+        padding: '7px',
+        width: '35px',
+        height: '35px',
+        border: 'none',
+    };
+    
+    const properties = {
+        prevArrow: <button style={{ ...buttonStyle }}><IoArrowBackOutline /></button>,
+        nextArrow: <button style={{ ...buttonStyle }}><IoArrowForwardOutline /></button>
+    }
+
+    const responsiveSettings = [
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 250,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+
+    const plainsFilter = data.filter((plains) => plains.status !== "Inativo" )
 
     return (
         <div className="Plains">
-
-            {data?.map((plain) => {
+            <Slide slidesToScroll={2} slidesToShow={2} indicators={true} {...properties} responsive={responsiveSettings}>
+            {plainsFilter?.map((plain) => {
                 return (
-                    plain?.status === "Inativo" ? "" :
                     <div className="plain" key={plain?.id}>
                     <h3>{plain?.name}</h3>
                     <div className="title2">
@@ -46,13 +99,15 @@ export function Plains() {
                     <a href={user !== null && user?.type === "Imobiliária" || user !== null && user?.type === "Corretor" ? `/plano/${plain?.id}` : "/cadastro-profissional"}>Contratar plano</a>
                 } */}
 
-                <a href={"https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre os planos e serviços que a Sua Chave pode me oferecer"}>Falar com time comercial</a>
+                {/* <a href={"https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre os planos e serviços que a Sua Chave pode me oferecer"}>Falar com time comercial</a> */}
+                <a href={`https://adm.suachave.com.br/cadastro/novocadastro`} target="_blank" rel="noreferrer">Teste por 7 dias grátis</a>
                 {/* <a href={`http://adm.suachave.com.br/cadastrar/${plain?.id}`} target="_blank" rel="noreferrer">Contratar</a> */}
 
                     <p>{plain?.note}</p>
                 </div>
                 )
             })}
+            </Slide>
 
         </div>
     )
