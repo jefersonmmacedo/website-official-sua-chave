@@ -32,6 +32,14 @@ export function Property() {
     }
     console.log(data[0]?.status, data[0]?.district, data[0]?.city, data[0]?.uf, data[0]?.type, data[0]?.subType, data[0]?.bedroom, data[0]?.suite, data[0]?.restroom, data[0]?.garage, data[0]?.pets, data[0]?.furnished, data[0]?.idProperty)
 
+
+    setTimeout(() => {
+        if(data?.length === 0) {
+            window.open("/home", "_self") 
+        }
+    }, "2000")
+
+
               const valueRent = parseInt(data[0]?.priceRent?.replace(/[^0-9]/gi, ""));
               const valueText = valueRent.toString()
               const valueTextFormat = valueText?.replace("00", "");
