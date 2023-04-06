@@ -79,7 +79,7 @@ const Nav = styled.nav`
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 9px 19px;
     background-color: rgba(255, 255, 255, 0.01);
     border: 1px solid var(--Primary);

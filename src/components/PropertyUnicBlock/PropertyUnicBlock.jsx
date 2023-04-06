@@ -29,7 +29,7 @@ export function PropertyUnicBlock({id, style}) {
     const titleProperty = `${property?.title}`
     const company = `${property?.nameCompany}`
     const nameSlug = slugify(property?.nameCompany);
-    const bedroom =  property?.bedroom === "" || property?.bedroom === "0"? "" : property?.bedroom === "1" ? `com ${property?.bedroom} quarto` : property?.bedroom !== "1" || property?.bedroom !== ""  || property?.bedroom !== "0"? `com ${property?.bedroom} quartos` : ""
+    const bedroom =  property?.bedroom === "" || property?.bedroom === "0"? "" : property?.bedroom === "1" ? `- ${property?.bedroom} quarto` : property?.bedroom !== "1" || property?.bedroom !== ""  || property?.bedroom !== "0"? `- ${property?.bedroom} quartos` : ""
     const StatusProperty = `${property?.subType} ${property?.status === "Venda" ? "à venda" : "para aluguel"} ${bedroom}`
     return (
         <div className={style === "Emphasis" ? "PropertyUnicEmphasis": "PropertyUnicBlock"}>
@@ -86,6 +86,7 @@ export function PropertyUnicBlock({id, style}) {
                     <h4>{StatusProperty !== undefined ? StatusProperty.slice(0,28) : StatusProperty}</h4>
                         </a>
                     {/* <h5>{StatusProperty}</h5> */}
+                    <h6><IoHomeOutline/>{titleProperty?.slice(0,39)}</h6>
                     <h6><IoLocationOutline />{property?.district} - {property?.city} - {property?.uf}</h6>
                     </div>
                     <div className="iconsBox">

@@ -15,7 +15,7 @@
     color: var(--Paragraph);
     font-weight: 500;
     border: 1px solid var(--Gray);
-    border-radius: 6px;
+    border-radius: 25px;
     font-size: 12px;
 }
 
@@ -75,7 +75,7 @@
     color: var(--Paragraph);
     font-weight: 500;
     border: 1px solid var(--Gray);
-    border-radius: 6px;
+    border-radius: 30px;
     font-size: 12px;
     margin-top: -50px;
 }
@@ -129,7 +129,7 @@
     border: 1px solid var(--Gray);
     background-color: var(--White);
     color: var(--Paragraph);
-    border-radius: 6px;
+    border-radius: 30px;
     padding: 15px;
     width: 100%;
     margin: 0px 0 20px 0;
@@ -138,7 +138,7 @@
     border: 1px solid var(--Primary);
     background-color: var(--White);
     color: var(--Primary);
-    border-radius: 6px;
+    border-radius: 30px;
     padding: 15px;
     width: 100%;
     margin: 10px 0 10px 0;
@@ -147,7 +147,7 @@
     border: 1px solid var(--Gray);
     background-color: var(--White);
     color: var(--Paragraph);
-    border-radius: 6px;
+    border-radius: 30px;
     padding: 10px 20px;
     width: 100%;
 }
@@ -155,7 +155,7 @@
     border: 1px solid var(--Primary);
     background-color: var(--White);
     color: var(--Primary);
-    border-radius: 6px;
+    border-radius: 30px;
     padding: 10px 20px;
     width: 100%;
 }
@@ -178,7 +178,7 @@
     align-items: flex-start;
     justify-content: center;
     border: 1px solid var(--Primary);
-    border-radius: 6px;
+    border-radius: 30px;
     color: var(--Primary);
     font-size: 14px;
     width: 50%;
@@ -192,7 +192,7 @@
     align-items: flex-start;
     justify-content: center;
     border: 1px solid var(--Gray2);
-    border-radius: 6px;
+    border-radius: 30px;
     color: var(--Paragraph);
     font-size: 14px;
     width: 50%;
@@ -216,7 +216,7 @@
     align-items: flex-start;
     justify-content: center;
     border: 1px solid var(--Primary);
-    border-radius: 6px;
+    border-radius: 30px;
     color: var(--White);
     font-size: 14px;
     width: 50%;
@@ -230,7 +230,7 @@
     align-items: flex-start;
     justify-content: center;
     border: 1px solid var(--Gray2);
-    border-radius: 6px;
+    border-radius: 30px;
     color: var(--Paragraph);
     font-size: 14px;
     width: 50%;
@@ -269,7 +269,7 @@
     font-weight: 500;
     border: none;
     margin: 5px;
-    border-radius: 6px;
+    border-radius: 30px;
 }
 
 .FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation button {
@@ -283,7 +283,7 @@
     font-weight: 500;
     border: none;
     margin: 5px 10px;
-    border-radius: 6px;
+    border-radius: 30px;
 }
 
 @media(max-width:670px) {
