@@ -26,7 +26,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     padding: 30px;
-    border-radius: 6px;
+    border-radius: 20px;
     color: var(--Paragraph);
     width: 100%;
 }
