@@ -58,21 +58,7 @@
     margin: 40px 0 0 0;
 }
 
-.Announce .MainAnnounce .bloco .textAnnounce .buttonsText button {
-    background-color: var(--Primary);
-    width: 300px;
-    padding: 15px 20px;
-    font-size: 16px;
-    border: 1px solid var(--Primary);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
-    color: var(--White);
-    margin: 5px;
-    font-weight: 700;
-}
+
 .Announce .MainAnnounce .buttonsPlainsAnnounce {
     display: flex;
     align-items: center;
@@ -114,6 +100,23 @@
     justify-content: flex-start;
     flex-direction: row;
     color: var(--Primary);
+    margin: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 16px;
+}
+.Announce .MainAnnounce .bloco .textAnnounce .buttonsText button {
+    background-color: var(--Primary);
+    width: 300px;
+    padding: 13px 20px;
+    font-size: 16px;
+    border: 1px solid var(--Primary);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    color: var(--White);
     margin: 5px;
     font-weight: 700;
     text-decoration: none;
@@ -380,6 +383,18 @@
     color: var(--White);
 }
 
+.Announce .MainAnnounce .imageModel{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.Announce .MainAnnounce .imageModel img {
+    width: 70%;
+    margin: 10px;
+}
 .Announce .MainAnnounce .textPricing{
     padding: 20px 20px 0 20px;
 }
@@ -503,16 +518,17 @@
     align-itens: center;
     justify-content: center;
     width: 100%;
-    padding: 60px 20px;
-    background-color: var(--BorderHover);
 }
 .Announce .MainAnnounce .beneficies .imageDashboard{
     display: flex;
     flex-direction: row;
     align-itens: center;
-    justify-content: flex-end;
+    justify-content: center;
     width: 50%;
     padding: 1px;
+    background-color: var(--BorderHover);
+    padding: 40px;
+    border-radius: 0px 0px 25px 0px;
 }
 
 .Announce .MainAnnounce .beneficies .imageDashboard img {
@@ -524,7 +540,8 @@
     align-itens: flex-start;
     justify-content: flex-start;
     width: 50%;
-    padding: 10px 40px;
+    padding: 40px;
+    background-color: var(--White);
 }
 
 
@@ -533,17 +550,18 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
 }
 .Announce .MainAnnounce .beneficies .textDashboardAnnounce .itensToHireAnnounce a {
+    width: 45%;
     display: flex;
     flex-direction: row;
     align-itens: center;
     justify-content: center;
     border: 1px solid var(--Primary);
-    background-color: var(--Primary);
+    background-color: var(--BorderHover);
     color: var(--White);
     font-weight: 700;
     margin: 10px 0;
@@ -553,12 +571,16 @@
     font-size: 14px;
 }
 .Announce .MainAnnounce .beneficies .textDashboardAnnounce .itensToHireAnnounce .ToHireUnicAnnounce {
+    width: 250px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
-    padding: 5px;
+    padding: 10px;
     color: var(--Primary);
+    background-color: var(--BorderHover);
+    margin: 5px;
+    border-radius: 15px;
 }
 
 .Announce .MainAnnounce .beneficies .textDashboardAnnounce .itensToHireAnnounce .ToHireUnicAnnounce h4 {
@@ -571,21 +593,44 @@
     text-align: left;
     /* padding: 10px 20px;
     border-radius: 30px; */
+    font-size: 14px;
 }
 
 .Announce .MainAnnounce .beneficies .textDashboardAnnounce .itensToHireAnnounce .ToHireUnicAnnounce svg {
     margin-right: 5px;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 .Announce .MainAnnounce .beneficies .textDashboardAnnounce h2 {
     font-weight: 800;
     color: var(--Black2);
-    margin:10px 0;
+    margin:10px;
     text-align: left;
 }
 .Announce .MainAnnounce .beneficies .textDashboardAnnounce h2 span {
     color: var(--Primary);
+}
+
+
+.Announce .MainAnnounce .beneficies .textDashboardAnnounce .linkText {
+    background-color: var(--Primary);
+    width: 300px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid var(--Primary);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: var(--White);
+    font-weight: 700;
+    text-decoration:none;
+    margin-top: 40px;
+}
+
+.Announce .MainAnnounce .beneficies .textDashboardAnnounce .linkText svg {
+    margin-right:5px;
 }
 
 
@@ -643,6 +688,7 @@
             width: 100%;
             padding: 20px 1px;
             justify-content: center;
+            width: 100%;
         }
         
 
@@ -657,12 +703,24 @@
         .Announce .MainAnnounce .beneficies .textDashboardAnnounce h2{
             text-align: center;
         }
+
+        .Announce .MainAnnounce .beneficies .textDashboardAnnounce .itensToHireAnnounce {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .Announce .MainAnnounce .beneficies .textDashboardAnnounce .linkText {
+            margin: 10px auto;
+        }
+
         .Announce .MainAnnounce .beneficies .textDashboardAnnounce .itensToHireAnnounce a  {
             margin: 10px auto;
         }
 
         .Announce .MainAnnounce .beneficies .textDashboardAnnounce .itensToHireAnnounce .ToHireUnicAnnounce {
-            width: 100%;
             display: flex;
             align-itens: center;
             justify-content: center;
@@ -708,6 +766,12 @@
 
 
         @media (max-width: 842px) {
+
+            .Announce .MainAnnounce .imageModel img {
+                width: 95%;
+            }
+
+
             .Announce .MainAnnounce .WhyChoose .WhyChooseImage {
                 display: none;
             }
@@ -817,7 +881,8 @@
         }
 
         .Announce .MainAnnounce .beneficies .imageDashboard img {
-            height: 200px;
+            width: 95%;
+            height: 100%;
         }
 
         .Announce .MainAnnounce .movie .moviePlay .box1 {

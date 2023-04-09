@@ -4,13 +4,15 @@ import { Footer } from "../../components/Footer/Footer";
 import {IoLogoWhatsapp, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline,
         IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoPlayOutline, IoCallOutline,
         IoCloseOutline, IoCalendarOutline, IoHomeOutline, IoOptionsOutline, IoChatboxEllipsesOutline,
-        IoCheckboxOutline, IoFunnelOutline} from "react-icons/io5";
+        IoCheckboxOutline, IoFunnelOutline, IoDesktopOutline} from "react-icons/io5";
 import SmartPhone from "../../assets/images/iphone.png";
 import Modal from 'react-modal';
 import { useState } from "react";
 import imgFamily from "../../assets/images/background14.jpg"
+import model from "../../assets/images/model.png"
 import Mackbook from "../../assets/images/Mockup.png"
 import { FaPlay } from "react-icons/fa";
+import { MdOutlineImportantDevices } from "react-icons/md";
 
 export function Announce() {
     const [isOpenModal, setIsOpenModa] = useState(false);
@@ -52,7 +54,7 @@ export function Announce() {
                     <div className="buttonsText">
                         <button onClick={HandleOpen}><IoLogoWhatsapp /> Falar com time comercial</button>
                         {/* <a href="/cadastro-profissional" className="btn"><IoCheckboxOutline /> Criar minha conta agora</a> */}
-                        <a href="https://adm.suachave.com.br/cadastro/novocadastro" className="btn" target="_Blank"><IoCheckboxOutline /> Crie minha conta agora!</a>
+                        <a href="https://adm.suachave.com.br/cadastro/novocadastro" className="btn" target="_Blank"><IoCheckboxOutline /> Criar minha conta agora!</a>
                     </div>
                 </div>
         </div>
@@ -70,7 +72,7 @@ export function Announce() {
             </div>
         </div>
         <div className="textPricing">
-        <h2>Porque escolher o <span>Sua Chave</span>?</h2>
+        <h2>Por que escolher a <span>Sua Chave</span>?</h2>
         <h4>Veja os motivos que faz nossos clientes nos escolherem e o que podemos agregar ao seu negócio.</h4>
     </div>
         <div className="WhyChoose">
@@ -109,11 +111,11 @@ export function Announce() {
             <div className="IconsWhyChoose">
                 <div className="IconsWhyChooseUnic">
                     <div className="iconSvg">
-                        <IoPhonePortraitOutline />
+                        <IoDesktopOutline />
                     </div>
                     <div className="IconsWhyText">
-                        <h2>Aplicativo administrativo</h2>
-                        <h4>Controle seu negócio de qualquer lugar a qualquer hora [Em breve...]</h4>
+                        <h2>Sistema de Gestão</h2>
+                        <h4>Controle tudo sobre seu negócio: imóveis, contratos, clientes e etc...</h4>
                     </div>
                 </div>
                 <div className="IconsWhyChooseUnic">
@@ -130,8 +132,8 @@ export function Announce() {
                         <IoPhonePortraitOutline />
                     </div>
                     <div className="IconsWhyText">
-                    <h2>Aplicativo para o seu negócio</h2>
-                    <h4>Tenha o aplicativo do seu negócio totalmente integrado ao nosso site [Em breve...]</h4>
+                    <h2>Aplicativo administrativo</h2>
+                    <h4>Controle seu negócio de qualquer lugar a qualquer hora [Em breve...]</h4>
                     </div>
                 </div>
             </div>
@@ -198,7 +200,18 @@ export function Announce() {
                     {/* <a href="/cadastro-profissional">Quero digitalizar minha imobiliária</a> */}
                     {/* <a href="/cadastro-profissional">Quero digitalizar minha imobiliária</a> */}
                 </div>
+                <a href="https://adm.suachave.com.br/cadastro/novocadastro" className="linkText" target="_Blank"><IoCheckboxOutline /> Criar minha conta agora!</a>
         </div>
+    </div>
+    <div className="textPricing">
+        <h2>Tenha um <span>site</span> para o <span>seu negócio</span></h2>
+        <h4>Site totalmente integrado ao nosso sistema e portal, controle todo o seu site pelo nosso sistema de gestão.</h4>
+    </div>
+    <div className="imageModel">
+        <img src={model} alt="Modelo de sites" />
+    </div>
+    <div className="buttonsPlainsAnnounce">
+        <a href="#"> Clique aqui e saiba mais </a>
     </div>
     <div className="textPricing">
         <h2>Escolha o <span>plano ideal</span> para o seu negócio</h2>
