@@ -8,7 +8,7 @@ import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
 import api from "../../services/api";
 import { AuthContext } from "../../contexts/Auth";
 
-export function NewScheduling({idProperty, idCompany, title, image}) {
+export function NewScheduling({idProperty, idCompany, title, image, type, subType}) {
     const Local = localStorage.getItem("suachave");
     const user = JSON.parse(Local);
 
@@ -38,6 +38,31 @@ export function NewScheduling({idProperty, idCompany, title, image}) {
     const [nameNew, setNameNew] = useState("");
     const [whatsappNew, setWhatsappNew] = useState("");
 
+    const [latitude, setLatitude] = useState("")
+    const [longitude, setLongitude] = useState("")
+
+    useEffect(() => {
+        function getLocation() {
+            return window.navigator.geolocation.getCurrentPosition(success, error);
+             }
+  
+        function success(position) {
+            const lat1  = position.coords.latitude;
+            const long1 = position.coords.longitude;
+        
+            setLatitude(lat1);
+            setLongitude(long1);
+            
+          }
+
+      function error() {
+        console.log('Unable to retrieve your location');
+      }
+
+      getLocation()
+  
+    },[])
+
 
     useEffect(() => {
       async function loadProperty() {
@@ -63,7 +88,12 @@ export function NewScheduling({idProperty, idCompany, title, image}) {
       const data = {
         idProperty,
         idCompany,
-        idClient: user === null ? "00000000" : user.id
+        idClient: user === null ? "00000000" : user.id,
+        latitude,
+        longitude,
+        origin: "Portal",
+        type,
+        subType,
     }
 
     await api.post("/viewproperty", data).then((res) => {

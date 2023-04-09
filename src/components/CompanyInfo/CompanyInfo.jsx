@@ -8,6 +8,7 @@ import Modal from 'react-modal';
 import { useFetch } from "../../hooks/useFetch";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
+import { useEffect } from "react";
 
 export function CompanyInfo({idProperty, idCompany}) {
     const Local = localStorage.getItem("suachave");
@@ -24,6 +25,31 @@ export function CompanyInfo({idProperty, idCompany}) {
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
 
+    const [latitude, setLatitude] = useState("")
+    const [longitude, setLongitude] = useState("")
+
+    useEffect(() => {
+        function getLocation() {
+            return window.navigator.geolocation.getCurrentPosition(success, error);
+             }
+  
+        function success(position) {
+            const lat1  = position.coords.latitude;
+            const long1 = position.coords.longitude;
+        
+            setLatitude(lat1);
+            setLongitude(long1);
+            
+          }
+
+      function error() {
+        console.log('Unable to retrieve your location');
+      }
+
+      getLocation()
+  
+    },[])
+
     const {data} = useFetch(`/company/unic/${idCompany}`)
 
     if(!data) {
@@ -35,13 +61,15 @@ export function CompanyInfo({idProperty, idCompany}) {
     function handleNewContactButton(type) {
         newContact({
         idProperty: idProperty, idCompany: idCompany, idClient: user.id, name: user.name,
-        email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: type, link: `http://www.suachave.com.br/imovel/${idProperty}`})
+        email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: type, origin: "Portal", latitude, longitude,
+        link: `http://www.suachave.com.br/imovel/${idProperty}`})
     }
 
     function handleNewContactModal(type) {
         newContact({
         idProperty: idProperty, idCompany: idCompany, idClient: "User Sem cadastro", name: name,
-        email: email, phone: phone, whatsapp: phone, type: type, link: `http://www.suachave.com.br/imovel/${idProperty}`})
+        email: email, phone: phone, whatsapp: phone, type: type, origin: "Portal", latitude, longitude,
+        link: `http://www.suachave.com.br/imovel/${idProperty}`})
 
         if(type === "WhatsApp") {
             setIsOpenModa(false)

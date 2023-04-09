@@ -54,7 +54,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
-    border-radius: 6px;
+    border-radius: 25px;
     text-decoration: none;
     background-color: var(--BorderHover);
     color: var(--Primary);
@@ -86,7 +86,7 @@
     justify-content: center;
     margin: 5px;
     padding: 5px;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 .ExploreIconsProperties .mainExplorer  .iconsExplore .IconUnicExplore:hover {
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);

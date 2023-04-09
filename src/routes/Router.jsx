@@ -4,16 +4,13 @@ import { Home } from '../pages/Home/Home';
 import { Notifications } from '../pages/Notifications/Notifications';
 import { Pricing } from '../pages/Pricing/Pricing';
 import { SignIn } from '../pages/SignIn/SignIn';
-import { ChooseYourAccount } from '../pages/ChooseYourAccount/ChooseYourAccount';
 import { SignUpClient } from '../pages/SignUpClient/SignUpClient';
-import { SignUpProfessional } from '../pages/SignUpProfessional/SignUpProfessional';
 import { PrivacyPolicy } from '../pages/PrivacyPolicy/PrivacyPolicy';
 import { TermsOfUse } from '../pages/TermsOfUse/TermsOfUse';
 import { Properties } from '../pages/Properties/Properties';
 import { Property } from '../pages/Property/Property';
 import { About } from '../pages/About/About';
 import { Companies } from '../pages/Companies/Companies';
-import { Brokers } from '../pages/Brokers/Brokers';
 import { Company } from '../pages/Company/Company';
 import { Schedules } from '../pages/Schedules/Schedules';
 import { MessagesProperty } from '../pages/MessagesProperty/MessagesProperty';
@@ -63,12 +60,10 @@ function PrivateRoute({children} ) {
             <Route path="/sobre" element={<About />}/>
             <Route path="/" element={<Home />}/>
             <Route path="/anunciar" element={<Announce />}/>
-            {/* <Route path="/home" element={<Home />}/> */}
             <Route path="/entrar" element={<SignIn />}/>
             <Route path="/recuperar" element={<Recuperation />}/>
             <Route path="/recuperar-codigo/:email" element={<RecuperationCode />}/>
             <Route path="/recuperar-nova-senha/:email" element={<RecuperationPassword />}/>
-            {/* <Route path="/cadastrar" element={<ChooseYourAccount />}/> */}
             <Route path="/cadastrar" element={<SignUpClient />}/>
             <Route path="/imoveis/:status" element={<Properties />}/>
             <Route path="/imoveis" element={<Properties />}/>
@@ -77,7 +72,6 @@ function PrivateRoute({children} ) {
             <Route path="/imovel/:id" element={<Property />}/>
             <Route path="/imobiliarias" element={<Companies />}/>
             <Route path="/imobiliaria/:nameSlug" element={<Company />}/>
-            <Route path="/corretores" element={<Brokers />}/>
             <Route path="/corretor/:id" element={<Company />}/>
             <Route path="/financiamento" element={<Simulator />}/>
             <Route path="/planos" element={<Pricing />}/>

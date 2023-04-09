@@ -351,9 +351,9 @@ async function newVisit(idAccount, username, idFriend) {
         })
     }
     async function newContact({
-        idProperty, idCompany, idClient, name, email, phone, whatsapp, type, link
+        idProperty, idCompany, idClient, name, email, phone, whatsapp, origin, type, latitude, longitude, link
     }) {
-        const data = {idProperty, idCompany, idClient, name, email, phone, whatsapp, type}
+        const data = {idProperty, idCompany, idClient, name, email, phone, whatsapp, origin, type, latitude, longitude}
 
         await api.post("/contact/", data).then((res) => {
 

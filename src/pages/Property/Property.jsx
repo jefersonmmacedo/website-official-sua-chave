@@ -23,7 +23,7 @@ export function Property() {
     const user = JSON.parse(Local);
 
     const {id} = useParams()
-    const {data} = useFetch(`/property/${id}`)
+    const {data} = useFetch(`/property/${id}`);
 
     if(!data) {
         return (
@@ -132,7 +132,8 @@ export function Property() {
              }
 
                     <NewMessageProperty idProperty={data[0]?.id} idCompany={data[0]?.idCompany} imageProperty={data[0]?.featuredImage}/>
-                    <NewScheduling idProperty={data[0]?.id} idCompany={data[0]?.idCompany} title={data[0]?.title} image={data[0]?.featuredImage}/>
+                    <NewScheduling idProperty={data[0]?.id} idCompany={data[0]?.idCompany} title={data[0]?.title} image={data[0]?.featuredImage} type={data[0]?.type} subType={data[0]?.subType}/>
+                    {/* ViewProperty está no agendamento */}
                     <NewShare idProperty={data[0]?.id} title={`${data[0]?.title} (${data[0]?.city} / ${data[0]?.uf})`}/>
                     <NewFavorite idProperty={data[0]?.id} idCompany={data[0]?.idCompany} page={"yes"}/>
 
