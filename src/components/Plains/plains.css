@@ -10,7 +10,7 @@
     flex-direction: column;
     padding: 20px;
     margin: 10px auto;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: var(--White);
     color: var(--Description);
     width: 350px;
@@ -150,11 +150,11 @@
     justify-content: center;
     background-color: var(--Button);
     border: none;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 10px 20px;
     color: var(--White);
     font-weight: 700;
-    margin: 10px 0 5px 0;
+    margin: 10px 0 2px 0;
 }
 .Plains .plain button {
     text-decoration: none;

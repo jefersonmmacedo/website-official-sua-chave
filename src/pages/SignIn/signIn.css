@@ -53,11 +53,11 @@
     justify-content: center;
     background-color: var(--Border);
     border: none;
-    border-radius: 0 25px 25px 0;
+    border-radius: 25px;
     padding: 10px 20px;
     color: var(--Paragraph);
     font-weight: 700;
-    margin: 20px 0;
+    margin: 20px 5px;
 }
 .SignIn .login .form .data .buttons .button2 {
     width: 80%;
@@ -67,11 +67,11 @@
     justify-content: center;
     background-color: var(--Primary);
     border: none;
-    border-radius: 0 25px 25px 0;
+    border-radius: 25px;
     padding: 10px 20px;
     color: var(--White);
     font-weight: 700;
-    margin: 20px 0;
+    margin: 20px 5px;
 }
 .SignIn .login .form .data .buttons .btn {
     width: 80%;
@@ -81,11 +81,11 @@
     justify-content: center;
     background-color: var(--Button);
     border: none;
-    border-radius: 25px 0 0 25px;
+    border-radius: 25px;
     padding: 10px 20px;
     color: var(--White);
     font-weight: 700;
-    margin: 20px 0;
+    margin: 20px 5px;
 }
 .SignIn .login .form .data .buttons .btn2 {
     width: 80%;
@@ -95,11 +95,11 @@
     justify-content: center;
     background-color: var(--Border);
     border: none;
-    border-radius: 25px 0 0 25px;
+    border-radius: 25px;
     padding: 10px 20px;
     color: var(--Paragraph);
     font-weight: 700;
-    margin: 20px 0;
+    margin: 20px 5px;
 }
 
 .SignIn .login .form .data input {
@@ -197,7 +197,7 @@
     justify-content: center;
     background-color: var(--Secondary);
     border: none;
-    border-radius: 6px;
+    border-radius: 25px;
     padding: 10px 20px;
     color: var(--White);
     font-weight: 700;

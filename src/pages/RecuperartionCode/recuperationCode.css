@@ -64,12 +64,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--Gray);
+    color: var(--White);
     font-weight: bold;
     margin: 10px 0;
-    background-color: var(--White);
-    border: 1px solid var(--Border);
-    border-radius: 6px;
+    background-color: var(--PrimaryRGBA);
+    border-radius: 15px;
     padding: 10px;
 }
 
@@ -107,7 +106,7 @@
     justify-content: center;
     background-color: var(--Button);
     border: none;
-    border-radius: 6px;
+    border-radius: 25px;
     padding: 10px 20px;
     color: var(--White);
     font-weight: 700;
@@ -121,7 +120,7 @@
     justify-content: center;
     background-color: var(--Black2);
     border: none;
-    border-radius: 6px;
+    border-radius: 25px;
     padding: 10px 20px;
     color: var(--Border);
     font-weight: 700;

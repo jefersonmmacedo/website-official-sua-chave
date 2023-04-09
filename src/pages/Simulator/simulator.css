@@ -266,10 +266,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 20px;
+    margin: 15px;
     padding: 20px;
     background-color: var(--White);
-    border-radius: 6px;
+    border-radius: 20px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 

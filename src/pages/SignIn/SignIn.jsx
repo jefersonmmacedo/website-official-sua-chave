@@ -59,7 +59,7 @@ export function SignIn() {
                     </>
                     :
                     <>
-                    <button className="buttonCompany" onClick={handleRedirectToPage}>Entrar como imobiliária / Corretor</button>
+                    <button className="buttonCompany" onClick={handleRedirectToPage}>Entrar como Imobiliária/Corretor</button>
                     {/* <a href="http://adm.suachave.com.br/entrar" target="_blank">Cadastre-se aqui!</a> */}
                     </>
                 }
