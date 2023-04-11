@@ -39,14 +39,14 @@ export function Plains() {
 
     const responsiveSettings = [
         {
-            breakpoint: 900,
+            breakpoint: 1050,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 720,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2
