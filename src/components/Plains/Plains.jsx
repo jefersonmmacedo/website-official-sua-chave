@@ -41,8 +41,8 @@ export function Plains() {
         {
             breakpoint: 900,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 3,
+                slidesToScroll: 3
             }
         },
         {
@@ -70,14 +70,25 @@ export function Plains() {
                 return (
                     <div className="plain" key={plain?.id}>
                     <h3>{plain?.name}</h3>
-                    <div className="title2">
-                    <h1>R$ {plain?.value}</h1>
-                    <h6>/mês</h6>
-                    </div>
-                    <div className="title">
-                    <h1>R$ {plain?.valueNew}</h1>
-                    <h4>/mês</h4>
-                    </div>
+                    {plain?.valueNew === "" ?
+                    <>
+                        <div className="title2">
+                        <h1>R$ {plain?.value}</h1>
+                        <h6>/mês</h6>
+                        </div>
+                        <div className="title">
+                        <h1>R$ {plain?.valueNew}</h1>
+                        <h4>/mês</h4>
+                        </div>
+                    </>
+                    :
+                    <>
+                        <div className="title">
+                        <h1>R$ {plain?.value}</h1>
+                        <h4>/mês</h4>
+                        </div>
+                    </>
+                    }
                     {/* <div className="title">
                     <h3>Entre em contato</h3>
                     </div> */}

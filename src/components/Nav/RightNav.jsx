@@ -74,7 +74,7 @@ const Ul = styled.ul`
   }
 
 
-  @media (max-width: 900px) {
+  @media (max-width: 930px) {
     flex-flow: column nowrap;
     background: rgba(237, 50, 55, 0.95);
     backdrop-filter: blur(4px);
@@ -200,6 +200,11 @@ const RightNav = ({ open }) => {
           <li className='nav-item'>
             <a href='/planos' >
             Planos
+            </a>
+          </li>
+          <li className='nav-item'>
+            <a href='#' >
+            Blog
             </a>
           </li>
           {user === "" || user === null || user === undefined ? 

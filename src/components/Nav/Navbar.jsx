@@ -17,7 +17,7 @@ const Nav = styled.nav`
   width: 100%;
   height: 65px;
   border-bottom: 1px solid #f1f1f1;
-  padding: 0 15px;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -131,7 +131,7 @@ const Nav = styled.nav`
     font-size:18px;
     margin:5px 5px;
 }
-@media (max-width: 900px) {
+@media (max-width: 930px) {
   padding: 0 10px;
   .account {
     margin-right:40px;
