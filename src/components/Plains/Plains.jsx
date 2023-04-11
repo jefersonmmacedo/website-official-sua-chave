@@ -68,7 +68,7 @@ export function Plains() {
             <Slide slidesToScroll={2} slidesToShow={2} indicators={true} {...properties} responsive={responsiveSettings}>
             {plainsFilter?.map((plain) => {
                 return (
-                    <div className={plain?.name === "Lite" ? "plain2" : "plain"} key={plain?.id}>
+                    <div className={plain?.name === "Tour" ? "plain2" : "plain"} key={plain?.id}>
   
                     <h3>{plain?.name}</h3>
                     {plain?.valueNew === "" ?
@@ -116,7 +116,7 @@ export function Plains() {
                 {/* <a href={`http://adm.suachave.com.br/cadastrar/${plain?.id}`} target="_blank" rel="noreferrer">Contratar</a> */}
 
                     <p>{plain?.note}</p>
-                    {plain?.name === "Lite" ? 
+                    {plain?.name === "Tour" ? 
                         <div className="featured">
                             <h5>Mais Procurado</h5>
                         </div>
