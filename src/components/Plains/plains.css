@@ -13,7 +13,7 @@
     border-radius: 20px;
     background-color: var(--White);
     color: var(--Description);
-    width: 350px;
+    width: 300px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -183,17 +183,17 @@
     margin: 10px auto;
     border-radius: 20px;
     background-color: var(--Primary);
-    width: 350px;
+    width: 300px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 .Plains .plain2 .featured {
-    width: 330px;
+    width: 290px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     flex-direction: row;
     position: absolute;
-
+    margin-top: -10px;
 }
 
 .Plains .plain2 .featured h5 {
