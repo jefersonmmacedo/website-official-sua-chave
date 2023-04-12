@@ -14,7 +14,7 @@ export function PropertyCarroussel({status}) {
     const perPage = 12;
 
     const {data} = useFetch(
-        `/property/lists/${availability}/${status}?page=${currentPage}&limit=${perPage}`
+        `/property/lists/${availability}/${status}?emphasis=false&page=${currentPage}&limit=${perPage}`
        );
 
     if(!data) {
