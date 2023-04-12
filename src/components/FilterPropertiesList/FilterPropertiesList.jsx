@@ -31,7 +31,7 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
    // console.log({districtNew, cityNew, ufNew})
 
     const availability = "Disponível";
-    const {data} = useFetch(`/property/all/${availability}`);
+    const {data} = useFetch(`/property/AllProperties/${availability}`);
 
     var districtList = [];
     var cityList = [];

@@ -148,7 +148,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: var(--Button);
+    background-color: var(--Primary);
     border: none;
     border-radius: 25px;
     padding: 10px 20px;
