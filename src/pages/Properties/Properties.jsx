@@ -45,36 +45,33 @@ export function Properties(){
     console.log(uf)
     console.log(district)
 
-    const EmphasisFalse = "false"
-    const EmphasisTrue = "true"
-
     useEffect(() => {
         async function loadproperties() {
             await api.get(
                 status !== undefined && subType !== "" && district !== "" && city !== "" && uf !== "" ?
-                `/property/listsadressfull/${availability}/${status}?type=${type}&subType=${subType}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=${EmphasisTrue}&page=${currentPage}&limit=${perPageEmphasis}`
+                `/property/listsadressfull/${availability}/${status}?type=${type}&subType=${subType}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
                 : type !== "" && status !== undefined  && district !== "" && city !== "" && uf !== "" ?
-              `/property/listsadresscityuf/${availability}/${status}?type=${type}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=${EmphasisTrue}&page=${currentPage}&limit=${perPageEmphasis}`
+              `/property/listsadresscityuf/${availability}/${status}?type=${type}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
                 : status !== undefined && subType !== "" && city !== "" && uf !== "" ?
-                `property/listsadress/${availability}/${status}?type=${type}&subType=${subType}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=${EmphasisTrue}&page=${currentPage}&limit=${perPageEmphasis}`
+                `property/listsadress/${availability}/${status}?type=${type}&subType=${subType}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
                 :type !== "" && status !== undefined  && city !== "" && uf !== "" ?
-                `/property/listsadresstype/${availability}/${status}?type=${type}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=${EmphasisTrue}&page=${currentPage}&limit=${perPageEmphasis}`
+                `/property/listsadresstype/${availability}/${status}?type=${type}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
                 : status !== undefined &&  district !== "" && city !== "" && uf !== "" ?
-                `/property/listsadressstatuscomplete/${availability}/${status}?district=${district}&city=${city}&uf=${uf}&emphasis=${EmphasisTrue}&page=${currentPage}&limit=${perPageEmphasis}`
+                `/property/listsadressstatuscomplete/${availability}/${status}?district=${district}&city=${city}&uf=${uf}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
                 : status !== undefined  && city !== "" && uf !== "" ?
-                `/property/listsadressstatus/${availability}/${status}?city=${city}&uf=${uf}&emphasis=${EmphasisTrue}&page=${currentPage}&limit=${perPageEmphasis}`
+                `/property/listsadressstatus/${availability}/${status}?city=${city}&uf=${uf}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
                 : status !== undefined && subType !== "" ?
-                `/property/listtypesubstatus/${availability}/${status}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=${EmphasisTrue}&page=${currentPage}&limit=${perPageEmphasis}`
+                `/property/listtypesubstatus/${availability}/${status}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
                 : subType !== "" ?
-                `/property/listtypesubtype/${availability}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=${EmphasisTrue}&page=${currentPage}&limit=${perPageEmphasis}`
+                `/property/listtypesubtype/${availability}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
                 : status !== undefined && type !== "" ?
-                `/property/listtypestatus/${availability}/${status}?type=${type}&emphasis=${EmphasisTrue}&page=${currentPage}&limit=${perPageEmphasis}`
+                `/property/listtypestatus/${availability}/${status}?type=${type}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
                 : type !== "" ?
-                `property/listtype/${availability}?type=${type}&emphasis=${EmphasisTrue}&page=${currentPage}&limit=${perPageEmphasis}`
+                `property/listtype/${availability}?type=${type}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
                 : status !== undefined ?
-                `/property/lists/${availability}/${status}?emphasis=${EmphasisTrue}&page=${currentPage}&limit=${perPageEmphasis}`
+                `/property/lists/${availability}/${status}?emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
                 : status === undefined ?
-                `/property/all/${availability}?emphasis=${EmphasisTrue}&page=${currentPage}&limit=${perPageEmphasis}`
+                `/property/all/${availability}?emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
                 :"").then((res) => {
                 setEnphasisProperties(res.data)
             }).catch((error) => {
@@ -87,29 +84,29 @@ export function Properties(){
 
     const {data} = useFetch(
         status !== undefined && subType !== "" && district !== "" && city !== "" && uf !== "" ?
-        `/property/listsadressfull/${availability}/${status}?type=${type}&subType=${subType}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=${EmphasisFalse}&page=${currentPage}&limit=${perPage}`
+        `/property/listsadressfull/${availability}/${status}?type=${type}&subType=${subType}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
         : type !== "" && status !== undefined  && district !== "" && city !== "" && uf !== "" ?
-      `/property/listsadresscityuf/${availability}/${status}?type=${type}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=${EmphasisFalse}&page=${currentPage}&limit=${perPage}`
+      `/property/listsadresscityuf/${availability}/${status}?type=${type}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
         : status !== undefined && subType !== "" && city !== "" && uf !== "" ?
-        `property/listsadress/${availability}/${status}?type=${type}&subType=${subType}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=${EmphasisFalse}&page=${currentPage}&limit=${perPage}`
+        `property/listsadress/${availability}/${status}?type=${type}&subType=${subType}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
         :type !== "" && status !== undefined  && city !== "" && uf !== "" ?
-        `/property/listsadresstype/${availability}/${status}?type=${type}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=${EmphasisFalse}&page=${currentPage}&limit=${perPage}`
+        `/property/listsadresstype/${availability}/${status}?type=${type}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
         : status !== undefined &&  district !== "" && city !== "" && uf !== "" ?
-        `/property/listsadressstatuscomplete/${availability}/${status}?district=${district}&city=${city}&uf=${uf}&emphasis=${EmphasisFalse}&page=${currentPage}&limit=${perPage}`
+        `/property/listsadressstatuscomplete/${availability}/${status}?district=${district}&city=${city}&uf=${uf}&emphasis=false&page=${currentPage}&limit=${perPage}`
         : status !== undefined  && city !== "" && uf !== "" ?
-        `/property/listsadressstatus/${availability}/${status}?city=${city}&uf=${uf}&emphasis=${EmphasisFalse}&page=${currentPage}&limit=${perPage}`
+        `/property/listsadressstatus/${availability}/${status}?city=${city}&uf=${uf}&emphasis=false&page=${currentPage}&limit=${perPage}`
         : status !== undefined && subType !== "" ?
-        `/property/listtypesubstatus/${availability}/${status}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=${EmphasisFalse}&page=${currentPage}&limit=${perPage}`
+        `/property/listtypesubstatus/${availability}/${status}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
         : subType !== "" ?
-        `/property/listtypesubtype/${availability}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=${EmphasisFalse}&page=${currentPage}&limit=${perPage}`
+        `/property/listtypesubtype/${availability}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
         : status !== undefined && type !== "" ?
-        `/property/listtypestatus/${availability}/${status}?type=${type}&emphasis=${EmphasisFalse}&page=${currentPage}&limit=${perPage}`
+        `/property/listtypestatus/${availability}/${status}?type=${type}&emphasis=false&page=${currentPage}&limit=${perPage}`
         : type !== "" ?
-        `property/listtype/${availability}?type=${type}&emphasis=${EmphasisFalse}&page=${currentPage}&limit=${perPage}`
+        `property/listtype/${availability}?type=${type}&emphasis=false&page=${currentPage}&limit=${perPage}`
         : status !== undefined ?
-        `/property/lists/${availability}/${status}?emphasis=${EmphasisFalse}&page=${currentPage}&limit=${perPage}`
+        `/property/lists/${availability}/${status}?emphasis=false&page=${currentPage}&limit=${perPage}`
         : status === undefined ?
-        `/property/all/${availability}?emphasis=${EmphasisFalse}&page=${currentPage}&limit=${perPage}`
+        `/property/all/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}`
         :"");
 
    // const {data} = useFetch(`/property/all/${availability}?page=${currentPage}&limit=${perPage}`)

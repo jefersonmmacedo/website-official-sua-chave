@@ -34,7 +34,7 @@ export function SearchPropertyHomeTop() {
 
 
     const availability = "Disponível";
-    const {data} = useFetch(`/property/all/${availability}`);
+    const {data} = useFetch(`/property/all/${availability}?emphasis=false`);
 
     var districtList = [];
     var cityList = [];
