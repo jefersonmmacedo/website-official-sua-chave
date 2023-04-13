@@ -80,6 +80,13 @@ export function Plains() {
                     <h3>{plain?.name}</h3>
                     {plain?.valueNew === "" ?
                     <>
+                        <div className="title">
+                        <h1>R$ {plain?.value}</h1>
+                        <h4>/mês</h4>
+                        </div>
+                    </>
+                    :
+                    <>
                         <div className="title2">
                         <h1>R$ {plain?.value}</h1>
                         <h6>/mês</h6>
@@ -89,13 +96,7 @@ export function Plains() {
                         <h4>/mês</h4>
                         </div>
                     </>
-                    :
-                    <>
-                        <div className="title">
-                        <h1>R$ {plain?.value}</h1>
-                        <h4>/mês</h4>
-                        </div>
-                    </>
+
                     }
                     {/* <div className="title">
                     <h3>Entre em contato</h3>
