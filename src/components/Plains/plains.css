@@ -231,6 +231,29 @@
     margin-left: 5px;
 }
 
+.Plains .plain2 .title2 {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: row; 
+}
+
+.Plains .plain2 .title2 h1 {
+    font-weight: 700;
+    color: var(--Gray);
+    text-decoration: line-through;
+    font-size: 20px;
+}
+
+.Plains .plain2 .title2 h6 {
+    font-weight: 700;
+    margin-left: 2px;
+    color: var(--Gray);
+    margin-right: 5px;
+}
+
+
 .Plains .plain2 .text {
     width: 100%;
     display: flex;
