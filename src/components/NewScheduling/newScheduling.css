@@ -47,7 +47,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -63,19 +63,94 @@
     justify-content: center;
 }
 
-.content-modal-scheduling .itensModal-scheduling svg {
+.content-modal-scheduling .itensModal-scheduling .title svg {
     margin-right: 5px;
     margin-bottom: 5px;
     color: var(--Primary);
     font-size: 30px;
 }
 
+.content-modal-scheduling .itensModal-scheduling svg {
+    color: var(--Primary);
+    font-size: 18px;
+}
+
+.content-modal-scheduling .itensModal-scheduling .listDays {
+    width: 90%;
+    margin: 10px 0 10px 0;
+}
+.content-modal-scheduling .itensModal-scheduling .listDays .CardDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    border: 1px solid var(--Primary);
+    background-color: var(--BorderHover);
+    margin: 5px auto;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-modal-scheduling .itensModal-scheduling .listDays .CardDay h2 {
+    color: var(--Primary);
+    margin: 5px 0px;
+    font-weight: 800;
+    font-size: 40px;
+}
+.content-modal-scheduling .itensModal-scheduling .listDays .CardDay h4 {
+    color: var(--Gray);
+    margin: 0px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.content-modal-scheduling .itensModal-scheduling .listDays .CardDay h5 {
+    color: var(--Gray);
+    margin: 0px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.content-modal-scheduling .itensModal-scheduling .listDays .CardDaySelected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    border: 1px solid var(--Primary);
+    background-color: var(--Primary);
+    margin: 5px auto;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content-modal-scheduling .itensModal-scheduling .listDays .CardDaySelected h2 {
+    color: var(--White);
+    margin: 5px 0px;
+    font-weight: 800;
+    font-size: 40px;
+}
+.content-modal-scheduling .itensModal-scheduling .listDays .CardDaySelected h4 {
+    color: var(--BorderHover);
+    margin: 0px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.content-modal-scheduling .itensModal-scheduling .listDays .CardDaySelected h5 {
+    color: var(--BorderHover);
+    margin: 0px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
 .content-modal-scheduling .itensModal-scheduling .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 80%;
+    width: 90%;
     margin-top: 20px;
 }
 

@@ -452,13 +452,13 @@ export function Evaluation() {
             </div>
             <div className="dataInputs">
             <select value={pets} onChange={handlePets} >
-                                    <option value="">Escolha</option>
+                                    <option value="">Aceita pets?</option>
                                     <option value="Sim">Sim</option>
                                     <option value="Não">Não</option>
                                 </select>
             
                                 <select value={furnished} onChange={handleFurnished} >
-                                <option value="">Escolha</option>
+                                <option value="">Mobilhado?</option>
                                     <option value="Sim">Sim</option>
                                     <option value="Não">Não</option>
                                 </select>
@@ -504,10 +504,6 @@ export function Evaluation() {
                   <div className="CompaniesEvaluation">
                     <h4>Escolha uma imobiliária/corretor para avaliar e publicar seu imóvel</h4>  
 
-                     <div className="buttonsStepesPage">
-                      <button className={typeCompany === "Imobiliária" ? "btnSelect" : "btnSelect2"} onClick={() => handleSelectTypeCompany("Imobiliária")}>Imobiliárias</button>
-                      <button className={typeCompany === "Corretor" ? "btnSelect" : "btnSelect2"} onClick={() => handleSelectTypeCompany("Corretor")}>Corretores</button>
-                  </div> 
 
                   <div className="searchBrokers">
                 <input type="text" placeholder="Busque pelo nome" value={search} onChange={e => setSearch(e.target.value)} onClick={handleClearAddress}/>
@@ -644,7 +640,7 @@ export function Evaluation() {
                         <div className="iconUnicBox">
                                 <TbBone />
                             <div className="simbolBox">
-                            <p>{pets} Aceita petss</p>
+                            <p>Aceita pets</p>
                             </div>
                         </div>
                         }

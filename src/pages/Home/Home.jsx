@@ -9,9 +9,21 @@ import { ToHire } from "../../components/ToHire/ToHire";
 import { Finance } from "../../components/Finance/Finance";
 import { TopHeadHome } from "../../components/TopHeadHome/TopHeadHome";
 import { NewSearchClient } from "../../components/NewSearchClient/NewSearchClient";
+import { useState } from "react";
 
 
 export function Home() {
+
+    // setInterval(function () {
+    //     if (navigator.onLine) {
+    //         console.log("Online")
+    //       } else {
+    //         alert("OffLine")
+    //       }
+    // }, 1000);
+
+
+
     return (
         <div className="Home">
             <Navbar2 />

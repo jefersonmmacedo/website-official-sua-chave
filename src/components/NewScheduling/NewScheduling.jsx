@@ -4,9 +4,11 @@ import Modal from 'react-modal';
 import { useEffect, useState, useContext } from "react";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
 import api from "../../services/api";
 import { AuthContext } from "../../contexts/Auth";
+import {IoArrowBackOutline, IoArrowForwardOutline} from "react-icons/io5";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
 
 export function NewScheduling({idProperty, idCompany, title, image, type, subType}) {
     const Local = localStorage.getItem("suachave");
@@ -24,7 +26,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
     const [isOpenModalLogin2, setIsOpenModaLogin2] = useState(false);
 
 
-    const [value, onChange] = useState();
+    const [dateSelected, setDateSelected] = useState();
     const [shift, setShift] = useState();
     const [hour, setHour] = useState();
     const [ownACar, setOwnACar] = useState();
@@ -41,6 +43,51 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
     const [latitude, setLatitude] = useState("")
     const [longitude, setLongitude] = useState("")
 
+    const [days, setDays] = useState([]);
+
+    useEffect(() => {
+        function dateToString(d) {
+            return [d.getFullYear(), d.getMonth() + 1, d.getDate()].map(d => d > 9 ? d : '0' + d).join('-');
+          }
+          
+          var hoje = new Date();
+          var ano = hoje.getFullYear();
+          var mes = hoje.getMonth();
+          var dia = hoje.getDate();
+          for (var i = 0; i < 30; i++) {
+            var outroDia = new Date(ano, mes, dia + i);
+           console.log(dateToString(outroDia));
+
+            const data = [{
+              dataCompleta: outroDia,
+                diaSemana: new Date(outroDia).getDay() === 0 ? "Domingo"
+                : new Date(outroDia).getDay() === 1 ? "Segunda-Feira"
+                : new Date(outroDia).getDay() === 2 ? "Terça-Feira"
+                : new Date(outroDia).getDay() === 3 ? "Quarta-Feira"
+                : new Date(outroDia).getDay() === 4 ? "Quinta-Feira"
+                : new Date(outroDia).getDay() === 5 ? "Sexta-Feira"
+                : new Date(outroDia).getDay() === 6 ? "Sábado"
+                : "",
+                dia: new Date(outroDia).getDate(),
+                mes: new Date(outroDia).getMonth() + 1 === 1 ? "Janeiro"
+                : new Date(outroDia).getMonth() + 1 === 2 ? "Fevereiro"
+                : new Date(outroDia).getMonth() + 1 === 3 ? "Março"
+                : new Date(outroDia).getMonth() + 1 === 4 ? "Abril"
+                : new Date(outroDia).getMonth() + 1 === 5 ? "Maio"
+                : new Date(outroDia).getMonth() + 1 === 6 ? "Junho"
+                : new Date(outroDia).getMonth() + 1 === 7 ? "Julho"
+                : new Date(outroDia).getMonth() + 1 === 8 ? "Agosto"
+                : new Date(outroDia).getMonth() + 1 === 9 ? "Setembro"
+                : new Date(outroDia).getMonth() + 1 === 10 ? "Outubro"
+                : new Date(outroDia).getMonth() + 1 === 11 ? "Novembro"
+                : new Date(outroDia).getMonth() + 1 === 12 ? "Dezembro"
+                : "",
+                ano: new Date(outroDia).getFullYear(),
+            }]
+            setDays(oldDays => [...oldDays, ...data])
+          }
+    }, [])
+
     useEffect(() => {
         function getLocation() {
             return window.navigator.geolocation.getCurrentPosition(success, error);
@@ -49,6 +96,8 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
         function success(position) {
             const lat1  = position.coords.latitude;
             const long1 = position.coords.longitude;
+
+            console.log(lat1, long1);
         
             setLatitude(lat1);
             setLongitude(long1);
@@ -95,7 +144,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
         type,
         subType,
     }
-
+    console.log(data)
     await api.post("/viewproperty", data).then((res) => {
       return
     }).catch((err) => {
@@ -112,14 +161,17 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
         newScheduling({
             idClient: user.id, idProperty, idCompany, titleProperty: title, imageProperty: image, email: user.email, phone: user.phone,
             whatsapp: user.whatsapp, status, meet,
-            day: new Date(value).getDate(), month: new Date(value).getMonth()+1, year: new Date(value).getFullYear(),
+            day: new Date(dateSelected).getDate(), month: new Date(dateSelected).getMonth()+1, year: new Date(dateSelected).getFullYear(),
             shift, hour, ownACar, location: meet === "Imobiliária" ? company.fantasyName : "No local do imóvel",
             address: meet === "Imobiliária" ? `${company.road} - Nº ${company.number} - ${company.district} - ${company.city} - ${company.uf}` : `${property.road} - ${property.district} - ${property.city} - ${property.uf}`,
             amountOfPeople,
-            similarProperties, dateCompleted: new Date(value)
+            similarProperties, dateCompleted: new Date(dateSelected)
         })
     }
 
+      function selectDate(date) {
+        setDateSelected(date)
+      }
 
     function handleOpenModal(e) {
       e.preventDefault();
@@ -181,6 +233,61 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
         setView(data);
       }
 
+
+      const buttonStyle = {
+        display:'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row',
+        backgroundColor: 'var(--BorderInput)',
+        color: 'var(--Primary)',
+        borderRadius: '100px',
+        padding: '7px',
+        width: '25px',
+        height: '25px',
+        border: '1px solid var(--Primary)',
+
+        svg:{
+          margin: '0px'
+        }
+    };
+    
+    const properties = {
+        prevArrow: <button style={{ ...buttonStyle }}><IoArrowBackOutline /></button>,
+        nextArrow: <button style={{ ...buttonStyle }}><IoArrowForwardOutline /></button>
+    }
+
+    const responsiveSettings = [
+        {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4
+            }
+        },
+        {
+            breakpoint: 400,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        },
+        {
+            breakpoint: 250,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 150,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+
     Modal.setAppElement('#root');
     return (
         <>
@@ -196,10 +303,25 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
               {view === "visita" ?
             <div className="itensModal-scheduling">
                <div className="textTitle">
-              <IoHome />
               <h2 className="title">  Novo agendamento</h2>
               </div>
-                <Calendar onChange={onChange} value={value} />
+                {/* <Calendar onChange={onChange} value={value} /> */}
+
+
+                <div className="listDays">
+                  <Slide slidesToScroll={2} slidesToShow={2} autoplay={false} infinite={false} {...properties} responsive={responsiveSettings}>
+                    {days?.map((date) => {
+                        return (
+                            <div className={date.dataCompleta === dateSelected ? "CardDaySelected": "CardDay" } onClick={() => selectDate(date.dataCompleta)}>
+                                <h4>{date.diaSemana}</h4>
+                                <h2>{date.dia}</h2>
+                                <h5>{date.mes} - {date.ano}</h5>
+                            </div>
+                        )
+                    })}
+                  </Slide>
+                </div>
+
                 <div className="form">
                 <div className="data">
                     <div className="infosData">
@@ -332,10 +454,21 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
             : view === "Video" ?
             <div className="itensModal-scheduling">
               <div className="textTitle">
-              <IoVideocam />
               <h2 className="title">  Nova video chamada</h2>
               </div>
-                <Calendar onChange={onChange} value={value} />
+              <div className="listDays">
+                  <Slide slidesToScroll={2} slidesToShow={2} autoplay={false} infinite={false} {...properties} responsive={responsiveSettings}>
+                    {days?.map((date) => {
+                        return (
+                          <div className={date.dataCompleta === dateSelected ? "CardDaySelected": "CardDay" } onClick={() => selectDate(date.dataCompleta)}>
+                                <h4>{date.diaSemana}</h4>
+                                <h2>{date.dia}</h2>
+                                <h5>{date.mes} - {date.ano}</h5>
+                            </div>
+                        )
+                    })}
+                  </Slide>
+                </div>
                 <div className="form">
                 <div className="data">
                     <div className="infosData">
@@ -430,10 +563,8 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
                 </div>
 
                 <div className="data">
-                <div className="infosData">
                     <div className="textModal-scheduling">
                         <p>* Agende a vídeo chamada com 3 horas de antecedência</p>
-                    </div>
                     </div>
                 </div>
 
