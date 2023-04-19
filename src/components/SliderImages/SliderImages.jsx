@@ -1,5 +1,5 @@
 ﻿  import Carousel, { slidesToShowPlugin  } from '@brainhubeu/react-carousel';
-  import {  IoCloseOutline  } from 'react-icons/io5';
+  import {  IoArrowBack, IoArrowForward, IoCloseOutline  } from 'react-icons/io5';
   import '@brainhubeu/react-carousel/lib/style.css';
 import { SliderImagesModal } from '../SliderImagesModal/SliderImagesModal';
 import Modal from 'react-modal';
@@ -82,14 +82,16 @@ import "./sliderImages.css"
 
           <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"
-            className="react-modal-content">
-            <button type="button" className="react-modal-button" onClick={handleCloseModal}>
+            className="react-modal-slider">
+            <button type="button" className="react-modal-button-image" onClick={handleCloseModal}>
             <IoCloseOutline /> 
             </button>
             <div className="content-modal">
             <div className="itensModal">
+              <div className="imagem">
                 <SliderImagesModal images={images}/>
-            <h5>Arraste para o lado</h5>
+              </div>
+            <h5><IoArrowBack/>Arraste as fotos para os lados<IoArrowForward/></h5>
             </div>
             </div>
             </Modal>

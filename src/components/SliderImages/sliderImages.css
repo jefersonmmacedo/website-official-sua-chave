@@ -1,27 +1,40 @@
 ﻿.img {
     height: 270px;
 }
+.content-modal {
+    margin-top: 40px;
+}
 .content-modal .itensModal {
     margin: 5px;
 }
 .content-modal .itensModal h5 {
-    color: var(--Paragraph);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--Border);
     font-weight: 700;
     text-align: center;
     width: 100%;
 }
-.content-modal .itensModal img {
-    height: 650px;
-    margin: 20px 0;
+.content-modal .itensModal h5 svg {
+    margin: 3px;
+}
+.content-modal .itensModal .imagem {
+    object-fit: contain;
+    width: 100%;
+    height: 450px;
+    margin: 10px auto;
+}
+.content-modal .itensModal .imagem img {
+    object-fit: contain;
+    width: 100%;
+    height: 450px;
 }
 
 @media (max-width: 660px) {
     .img {
         height: 200px;
     }
-    .content-modal .itensModal img {
-        width: 100%;
-        height: 550px;
-        object-fit: contain;
-    }
+
 }

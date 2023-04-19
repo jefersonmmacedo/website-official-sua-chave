@@ -10,6 +10,7 @@
   --PrimaryRGBA: rgba(224, 40, 47, 0.5);
   --PrimaryEnphasis: rgba(224, 40, 47, 0.08);
   --PrimaryImage: rgba(224, 40, 47, 0.3);
+  --BlackOpacity: rgba(0, 0, 0, 0.3);
   --PrimaryHover: #d51942;
   --Secondary: #00afef;
   --SecondaryHover: #37b2e6;
@@ -153,19 +154,48 @@ button {
 .react-modal-content:focus{
   outline: none;
   }
+.react-modal-slider {
+  width: 100%;
+  max-width: 750px;
+  background-color: var(--BlackOpacity);
+  position: relative;
+  border-radius: 8px;
+  border: none;
+}
 
-.react-modal-button {
-  width: 15px;
-  height: 15px;
+.react-modal-slider:focus{
+  outline: none;
+  }
+
+.react-modal-button-image {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:var(--White);
+  background-color:var(--Black);
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 15px;
+  border: 1px solid var(--Border);
+  padding: 6px;
+  font-size: 12px;
+  color: var(--White);
+  border-radius: 6px;
+}
+.react-modal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:var(--BorderInput);
   position: absolute;
   right: 0;
   top: 0;
   margin: 15px;
   border: none;
+  padding: 6px;
+  font-size: 12px;
+  color: var(--Black);
+  border-radius: 6px;
 }
 
 @media(max-width: 900px) {

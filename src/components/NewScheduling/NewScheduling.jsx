@@ -2,7 +2,6 @@
 import { IoCalendar, IoCloseOutline, IoLocationOutline, IoBusinessOutline, IoHome, IoVideocam, IoPerson, IoAlertCircleOutline } from "react-icons/io5";
 import Modal from 'react-modal';
 import { useEffect, useState, useContext } from "react";
-import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import api from "../../services/api";
 import { AuthContext } from "../../contexts/Auth";
@@ -45,6 +44,318 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
 
     const [days, setDays] = useState([]);
 
+
+
+
+    const myConfig = {
+      idCompany: idCompany,
+      Sunday: {
+        Active: false,
+        Shifts: [
+          {Turno: "Manhã"},
+          {Turno: "Tarde"},
+         ],
+           Schedules: [
+           {
+           Turno: "Manhã",
+           Horário: "08:00 - 09:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "09:00 - 10:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "10:00 - 11:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "11:00 - 12:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "13:00 - 14:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "14:00 - 15:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "15:00 - 16:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "16:00 - 17:00"
+         }
+       ]},
+      Monday: {
+        Active: true,
+        Shifts: [
+          {Turno: "Manhã"},
+          {Turno: "Tarde"},
+         ],
+           Schedules: [
+           {
+           Turno: "Manhã",
+           Horário: "08:00 - 09:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "09:00 - 10:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "10:00 - 11:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "11:00 - 12:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "13:00 - 14:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "14:00 - 15:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "15:00 - 16:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "16:00 - 17:00"
+         }
+       ]},
+       Tuesday: {
+        Active: true,
+        Shifts: [
+          {Turno: "Manhã"},
+          {Turno: "Tarde"},
+         ],
+           Schedules: [
+           {
+           Turno: "Manhã",
+           Horário: "08:00 - 09:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "09:00 - 10:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "10:00 - 11:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "11:00 - 12:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "13:00 - 14:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "14:00 - 15:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "15:00 - 16:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "16:00 - 17:00"
+         }
+       ]},
+       Wednesday: {
+        Active: true,
+        Shifts: [
+          {Turno: "Manhã"},
+          {Turno: "Tarde"},
+         ],
+           Schedules: [
+           {
+           Turno: "Manhã",
+           Horário: "08:00 - 09:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "09:00 - 10:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "10:00 - 11:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "11:00 - 12:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "13:00 - 14:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "14:00 - 15:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "15:00 - 16:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "16:00 - 17:00"
+         }
+       ]},
+       Thursday: {
+        Active: true,
+        Shifts: [
+          {Turno: "Manhã"},
+          {Turno: "Tarde"},
+         ],
+           Schedules: [
+           {
+           Turno: "Manhã",
+           Horário: "08:00 - 09:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "09:00 - 10:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "10:00 - 11:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "11:00 - 12:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "13:00 - 14:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "14:00 - 15:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "15:00 - 16:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "16:00 - 17:00"
+         }
+       ]},
+       Friday: {
+        Active: true,
+        Shifts: [
+          {Turno: "Manhã"},
+          {Turno: "Tarde"},
+         ],
+           Schedules: [
+           {
+           Turno: "Manhã",
+           Horário: "08:00 - 09:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "09:00 - 10:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "10:00 - 11:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "11:00 - 12:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "13:00 - 14:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "14:00 - 15:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "15:00 - 16:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "16:00 - 17:00"
+         }
+       ]},
+       Saturday: {
+        Active: false,
+        Shifts: [
+          {Turno: "Manhã"},
+          {Turno: "Tarde"},
+          {Turno: "Noite"}
+         ],
+           Schedules: [
+           {
+           Turno: "Manhã",
+           Horário: "08:00 - 09:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "09:00 - 10:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "10:00 - 11:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "11:00 - 12:00"
+         },
+                 {
+           Turno: "Tarde",
+           Horário: "13:00 - 14:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "14:00 - 15:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "15:00 - 16:00"
+         },
+                 {
+           Turno: "Manhã",
+           Horário: "16:00 - 17:00"
+         }
+       ]},
+      }
+    
+
+      const filterShifts = new Date(dateSelected).getDay() === 0 ? myConfig.Sunday.Shifts 
+      : new Date(dateSelected).getDay() === 1 ? myConfig.Monday.Shifts 
+      : new Date(dateSelected).getDay() === 2 ? myConfig.Tuesday.Shifts 
+      : new Date(dateSelected).getDay() === 3 ? myConfig.Wednesday.Shifts 
+      : new Date(dateSelected).getDay() === 4 ? myConfig.Thursday.Shifts 
+      : new Date(dateSelected).getDay() === 5 ? myConfig.Friday.Shifts 
+      : new Date(dateSelected).getDay() === 6 ? myConfig.Saturday.Shifts 
+      : []
+      const filterSchedules = new Date(dateSelected).getDay() === 0 ? myConfig.Sunday.Schedules
+      : new Date(dateSelected).getDay() === 1 ? myConfig.Monday.Schedules
+      : new Date(dateSelected).getDay() === 2 ? myConfig.Tuesday.Schedules 
+      : new Date(dateSelected).getDay() === 3 ? myConfig.Wednesday.Schedules 
+      : new Date(dateSelected).getDay() === 4 ? myConfig.Thursday.Schedules 
+      : new Date(dateSelected).getDay() === 5 ? myConfig.Friday.Schedules 
+      : new Date(dateSelected).getDay() === 6 ? myConfig.Saturday.Schedules 
+      : []
+
+      console.log(shift)
+      console.log(filterShifts)
+      console.log(filterSchedules)
+
+
+
     useEffect(() => {
         function dateToString(d) {
             return [d.getFullYear(), d.getMonth() + 1, d.getDate()].map(d => d > 9 ? d : '0' + d).join('-');
@@ -56,7 +367,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
           var dia = hoje.getDate();
           for (var i = 0; i < 30; i++) {
             var outroDia = new Date(ano, mes, dia + i);
-           console.log(dateToString(outroDia));
+          // console.log(dateToString(outroDia));
 
             const data = [{
               dataCompleta: outroDia,
@@ -144,8 +455,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
         type,
         subType,
     }
-    console.log(data)
-    await api.post("/viewproperty", data).then((res) => {
+     await api.post("/viewproperty", data).then((res) => {
       return
     }).catch((err) => {
         console.log(err)
@@ -209,7 +519,6 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
           loginSessionFast({email: login, password:password})
           console.log({email: login, password:password})
       }
-  
 
       function handleShift(e) {
         setShift(e.target.value);
@@ -288,6 +597,16 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
         }
     ]
 
+    const filterWeek = days.filter((day) =>  myConfig.Sunday.Active === false && day.diaSemana === "Domingo" ? day.diaSemana !== "Domingo"
+                                            : myConfig.Monday.Active === false && day.diaSemana === "Segunda-Feira" ? day.diaSemana !== "Segunda-Feira"  
+                                            : myConfig.Tuesday.Active === false && day.diaSemana === "Terça-Feira" ? day.diaSemana !== "Terça-Feira"  
+                                            : myConfig.Wednesday.Active === false && day.diaSemana === "Quarta-Feira" ? day.diaSemana !== "Quarta-Feira"  
+                                            : myConfig.Thursday.Active === false && day.diaSemana === "Quinta-Feira" ? day.diaSemana !== "Quinta-Feira"  
+                                            : myConfig.Friday.Active === false && day.diaSemana === "Sexta-Feira" ? day.diaSemana !== "Sexta-Feira"  
+                                            : myConfig.Saturday.Active === false && day.diaSemana === "Sábado" ? day.diaSemana !== "Sábado"  
+                                              : day);
+
+
     Modal.setAppElement('#root');
     return (
         <>
@@ -310,8 +629,9 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
 
                 <div className="listDays">
                   <Slide slidesToScroll={2} slidesToShow={2} autoplay={false} infinite={false} {...properties} responsive={responsiveSettings}>
-                    {days?.map((date) => {
+                    {filterWeek?.map((date) => {
                         return (
+                         
                             <div className={date.dataCompleta === dateSelected ? "CardDaySelected": "CardDay" } onClick={() => selectDate(date.dataCompleta)}>
                                 <h4>{date.diaSemana}</h4>
                                 <h2>{date.dia}</h2>
@@ -329,36 +649,31 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
                         <p>Turno</p>
                     </div>
                      <select style={{borderRadius: 25}}  value={shift} onChange={handleShift}>
-                    <option value="Escolha">Escolha</option>
-                    <option value="Manhã">Manhã</option>
-                    <option value="Tarde">Tarde</option>
+                       <option value="Escolha">Escolha</option>
+                        {filterShifts.map((shift) => {
+                          return (
+                            <option value={shift.Turno}>{shift.Turno}</option>
+                          )
+                        })
+                        }              
                 </select>
                     </div>
                     <div className="infosData">
                     <div className="textModal-scheduling">
                         <p>Escolha um horário</p>
                     </div>
-                     <select style={{borderRadius: 25}}  value={hour} onChange={handleHour}>
-                     {shift === "Manhã" ?
-                        <>
-                         <option value="Escolha">Escolha</option>
-                        <option value="08h - 09h">08h - 09h</option>
-                        <option value="09h - 10h">09h - 10h</option>
-                        <option value="10h - 11h">10h - 11h</option>
-                        <option value="11h - 12h">11h - 12h</option>
-                        </>
-                        : shift === "Tarde" ?
-                        <>
-                        <option value="Escolha">Escolha</option>
-                        <option value="13h - 14h">13h - 14h</option>
-                        <option value="14h - 15h">14h - 15h</option>
-                        <option value="15h - 16h">15h - 16h</option>
-                        <option value="16h - 17h">16h - 17h</option>
-                        </>
-                        : <option value="Escolha">Escolha Turno</option>}
-                  
+                    <select style={{borderRadius: 25}}  value={hour} onChange={handleHour}>
 
-                </select>
+                         <option value="Escolha">Escolha</option>
+                        {filterSchedules.map((shedule) => {
+                          return (
+                            shedule.Turno !== shift ? "" :
+                            <option value={shedule.Horário}>{shedule.Horário}</option>
+                          )
+                        })
+                        }              
+
+                </select> 
                     </div>
 
                 </div>
