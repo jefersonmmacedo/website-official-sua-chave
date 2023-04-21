@@ -88,6 +88,7 @@ import "./sliderImages.css"
             </button>
             <div className="content-modal">
             <div className="itensModal">
+            <h5>{images.length} Fotos</h5>
               <div className="imagem">
                 <SliderImagesModal images={images}/>
               </div>
