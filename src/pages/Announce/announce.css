@@ -1,4 +1,8 @@
-﻿.Announce {
+﻿.content-modal-movie {
+    margin-top: 0px;
+}
+
+.Announce {
     width: 100%;
     display: flex;
     text-align: center;

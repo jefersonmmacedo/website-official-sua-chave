@@ -227,11 +227,11 @@ export function Announce() {
 
     <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"
-            className="react-modal-content">
-            <button type="button" className="react-modal-button" onClick={handleCloseModal}>
+            className="react-modal-slider">
+            {/* <button type="button" className="react-modal-button" onClick={handleCloseModal}>
             <IoCloseOutline /> 
-            </button>
-            <div className="content-modal">
+            </button> */}
+            <div className="content-modal-movie">
     <iframe width="100%" height="420" src="https://www.youtube.com/embed/3UPvgq66BRE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
             </Modal>
