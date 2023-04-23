@@ -14,6 +14,10 @@ import { useFetch } from '../../hooks/useFetch';
 import { toast } from 'react-toastify';
 import { IoArrowBackOutline, IoAttachOutline, IoBusinessOutline, IoChatboxOutline, IoHomeOutline, IoImageOutline, IoEllipsisVerticalOutline, IoVideocamOutline } from 'react-icons/io5';
 import { useEffect } from 'react';
+import { UserTopBarChat } from '../../components/UserTopBarChat/UserTopBarChat';
+import { PropertyTopBarChat } from '../../components/PropertyTopBarChat/PropertyTopBarChat';
+import { ViewClientChat } from '../../components/ViewClientChat/ViewClientChat';
+import { ViewPropertyChat } from '../../components/ViewPropertyChat/ViewPropertyChat';
 
    
 export function ChatMessage() {
@@ -53,6 +57,7 @@ async function handleViewMessageRoom() {
     idUser: user.id,
     dateReady: new Date()
   }
+  console.log(data)
     await api.patch(`/dateready/rooms/update/${idReadData}`, data).then(() =>{
     }).catch((err) => {
       console.log(err)
@@ -285,44 +290,30 @@ const profile = "https://firebasestorage.googleapis.com/v0/b/foursome4-b925c.app
       <div className="chat">
         <div className="main-chat">
          <div className="section-chat">
-            <div className="topBarChat">
-
+         <div className="topBarChat">
+            <a href="/">
             <div className="buttonTopBarChat">
-                <a href="javascript:history.back()"><IoArrowBackOutline/> Voltar</a>
+                {/* <a href="javascript:history.back()"><IoArrowBackOutline/> Voltar</a> */}
+                <IoArrowBackOutline/> 
                 </div>
+                </a>
 
-                <div className="UserTopBar">
-                  <div className="imageTop">
-                        <img src={profile} alt="" />
-                  </div>
-                  <div className="textTop">
-                    <h5>Name Company</h5>
-                    <h6>Cidade - Estado</h6>
-                  </div>
-                </div>
-
-                <div className="PropertyTopBar">
-                <div className="imageTop">
-                        <img src={profile} alt="" />
-                  </div>
-                  <div className="textTop">
-                    <h5>Título Propriedade</h5>
-                    <h6>Cidade - Estado</h6>
-                  </div>
-                </div>
+               <UserTopBarChat idCompany={idCompany}/>
+               <PropertyTopBarChat idProperty={idProperty}/>
 
                 <div className="LinksMobile">
                 <div className="buttonLinksMobile">
-                    <a href="/mensagens"> <IoHomeOutline/> Ver Imóvel</a>
+                <ViewPropertyChat id={idProperty} />
                 </div>
                 <div className="buttonLinksMobile">
-                    <a href="/mensagens"> <IoBusinessOutline/> Ver Imobiliária</a>
+                <ViewClientChat id={idCompany} mobile={false}/>
                 </div>
                 </div>
-
+                <a href="/mensagens">
                 <div className="buttonTopBarChat">
-                    <a href="/mensagens"> <IoChatboxOutline/> Conversas</a>
+                     <IoChatboxOutline/> 
                 </div>
+                </a>
             </div>
              <div className="messages" ref={messageRef}>
 

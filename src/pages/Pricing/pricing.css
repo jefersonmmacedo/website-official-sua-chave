@@ -21,6 +21,12 @@
     color: var(--Paragraph);
 }
 
+.Pricing .image {
+    width: 900px;
+    margin: 10px 20px;
+}
+
+
 .Pricing .marketing {
     width: 100%;
     display: flex;
@@ -120,6 +126,12 @@
 }
 
 @media (max-width: 950px) {
+
+    .Pricing .image {
+        width: 100%;
+        margin: 10px 20px;
+    }
+    
 
     .Pricing .future{
         width: 90%;

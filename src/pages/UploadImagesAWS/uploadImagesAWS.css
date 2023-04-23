@@ -1,0 +1,16 @@
+.UploadImagesAWS {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    background-color: var(--Primary)
+}
+
+.UploadImagesAWS .box {
+    width: 500px;
+    height: 500px;
+    background-color: var(--White);
+    border-radius: 20px;
+}

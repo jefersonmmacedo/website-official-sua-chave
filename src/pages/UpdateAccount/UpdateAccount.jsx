@@ -1,7 +1,7 @@
 ﻿import { Footer } from "../../components/Footer/Footer";
 import Navbar2 from "../../components/Nav/Navbar";
 import "./updateAccount.css";
-import {IoCloseCircle} from 'react-icons/io5';
+import {IoCloseCircle, IoRefreshOutline} from 'react-icons/io5';
 import { ToolBarClient } from "../../components/ToolBarClient/ToolBarClient";
 import { useState } from "react";
 import { FiUpload } from "react-icons/fi";
@@ -68,7 +68,10 @@ export function UpdateAccount() {
                 <div className="main">
                 <ToolBarClient />
                 <div className="text">
-                <h2>Minha Conta</h2>
+                <div className="textTop">
+                <h3>Minha conta</h3>
+                <button ><IoRefreshOutline /> Atualize seus dados</button>
+                </div>
                     <form action="">
 
                     <label className="label-avatar">

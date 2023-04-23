@@ -27,6 +27,38 @@
     margin: 10px;
 }
 
+
+.UpdateAccount .main .text .textTop {
+    width: 550px;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.UpdateAccount .main .text .textTop h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.UpdateAccount .main .text .textTop button {
+    border: none;
+    color: var(--ButtonDisabled);
+    background-color: var(--White);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.UpdateAccount .main .text .textTop button svg {
+    margin-right: 3px;
+    font-weight: bold;
+}
+
 .UpdateAccount .main .text h2 {
     margin-bottom: 20px;
     font-weight: bold;
@@ -175,6 +207,11 @@
         border-radius: 6px;
         background-color: var(--BorderHover);
         margin: 10px;
+    }
+
+    .UpdateAccount .main .text .textTop {
+        width: 100%;
+        justify-content: center;
     }
 
     @media (max-width: 450px) {

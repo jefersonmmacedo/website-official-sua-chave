@@ -2,7 +2,7 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import "./myAccount.css";
 import { ToolBarClient } from "../../components/ToolBarClient/ToolBarClient";
-import { IoCalendarOutline, IoChatboxEllipsesOutline, IoChatboxOutline, IoHeartOutline, IoHomeOutline, IoPersonOutline} from "react-icons/io5"
+import { IoCalendarOutline, IoChatboxEllipsesOutline, IoChatboxOutline, IoCloseSharp, IoHeartOutline, IoHomeOutline, IoPersonOutline} from "react-icons/io5"
 import api from "../../services/api";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -56,7 +56,10 @@ export function MyAccount() {
                 <div className="main">
                 <ToolBarClient />
                 <div className="text">
-                <h2>Seja bem-vindo, {user.name}</h2>
+                <div className="textTop">
+                <h3>Seja bem-vindo, {user.name}</h3>
+                <button><IoCloseSharp /> Deletar minha conta</button>
+                </div>
                     <div className="indicators">
                         <a href="/mensagens">
                         <div className="indicatorUnic">

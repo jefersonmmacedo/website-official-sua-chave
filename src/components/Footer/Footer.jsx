@@ -25,7 +25,7 @@ export function Footer() {
                                 <h5><a href="/anunciar">Para imobiliárias</a></h5>
                                 <h5><a href="#">Integração com portais</a></h5>
                                 <h5><a href="#">Site para seu negócio</a></h5>
-                                <h5><a href="#">Tour Virtual [Em breve]</a></h5>
+                                <h5><a href="#">Tour Virtual</a></h5>
                         </div>
                         <div className="sectionUnic">
                             <h3>CENTRAL DE AJUDA</h3>

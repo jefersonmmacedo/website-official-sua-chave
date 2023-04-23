@@ -27,6 +27,37 @@
     margin: 10px;
 }
 
+.Schedules .main .text .textTop {
+    width: 550px;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Schedules .main .text .textTop h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.Schedules .main .text .textTop button {
+    border: none;
+    color: var(--ButtonDisabled);
+    background-color: var(--White);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.Schedules .main .text .textTop button svg {
+    margin-right: 3px;
+    font-weight: bold;
+}
+
 .Schedules .main .text h2 {
     margin-bottom: 20px;
     font-weight: bold;
@@ -226,6 +257,13 @@
             width: 100%;
             padding: 0px;
         }
+
+                    
+            .Schedules .main .text .textTop {
+                width: 100%;
+                justify-content: center;
+            }
+
 
         @media (max-width: 700px) {
             .Schedules .main .text .ListSchedules{

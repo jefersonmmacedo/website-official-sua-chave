@@ -27,6 +27,40 @@
     margin: 10px;
 }
 
+.Favorites .main .aside .textTop {
+    width: 90%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    fle-wrap: wrap;
+}
+
+.Favorites .main .aside .textTop h3 {
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.Favorites .main .aside .textTop button {
+    border: none;
+    color: var(--ButtonDisabled);
+    background-color: var(--White);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.Favorites .main .aside .textTop button svg {
+    margin-right: 3px;
+    font-weight: bold;
+}
+
+
 .Favorites .main .aside h2 {
     margin-bottom: 20px;
     font-weight: bold;
@@ -52,6 +86,12 @@
     .Favorites .main .aside {
         width: 100%;
     }
+
+    .Favorites .main .aside .textTop {
+        width: 100%;
+        justify-content: center;
+    }
+    
     .viewFooter {
        display: none;
     }

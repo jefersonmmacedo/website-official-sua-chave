@@ -34,6 +34,7 @@ import { RecuperationPassword } from '../pages/RecuperartionPassword/Recuperarti
 import { Announce } from '../pages/Announce/Announce';
 import { ConfirmedAccount } from '../pages/ConfirmedAccount/ConfirmedAccount';
 import { ConfirmedSend } from '../pages/ConfirmedSend/ConfirmedSend';
+import { UploadImagesAWS } from '../pages/UploadImagesAWS/UploadImagesAWS';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -79,6 +80,7 @@ function PrivateRoute({children} ) {
             <Route path="/faq" element={<Faq />}/>
             <Route path="/avaliacao" element={<Evaluation />}/>
             <Route path="/test" element={<TestTools />}/>
+            <Route path="/upload" element={<UploadImagesAWS />}/>
             
             /* Rotas fechadas/login */
             <Route path="/minhaconta"

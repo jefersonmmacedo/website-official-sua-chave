@@ -27,6 +27,41 @@
     margin: 10px;
 }
 
+.MyAccount .main .text .textTop {
+    width: 80%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.MyAccount .main .text .textTop h3 {
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.MyAccount .main .text .textTop button {
+    border: none;
+    color: var(--White);
+    background-color: var(--ButtonDisabled);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+.MyAccount .main .text .textTop button svg {
+    margin-right: 3px;
+    font-weight: bold;
+}
+
 .MyAccount .main .text h2 {
     margin-bottom: 20px;
     font-weight: bold;
@@ -93,6 +128,12 @@ text-decoration: none;
         align-items: center;
         justify-content: flex-start;
     }
+
+    .MyAccount .main .text .textTop {
+        width: 100%;
+        justify-content: center;
+    }
+    
 
     .MyAccount .main .text form{
         width: 100%;

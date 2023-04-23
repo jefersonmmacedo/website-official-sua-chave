@@ -1,7 +1,7 @@
 ﻿import { Footer } from "../../components/Footer/Footer";
 import Navbar2 from "../../components/Nav/Navbar";
 import "./schedules.css";
-import {IoBusinessOutline, IoCalendarClear, IoCalendarOutline, IoLocationOutline} from 'react-icons/io5';
+import {IoBusinessOutline, IoCalendarClear, IoCalendarOutline, IoLocationOutline, IoRefreshOutline} from 'react-icons/io5';
 import { ToolBarClient } from "../../components/ToolBarClient/ToolBarClient";
 import ImageHouse1 from "../../assets/images/house.jpg";
 import ImageHouse2 from "../../assets/images/house1.jpg";
@@ -30,6 +30,11 @@ export function Schedules() {
 
     const filterPassed = data?.filter((filterData) => new Date(filterData.created_at) < new Date())
 
+
+    function realoadPage() {
+        window.location.reload(false);
+    }
+
     return (
         <div className="Schedules">
             <Navbar2 />
@@ -37,7 +42,10 @@ export function Schedules() {
                 <ToolBarClient />
 
                 <div className="text">
-                <h2>Meus agendamentos</h2>
+                <div className="textTop">
+                <h3>Minhas conversas</h3>
+                <button onClick={realoadPage}><IoRefreshOutline /> Atualizar</button>
+                </div>
                 
 
                 {filterNow?.length === 0 ? ""

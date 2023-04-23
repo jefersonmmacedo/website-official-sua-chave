@@ -139,7 +139,6 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    width: 100px;
     padding: 15px 20px;
     Background-color: var(--White);
     color: var(--Paragraph);
@@ -498,6 +497,10 @@
                 }
 
                 .SearchPropertyHomeTop .selectButtonsHomeTop button {
+                    width: 100%;
+                    padding: 15px 5px;
+                }
+                .SearchPropertyHomeTop .selectButtonsHomeTop .btn {
                     width: 100%;
                     padding: 15px 5px;
                 }
