@@ -4,11 +4,14 @@ import {IoSearch, IoAddOutline, IoRemoveOutline} from "react-icons/io5";
 import { useFetch } from "../../hooks/useFetch";
 import { toast } from "react-toastify";
 import { TbBone, TbSofa } from "react-icons/tb";
+import { useEffect } from "react";
+import api from "../../services/api";
 
 export function SearchPropertyHomeTop() {
     const [isCheckedPets, setIsCheckedPets] = useState(false);
     const [isCheckedFurnished, setIsCheckedFurnished] = useState(false);
 
+    const [data, setData] = useState([]);
     const [codeImob, setCodeImob] = useState("imob-");
     const [pets, setPets] = useState("não");
     const [furnished, setFurnished] = useState("não");
@@ -35,8 +38,20 @@ export function SearchPropertyHomeTop() {
 
     const availability = "Disponível";
 
+    useEffect(() => {
+        async function loadProperty() {
+            await api.get(`/property/AllProperties/${availability}`).then((res) => {
+                setData(res.data);
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
 
-    const {data} = useFetch(`/property/AllProperties/${availability}`);
+        loadProperty()
+    }, [])
+
+
+  //  const {data} = useFetch(`/property/AllProperties/${availability}`);
 
     var districtList = [];
     var cityList = [];
@@ -221,8 +236,6 @@ export function SearchPropertyHomeTop() {
                         })}
                        </>
                         }
-
-
                     </select>
 
 

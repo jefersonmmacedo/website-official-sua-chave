@@ -3,10 +3,13 @@ import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { TbBone, TbSofa } from "react-icons/tb";
 import { useFetch } from "../../hooks/useFetch";
 import "./filterPropertiesList.css"
+import { useEffect } from "react";
+import api from "../../services/api";
 
 export function FilterPropertiesList({status, typeProperty, subTypeProperty, district, city, uf, quarto, banheiro, suítes, garagem}) {
     console.log({status, district, city, uf, quarto, banheiro, suítes, garagem})
     const [filter, setFilter] = useState(false);
+    const [data, setData] = useState([]);
     const [type, setType] = useState(typeProperty === "" ? "" : typeProperty);
     const [subType, setSubType] = useState(subTypeProperty === "" ? "" : subTypeProperty);
     const [bedroom, setBedroom] = useState(quarto === "0" ? "0" : quarto);
@@ -31,10 +34,22 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
    // console.log({districtNew, cityNew, ufNew})
 
     const availability = "Disponível";
-    const {data} = useFetch(`/property/AllProperties/${availability}`);
+    useEffect(() => {
+        async function loadProperty() {
+            await api.get(`/property/AllProperties/${availability}`).then((res) => {
+                setData(res.data);
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
+
+        loadProperty()
+    }, [])
+
 
     var districtList = [];
     var cityList = [];
+    var subTypeList = [];
 
     data?.forEach((item) => {
         var duplicated  = districtList.findIndex(redItem => {
@@ -52,6 +67,15 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
     
         if(!duplicated) {
             cityList.push(item);
+        }
+    });
+    data?.forEach((item) => {
+        var duplicated  = subTypeList.findIndex(redItem => {
+            return item.type === redItem.type && item.subType === redItem.subType;
+        }) > -1;
+    
+        if(!duplicated) {
+            subTypeList.push(item);
         }
     });
 
@@ -73,6 +97,15 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
             }
         })
         }
+        if(subTypeList) {
+            subTypeList.sort(function(a,b) {
+                if(a.uf < b.uf ) {
+                    return -1
+                } else {
+                    return true
+                }
+            })
+            }
 
         function handleSelectAddress(e) {
             setAdressSelected(e.target.value)
@@ -202,60 +235,21 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
              
              <div className="dataSelects">
              <h4>Subtipo:</h4>
-            <select value={subType} onChange={handleSubType} className={subType === "" ? "" : "select"}>
-                {type === "Residencial" ?
-                <>
-                <option value="">Subtipo</option>
-                <option value="Casa">Casa</option>
-                <option value="Casa geminada">Casa geminada</option>
-                <option value="Sobrado">Sobrado</option>
-                <option value="Bangalô">Bangalô</option>
-                <option value="Edícula">Edícula</option>
-                <option value="Flat">Flat</option>
-                <option value="Casa de vila">Casa de vila</option>
-                <option value="Condomínio fechado">Condomínio fechado</option>
-                <option value="Apartamento">Apartamento</option>
-                <option value="Apartamento duplex">Apartamento duplex</option>
-                <option value="Cobertura">Cobertura</option>
-                <option value="Cobertura duplex">Cobertura duplex</option>
-                <option value="Loft">Loft</option>
-                <option value="Kitnet">Kitnet</option>
-                <option value="Mansão">Mansão</option>
-                <option value="Stúdio">Stúdio</option>
-                </>
-                : type === "Comercial" ?
-                <>
-                <option value="">Subtipo</option>
-                <option value="Loja">Loja</option>
-                <option value="Conjunto comercial">Conjunto comercial</option>
-                <option value="Ponto comercial">Ponto comercial</option>
-                <option value="Sala Comercial">Sala Comercial</option>
-                <option value="Prédio">Prédio</option>
-                <option value="Hotel">Hotel</option>
-                <option value="Stúdio">Stúdio</option>
-                </>
-                : type === "Industrial" ?
-                <>
-                <option value="">Subtipo</option>
-                <option value="Galpão">Galpão</option>
-                <option value="Área industrial">Área industrial</option>
-                </>
-                : type === "Rural" ?
-                <>
-                <option value="">Subtipo</option>
-                <option value="Chácara">Chácara</option>
-                <option value="Fazenda">Fazenda</option>
-                <option value="Sítio">Sítio</option>
-                </>
-                : type === "Terrenos e Lotes" ?
-                <>
-                <option value="">Subtipo</option>
-                <option value="Área">Área</option>
-                <option value="Terreno/Lote">Terreno/Lote</option>
-                </>
-                :  <option value="">{subType === "" ? "Selecione o tipo" : subType}</option>
-                }
-            </select>
+             <select value={subType} onChange={handleSubType} className={subType === "" ? "" : "select"}>
+                       {type === "" ?
+                       <option value="">Escolha o tipo de imóvel</option>
+                       :
+                       <>
+                        <option value="">Selecione</option>
+                        {subTypeList.map((list) => {
+                            return (
+                                list.type !== type ? "" :
+                                <option value={list.subType}>{list.subType}</option>
+                            )
+                        })}
+                       </>
+                        }
+                    </select>
             </div>
             
             <div className="dataSelects">
