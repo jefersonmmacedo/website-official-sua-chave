@@ -10,6 +10,7 @@ import { Finance } from "../../components/Finance/Finance";
 import { TopHeadHome } from "../../components/TopHeadHome/TopHeadHome";
 import { NewSearchClient } from "../../components/NewSearchClient/NewSearchClient";
 import { useState } from "react";
+import { Partners } from "../../components/Partners/Partners";
 
 
 export function Home() {

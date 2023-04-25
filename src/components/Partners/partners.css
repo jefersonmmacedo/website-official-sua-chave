@@ -1,0 +1,168 @@
+﻿.Partners  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 1200px;
+    margin: 5px auto;
+}
+
+.Partners .simulation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    border-radius: 20px;
+    color: var(--Paragraph);
+    background-color: var(--White);
+    border: 1px solid var(--Border);
+    width: 100%;
+}
+.Partners .simulation .simulationBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px;
+    border-radius: 20px;
+    color: var(--Description);
+    width: 100%;
+}
+
+.Partners .simulation .simulationBox:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.Partners .simulation .simulationBox .iconPartners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    Background-color: var(--Primary);
+}
+.Partners .simulation .simulationBox .iconPartners svg {
+    font-size: 24px;
+    margin: 10px 0;
+    opacity: none;
+    color: var(--White);
+}
+.Partners .simulation .simulationBox h2 {
+    font-weight: 800;
+    opacity: none;
+    margin: 20px 0 10px 0;
+}
+.Partners .simulation .simulationBox h4{
+    font-weight: 400;
+    margin: 0px 0 20px 0;
+    opacity: none;
+}
+.Partners .simulation .simulationBox a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px 5px 0px;
+    Background-color: var(--White);
+    color: var(--Primary);
+    font-weight: 500;
+    border: none;
+    margin: 5px 0;
+    border-radius: 25px;
+    text-decoration:none;
+    font-weight: 700;
+    opacity: none;
+}
+
+.Partners .PartnersValue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 6px;
+    color: var(--Description);
+    width: 100%;
+    background-image: url("../../assets/images/background17.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+}
+.Partners .PartnersValue .PartnersBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color:  rgba(241, 241, 241, 0.7);
+    padding: 30px;
+    border-radius: 6px;
+    color: var(--Description);
+    width: 100%;
+}
+.Partners .PartnersValue .PartnersBox:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.Partners .PartnersValue .PartnersBox  svg {
+    font-size: 40px;
+    margin: 10px 0;
+}
+.Partners .PartnersValue .PartnersBox  h2 {
+    font-weight: 900;
+    font-size: 32px;
+}
+.Partners .PartnersValue .PartnersBox  h4{
+    font-weight: 600;
+    margin: 5px 0 20px 0;
+}
+.Partners .PartnersValue .PartnersBox  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    Background-color: var(--Primary);
+    color: var(--White);
+    font-weight: 500;
+    border: none;
+    margin: 10px 0;
+    border-radius: 25px;
+    text-decoration:none;
+    font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+    .Partners  {
+        width: 100%;
+    }
+    
+@media (max-width: 600px) {
+
+    .Partners  {
+        flex-direction: column;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .Partners .PartnersValue .PartnersBox {
+       padding: 20px;
+    }
+   .Partners .simulation .simulationBox {
+        padding: 20px;
+    }
+    .Partners .PartnersValue .PartnersBox h2 {
+        font-size: 30px;
+        font-weight: 900;
+    }
+   .Partners .simulation .simulationBox h2 {
+        font-size: 30px;
+        font-weight: 900;
+    }
+}
+}

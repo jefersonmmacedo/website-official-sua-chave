@@ -13,6 +13,7 @@ import model from "../../assets/images/model.png"
 import Mackbook from "../../assets/images/Mockup.png"
 import { FaPlay } from "react-icons/fa";
 import { MdOutlineImportantDevices } from "react-icons/md";
+import { Partners } from "../../components/Partners/Partners";
 
 export function Announce() {
     const [isOpenModal, setIsOpenModa] = useState(false);
@@ -213,6 +214,12 @@ export function Announce() {
     <div className="buttonsPlainsAnnounce">
         <a href="#"> Clique aqui e saiba mais </a>
     </div>
+    <div className="textPricing">
+        <h2>Temos as <span>melhores ferramentas</span> para o seu dia a dia</h2>
+    </div>
+
+    <Partners />
+
     <div className="textPricing">
         <h2>Escolha o <span>plano ideal</span> para o seu negócio</h2>
         <h4>Temos um plano cara cada momento do seu negócio. Acesse o link a abaixo e confira:</h4>

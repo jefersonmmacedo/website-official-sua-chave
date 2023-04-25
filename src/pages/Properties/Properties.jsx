@@ -33,6 +33,7 @@ export function Properties(){
 
     const [propertyNotFound, setPropertyNotFound] = useState(false);
 
+    // const [data, setData] = useState([]);
     const [properties, setProperties] = useState([]);
     const [enphasisProperties, setEnphasisProperties] = useState([]);
     const [ currentPage, setCurrentPage] = useState(0);
@@ -81,6 +82,44 @@ export function Properties(){
 
         loadproperties()
     },[])
+
+    // useEffect(() => {
+    //     async function loadproperties() {
+    //         await api.get(
+    //             status !== undefined && subType !== "" && district !== "" && city !== "" && uf !== "" ?
+    //             `/property/listsadressfull/${availability}/${status}?type=${type}&subType=${subType}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
+    //             : type !== "" && status !== undefined  && district !== "" && city !== "" && uf !== "" ?
+    //           `/property/listsadresscityuf/${availability}/${status}?type=${type}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
+    //             : status !== undefined && subType !== "" && city !== "" && uf !== "" ?
+    //             `property/listsadress/${availability}/${status}?type=${type}&subType=${subType}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
+    //             :type !== "" && status !== undefined  && city !== "" && uf !== "" ?
+    //             `/property/listsadresstype/${availability}/${status}?type=${type}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
+    //             : status !== undefined &&  district !== "" && city !== "" && uf !== "" ?
+    //             `/property/listsadressstatuscomplete/${availability}/${status}?district=${district}&city=${city}&uf=${uf}&emphasis=false&page=${currentPage}&limit=${perPage}`
+    //             : status !== undefined  && city !== "" && uf !== "" ?
+    //             `/property/listsadressstatus/${availability}/${status}?city=${city}&uf=${uf}&emphasis=false&page=${currentPage}&limit=${perPage}`
+    //             : status !== undefined && subType !== "" ?
+    //             `/property/listtypesubstatus/${availability}/${status}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
+    //             : subType !== "" ?
+    //             `/property/listtypesubtype/${availability}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
+    //             : status !== undefined && type !== "" ?
+    //             `/property/listtypestatus/${availability}/${status}?type=${type}&emphasis=false&page=${currentPage}&limit=${perPage}`
+    //             : type !== "" ?
+    //             `property/listtype/${availability}?type=${type}&emphasis=false&page=${currentPage}&limit=${perPage}`
+    //             : status !== undefined ?
+    //             `/property/lists/${availability}/${status}?emphasis=false&page=${currentPage}&limit=${perPage}`
+    //             : status === undefined ?
+    //             `/property/all/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}`
+    //             :"").then((res) => {
+    //             setData(res.data)
+    //         }).catch((error) => {
+    //             console.error(error);
+    //         });
+    //     }
+
+    //     loadproperties()
+    // },[])
+
 
     const {data} = useFetch(
         status !== undefined && subType !== "" && district !== "" && city !== "" && uf !== "" ?
@@ -219,7 +258,17 @@ export function Properties(){
 
 
                     {data?.length < 12 || data?.length === 0 ? "":
-                <div className="" id="sentinela">   
+                <div className="sentinela" id="sentinela"> 
+                         <div className="itens">          
+                         <PropertyUnicBlockLoader />
+                         <PropertyUnicBlockLoader />
+                         <PropertyUnicBlockLoader />
+                         <PropertyUnicBlockLoader />
+                         <PropertyUnicBlockLoader />
+                         <PropertyUnicBlockLoader />
+                         <PropertyUnicBlockLoader />
+                         <PropertyUnicBlockLoader />
+                        </div>  
                         <img src={loader} alt="Gif LOader more posts" width={20}/>
                 </div>   
                 }

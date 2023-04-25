@@ -92,6 +92,16 @@
     margin-bottom: 50px;
 }
 
+.Properties .listPage .ListProperty .sentinela .itens {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
 .Properties .listPage .ListProperty .MainAbout img {
     width: 550px;
     margin: 40px auto;

@@ -13,9 +13,9 @@ export function Pricing() {
             <h4>Cada plano atende a uma necessidade, de acordo com as ferramentas oferecidas. <br/>Você poderá alterar a qualquer momento.</h4>
 
             <Plains />
-            <a href="https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre os planos e serviços que a Sua Chave pode me oferecer" target="_Blank">
+            {/* <a href="https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre os planos e serviços que a Sua Chave pode me oferecer" target="_Blank">
                 <img className="image" src={integracoes} alt="Propaganda de integrações" />
-            </a>
+            </a> */}
 
             <div className="future">
                 <h4>Serviços disponíveis <span>em breve</span>:</h4>

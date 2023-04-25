@@ -4,20 +4,33 @@ import 'react-slideshow-image/dist/styles.css';
 import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
 import { useFetch } from "../../hooks/useFetch";
 import { PropertyUnicBlockLoader } from "../PropertyUnicBlockLoader/PropertyUnicBlockLoader";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import api from "../../services/api";
 
 
 export function PropertyCarroussel({status}) {
     console.log(status)
     const availability = "Disponível";
+    const [ data, setData] = useState([]);
     const [ currentPage, setCurrentPage] = useState(0);
     const perPage = 12;
 
-    const {data} = useFetch(
-        `/property/lists/${availability}/${status}?emphasis=false&page=${currentPage}&limit=${perPage}`
-       );
+    useEffect(() => {
+        async function loadProperty() {
+            await api.get(`/property/lists/${availability}/${status}?emphasis=false&page=${currentPage}&limit=${perPage}`).then((res) => {
+                setData(res.data);
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
 
-    if(!data) {
+        loadProperty()
+    }, [])
+    // const {data} = useFetch(
+    //     `/property/lists/${availability}/${status}?emphasis=false&page=${currentPage}&limit=${perPage}`
+    //    );
+
+    if(data.length === 0) {
         return (
             <div className="loader">
             <PropertyUnicBlockLoader />
