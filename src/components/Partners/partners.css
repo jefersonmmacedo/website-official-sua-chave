@@ -61,6 +61,7 @@
     font-weight: 400;
     margin: 0px 0 20px 0;
     opacity: none;
+    text-align: left;
 }
 .Partners .simulation .simulationBox a {
     display: flex;

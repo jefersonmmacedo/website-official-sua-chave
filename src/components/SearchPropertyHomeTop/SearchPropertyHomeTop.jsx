@@ -51,8 +51,6 @@ export function SearchPropertyHomeTop() {
     }, [])
 
 
-  //  const {data} = useFetch(`/property/AllProperties/${availability}`);
-
     var districtList = [];
     var cityList = [];
     var subTypeList = [];
