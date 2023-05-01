@@ -16,7 +16,7 @@
     background-color: var(--Primary);
     font-weight: 700;
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
 }
 
 .Company .mainCompany {
@@ -26,7 +26,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--White);
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 100px 20px 40px 20px;
 }
 .Company .mainCompany .CompanyUnic {
@@ -35,7 +35,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 6px;
+    border-radius: 20px;
     padding-right: 20px;
 }
 
@@ -54,13 +54,13 @@
     align-items:center;
     justify-content: center;
     width: 200px; 
-    border-radius: 6px;
+    border-radius: 20px;
     object-fit: cover;
     margin: 5px 10px;
 }
 .Company .mainCompany .CompanyUnic .title .image img {
     width: 195px; 
-    border-radius: 6px;
+    border-radius: 20px;
     object-fit: contain;
     margin: 3px;
 }
@@ -145,7 +145,7 @@
     justify-content: center;
     flex-direction: row;
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 7px;
     cursor: pointer;
     background-color: var(--BorderHover);
@@ -179,7 +179,7 @@
     background-color: var(--BorderHover);
     border: 1px solid var(--Primary);
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 20px;
     width: 130px;
     margin: 5px;
 }
@@ -193,7 +193,7 @@
     background-color: var(--Primary);
     border: 1px solid var(--Primary);
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 20px;
     width: 130px;
     margin: 5px;
 }
@@ -280,12 +280,12 @@ margin-right: 5px;
 .Company .mainCompany .CompanyUnic .text .video {
     width: 100%;
     margin: 20px 0;
-    border-radius: 6px;
+    border-radius: 20px;
 }
 .Company .mainCompany .CompanyUnic .text .map {
     width: 100%;
     margin: 20px 0;
-    border-radius: 6px;
+    border-radius: 20px;
 }
 
 .Company .mainCompany .textProperties {
@@ -325,7 +325,7 @@ margin-right: 5px;
     background-color: var(--BorderInput);
     border: none;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 20px;
     width: 170px;
     margin: 5px;
 }
@@ -344,7 +344,7 @@ margin-right: 5px;
     background-color: var(--Primary);
     border: none;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 20px;
     width: 150px;
     margin: 5px;
 }
@@ -489,7 +489,7 @@ margin-right: 5px;
             background-color: var(--BorderInput);
             border: none;
             font-weight: 700;
-            border-radius: 6px;
+            border-radius: 20px;
             width: 150px;
             margin: 5px;
         }

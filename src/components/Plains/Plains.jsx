@@ -23,13 +23,13 @@ export function Plains() {
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'row',
-        backgroundColor: 'var(--Primary)',
+        backgroundColor: 'var(--PrimaryHover)',
+        border: '2px solid var(--White)',
         color: 'var(--White)',
         borderRadius: '100px',
         padding: '7px',
         width: '35px',
         height: '35px',
-        border: 'none',
     };
     
     const properties = {
@@ -41,8 +41,8 @@ export function Plains() {
         {
             breakpoint: 1210,
             settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4
+                slidesToShow: 3,
+                slidesToScroll: 3
             }
         },
         {
@@ -72,7 +72,7 @@ export function Plains() {
 
     return (
         <div className="Plains">
-            <Slide slidesToScroll={2} slidesToShow={2} indicators={true} {...properties} responsive={responsiveSettings}>
+            <Slide slidesToScroll={2} slidesToShow={2} indicators={true} autoplay={false} {...properties} responsive={responsiveSettings}>
             {plainsFilter?.map((plain) => {
                 return (
                     <div className={plain?.name === "Tour" ? "plain2" : "plain"} key={plain?.id}>

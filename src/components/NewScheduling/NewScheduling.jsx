@@ -350,11 +350,6 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
       : new Date(dateSelected).getDay() === 6 ? myConfig.Saturday.Schedules 
       : []
 
-      console.log(shift)
-      console.log(filterShifts)
-      console.log(filterSchedules)
-
-
 
     useEffect(() => {
         function dateToString(d) {
@@ -442,19 +437,20 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
       loadCompany()
     },[])
 
-    
+
   useEffect(() => {
     async function newView() {
       const data = {
         idProperty,
         idCompany,
         idClient: user === null ? "00000000" : user.id,
-        latitude,
-        longitude,
+        latitude: latitude,
+        longitude: longitude,
         origin: "Portal",
         type,
         subType,
     }
+    console.log(data);
      await api.post("/viewproperty", data).then((res) => {
       return
     }).catch((err) => {
@@ -517,7 +513,6 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
         function handleLogin(e) {
           e.preventDefault();
           loginSessionFast({email: login, password:password})
-          console.log({email: login, password:password})
       }
 
       function handleShift(e) {

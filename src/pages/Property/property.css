@@ -30,7 +30,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     background-color: var(--White);
-    border-radius: 6px;
+    border-radius: 20px;
     margin: 20px;
     padding-bottom: 20px;
 }
@@ -67,7 +67,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--Secondary);
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     margin: 5px;
 }
@@ -139,7 +139,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--Secondary);
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     margin: 5px;
 }
@@ -154,7 +154,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--Secondary);
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     margin: 5px;
 }
@@ -170,7 +170,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--Aproved);
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     margin: 5px;
 }
@@ -186,7 +186,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--Primary);
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     margin: 5px;
 }
@@ -221,11 +221,11 @@
     align-items: flex-start;
     justify-content: flex-end;
     text-align: center;
-    padding: 5px;
+    padding: 5px 7px;
     margin: 5px 15px 5px 5px;
     color: var(--Gray);
     background-color: var(--BorderHover);
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
 .Property .main .data .propertyUnic .text .iconsBox .iconUnicBox svg {
@@ -271,7 +271,7 @@
     margin: 5px;
     color: var(--Paragraph);
     padding: 5px 10px;
-    border-radius: 6px;
+    border-radius: 20px;
     background-color: rgba(170,0,0, 0.03);
 }
 .Property .main .data .propertyUnic .text .characteristics .item svg {
@@ -287,7 +287,7 @@
 .Property .main .data .propertyUnic .text .infosCompanyMobile {
     width: 100%;
     display: none;
-    border-radius: 6px;
+    border-radius: 20px;
     border: 1px solid var(--Border);
     margin: 5px;
     padding: 10px;
@@ -357,12 +357,12 @@
 .Property .main .data .propertyUnic .text .video {
     width: 100%;
     margin: 20px 0;
-    border-radius: 6px;
+    border-radius: 20px;
 }
 .Property .main .data .propertyUnic .text .map {
     width: 100%;
     margin: 20px 0;
-    border-radius: 6px;
+    border-radius: 20px;
 }
 
 .Property .main .data .propertyUnic .text .map h6 {
@@ -377,7 +377,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     background-color: var(--White);
-    border-radius: 6px;
+    border-radius: 20px;
     border: 1px solid var(--Border);
     margin: 20px ;
     padding: 10px;
@@ -490,7 +490,7 @@
     justify-content: center;
     padding: 10px 20px;
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     background-color: var(--Primary);
     color: var(--White);
     margin: 30px 0 10px 0px;

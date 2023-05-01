@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: flex-start;
     background-color: var(--BorderHover);
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 10px 10px 10px;
     margin-top: 20px;
 }
@@ -20,12 +20,12 @@
 
 .CompanyInfo .Head .image {
     width: 120px;
-    border-radius: 6px;
+    border-radius: 0px;
     margin-bottom: 5px;
 }
 .CompanyInfo .Head .image img {
     width: 120px;
-    border-radius: 6px;
+    border-radius: 0px;
     object-fit: contain;
 }
 
@@ -78,7 +78,7 @@
     margin: 3px 0;
     background-color: var(--BorderHover);
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 20px;
 }
 
 
@@ -124,7 +124,7 @@
     justify-content: center;
     margin: 5px;
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 15px;
     background-color: var(--Primary);
     color: var(--White);
@@ -148,7 +148,7 @@
     justify-content: center;
     margin: 5px;
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 15px;
     background-color: var(--Primary);
     color: var(--White);

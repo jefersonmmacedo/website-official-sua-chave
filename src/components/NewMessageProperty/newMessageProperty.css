@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--Primary);
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     color: var(--White);
     cursor: pointer;
@@ -172,7 +172,7 @@
     margin: 10px 0;
     background-color: var(--White);
     border: 1px solid var(--Primary);
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px;
 }
 

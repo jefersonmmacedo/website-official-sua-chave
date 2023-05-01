@@ -321,6 +321,7 @@ export function Property() {
                     {data[0]?.video === "" ? "" :
                     <div className="video">
                     <iframe width="100%" height="300" src={data[0]?.video} title="YouTube video player" frameBorder="0"
+                    style={{border:"0px", borderRadius: "20px"}}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     }
@@ -328,7 +329,7 @@ export function Property() {
                         <div className="map">
                             <iframe
                             width="100%" height="300"
-                            frameBorder="0" style={{border:"0px", borderRadius: "6px"}} 
+                            frameBorder="0" style={{border:"0px", borderRadius: "20px"}} 
                             referrerpolicy="no-referrer-when-downgrade"
                             src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyCZllXD0czNd_oeF0u_o9LUVJ2bCd1K4p8&q=${data[0]?.district}, ${data[0]?.city} - ${data[0]?.uf}, ${data[0]?.cep}`}
                             allowFullScreen>
