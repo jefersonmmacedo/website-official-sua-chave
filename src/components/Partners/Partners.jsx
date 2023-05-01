@@ -13,7 +13,7 @@ export function Partners() {
                 </div>
             <h2>Tour Virtual de imóveis</h2>
             <h4> Crie experiências incríveis utilizando nossa plataforma apresentando seus imóveis de uma forma inovadora!</h4>
-            <a href="/financiamento">Saber mais sobre o Tour Virual</a>
+            {/* <a href="/financiamento">Saber mais sobre o Tour Virual</a> */}
             </div>
             </div>
             <div className="simulation">
@@ -24,7 +24,7 @@ export function Partners() {
 
             <h2>Integração com Portais</h2>
             <h4> Anuncie com a gente e tenha todos os seus imóveis nos maiores e principais portais e mídias do Brasil!</h4>
-            <a href="/avaliacao">Saber mais sobre Integrações</a>
+            {/* <a href="/avaliacao">Saber mais sobre Integrações</a> */}
                 </div>
             </div>
         </div>
