@@ -21,16 +21,21 @@ export function Pricing() {
             <div className="content">
                 <h4><span>Todos</span> os <span>planos</span> também incluem:</h4>
                 <div className="itensContent">
-                <h5><IoCheckmarkCircleOutline /> 50 Fotos por imóvel</h5>
+                <h5><IoCheckmarkCircleOutline /> Todos os imóveis no portal Sua Chave</h5>
                 <h5><IoCheckmarkCircleOutline /> Chat único por anúncio</h5>
                 <h5><IoCheckmarkCircleOutline /> Agendamento de visitas</h5>
+                <h5><IoCheckmarkCircleOutline /> Cadastro de clientes, proprietários e fiadores</h5>
                 <h5><IoCheckmarkCircleOutline /> Contato via ligação e whatsapp</h5>
                 <h5><IoCheckmarkCircleOutline /> Área administrativa - CRM</h5>
-                <h5><IoCheckmarkCircleOutline /> Gestão financeira</h5>
-                <h5><IoCheckmarkCircleOutline /> Acesso a busca de imóveis dos clientes</h5>
+                <h5><IoCheckmarkCircleOutline /> Gestão financeira<span>*</span></h5>
+                <h5><IoCheckmarkCircleOutline /> Acesso a busca de imóveis dos clientes<span>*</span></h5>
+                <h5><IoCheckmarkCircleOutline /> Solicitação para avaliação de imóveis<span>*</span></h5>
                 <h5><IoCheckmarkCircleOutline /> Captação de leads</h5>
-                <h5><IoCheckmarkCircleOutline /> Hospedagem inclusa</h5>
+                <h5><IoCheckmarkCircleOutline /> Hospedagem inclusa<span>*</span></h5>
                 <h5><IoCheckmarkCircleOutline /> Taxa de adesão gratuita</h5>
+                </div>
+                <div className="infosContent">
+                    <h5>* Apartir do plano Start</h5>
                 </div>
             </div>
             {/* <div className="future">

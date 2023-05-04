@@ -72,7 +72,7 @@ export function Plains() {
 
     return (
         <div className="Plains">
-            <Slide slidesToScroll={2} slidesToShow={2} indicators={true} autoplay={false} {...properties} responsive={responsiveSettings}>
+            <Slide slidesToScroll={1} slidesToShow={1} indicators={true} autoplay={false} {...properties} responsive={responsiveSettings}>
             {plainsFilter?.map((plain) => {
                 return (
                     <div className={plain?.name === "Tour" ? "plain2" : "plain"} key={plain?.id}>

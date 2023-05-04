@@ -175,7 +175,7 @@ export function Announce() {
                 <div className="itensToHireAnnounce">
                     <div className="ToHireUnicAnnounce">
                     <IoHomeOutline />
-                        <h4>Anúncios ilimitados</h4>
+                        <h4>Gerencie seus imóveis</h4>
                     </div>
                     <div className="ToHireUnicAnnounce">
                     <IoCalendarOutline />

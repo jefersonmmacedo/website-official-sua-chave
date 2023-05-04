@@ -81,6 +81,7 @@
     background-color: var(--White);
     font-weight: 700;
 }
+
 .Pricing .content{
     display: flex;
     flex-direction: column;
@@ -93,6 +94,28 @@
     border: 1px solid var(--Border);
     background-color: var(--White);
 }
+.Pricing .content .infosContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.Pricing .content .infosContent h5 {
+    margin: 5px;
+    color: var(--Primary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
 
 .Pricing .content h4 {
     margin: 5px 0;
@@ -126,6 +149,10 @@
     padding: 3px 10px;
     border-radius: 20px;
     font-size: 14px;
+}
+
+.Pricing .content .itensContent h5 span {
+    color: var(--Primary);
 }
 
 .Pricing .content .itensContent h5 svg {
