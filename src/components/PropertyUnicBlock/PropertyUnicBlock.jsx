@@ -2,6 +2,7 @@ import "./propertyUnicBlock.css";
 import { IoBedOutline, IoCarSportOutline, IoChevronForwardOutline, IoHome, IoHomeOutline, IoLocationOutline, IoPawOutline } from "react-icons/io5";
 import { MdOutlineShower } from "react-icons/md";
 import slugify from 'react-slugify';
+import imageDefault from "../../assets/images/default.png"
 
 
 import { NewFavorite } from "../NewFavorite/NewFavorite";
@@ -30,7 +31,7 @@ export function PropertyUnicBlock({id, style}) {
     const company = `${property?.nameCompany}`
     const nameSlug = slugify(property?.nameCompany);
     const bedroom =  property?.bedroom === "" || property?.bedroom === "0"? "" : property?.bedroom === "1" ? `- ${property?.bedroom} quarto` : property?.bedroom !== "1" || property?.bedroom !== ""  || property?.bedroom !== "0"? `- ${property?.bedroom} quartos` : ""
-    const StatusProperty = `${property?.subType} ${property?.status === "Venda" ? "à venda" : "para aluguel"} ${bedroom}`
+    const StatusProperty = `${property?.subType} ${property?.status === "Venda" ? "à venda" : property?.status === "Aluguel" ? "para aluguel" : "para aluguel e venda"}`
     return (
         <div className={style === "Emphasis" ? "PropertyUnicEmphasis": "PropertyUnicBlock"}>
                     <div className={style === "Emphasis" ? "imageSliderEmphasis": "imageSlider"}>
@@ -41,12 +42,12 @@ export function PropertyUnicBlock({id, style}) {
                         src={property?.featuredImage}
                         onError={({ currentTarget }) => {
                             currentTarget.onerror = null; // previne loop
-                            currentTarget.src="https://firebasestorage.googleapis.com/v0/b/foursome4-b925c.appspot.com/o/avatar.png?alt=media&token=f3b1f0bc-3885-4296-8363-ec1c3d43e240";
+                            currentTarget.src="https://firebasestorage.googleapis.com/v0/b/suachave-4bcbe.appspot.com/o/default.png?alt=media&token=6b8adb0b-f3ac-40ef-a0fb-7e5408245b03";
                         }}
-                        alt={property?.title}
+                        alt={property?.title === "" ? "Imagem propriedade" : property?.title}
                         />
 
-                    {/* <img src={property?.featuredImage} alt={property?.title} /> */}
+                    {/* <img src={imageDefault} alt={property?.title} /> */}
                 </a>
                     </div>
                         
@@ -147,7 +148,12 @@ export function PropertyUnicBlock({id, style}) {
                         {property?.priceSale === "" && property?.priceRent === ""  ?
                         <h3><span>Consultar valor</span></h3>
                         :
-                        <h3>R$ <span>{property?.status === "Venda" ? property?.priceSale : property?.priceRent}</span></h3>
+                        property?.status === "Venda" ?
+                        <h3>R$ <span>{property?.priceSale}</span></h3>
+                        : property?.status === "Aluguel" ?
+                        <h3>R$ <span>{property?.priceRent}</span></h3>
+                        :  <h4>{property?.priceRent === "" ? "Consultar" : "R$"} <span>{property?.priceRent === "" ? "Consultar" : property?.priceRent}</span> /
+                        {property?.priceSale === "" ? " Consultar" : " R$"} <span>{property?.priceSale === "" ? "Consultar" : property?.priceSale}</span></h4>
                         }
                     </div>
                     </div>

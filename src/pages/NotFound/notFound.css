@@ -7,18 +7,32 @@
     flex-direction: column;
 }
 .NotFound .MainAbout{
-    width: 95%;
+    width: 100%;
     display: flex;
     text-align: center;
     align-itens: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 80px;
-    margin-bottom: 50px;
+    margin: 40px 0;
+}
+
+.NotFound .MainAbout .logo {
+    width: 100px;
+    display: flex;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+.NotFound .MainAbout .logo img {
+    width: 100%;
+    margin: 0px auto;
 }
 
 .NotFound .MainAbout img {
-    width: 650px;
+    width: 450px;
     margin: 40px auto;
 }
 
@@ -26,26 +40,65 @@
     font-weight: 700;
     text-align: center;
     color: var(--Paragraph);
-    margin: 10px 10px;
+    margin: 30px 10px 10px 10px;
 }
 .NotFound .MainAbout h5 {
     font-weight: 500;
     text-align: center;
     color: var(--Gray);
-    margin: 0 20px;
+    margin: 10px 20px;
+}
+.NotFound .MainAbout .buttons {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.NotFound .MainAbout .buttons button {
+    width: 250px;
+    display: flex;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: var(--Primary);
+    color: var(--White);
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    font-size: 14px;
+}
+.NotFound .MainAbout .buttons a {
+    width: 250px;
+    display: flex;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: var(--Primary);
+    color: var(--White);
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    font-size: 14px;
+    text-decoration: none;
 }
 
 
 @media (max-width: 750px) {
     .NotFound .MainAbout img {
         width: 70%;
-        margin: 0 auto;
+        margin: 20px auto;
     }
 
     @media (max-width: 550px) {
         .NotFound .MainAbout img {
             width: 85%;
-            margin: 0 auto;
+            margin: 20px auto;
         }
     }
 }

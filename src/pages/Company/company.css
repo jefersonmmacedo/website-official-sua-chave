@@ -54,13 +54,13 @@
     align-items:center;
     justify-content: center;
     width: 200px; 
-    border-radius: 20px;
+    border-radius: 0px;
     object-fit: cover;
     margin: 5px 10px;
 }
 .Company .mainCompany .CompanyUnic .title .image img {
     width: 195px; 
-    border-radius: 20px;
+    border-radius: 0px;
     object-fit: contain;
     margin: 3px;
 }

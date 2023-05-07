@@ -43,7 +43,7 @@ export function Schedules() {
 
                 <div className="text">
                 <div className="textTop">
-                <h3>Minhas conversas</h3>
+                <h3>Meus agendamentos</h3>
                 <button onClick={realoadPage}><IoRefreshOutline /> Atualizar</button>
                 </div>
                 

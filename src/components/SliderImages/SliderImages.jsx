@@ -5,6 +5,7 @@ import { SliderImagesModal } from '../SliderImagesModal/SliderImagesModal';
 import Modal from 'react-modal';
 import { useState } from "react";
 import "./sliderImages.css"
+import imageDefault from "../../assets/images/default2.png"
   
   
   
@@ -74,7 +75,16 @@ import "./sliderImages.css"
 
             {images.map((image) => {
                 return (
-                    <img src={image.link} width="100%" height="100%" onClick={handleOpenModal} key={image.id} className="img"/>
+                  <img 
+                  src={image.link}
+                  onError={({ currentTarget }) => {
+                      currentTarget.onerror = null; // previne loop
+                      currentTarget.src="https://firebasestorage.googleapis.com/v0/b/suachave-4bcbe.appspot.com/o/default2.png?alt=media&token=5b3e2129-77a2-45de-838f-74e9fe6ebc4a";
+                  }}
+                  alt={"Imagem propriedade"}
+                  width="100%" height="100%" onClick={handleOpenModal} key={image.id} className="img"
+                  />
+                    
                 )
             })}
 

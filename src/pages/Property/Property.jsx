@@ -241,79 +241,147 @@ export function Property() {
                         })}
                     </div>
                     <div className="infosCompanyMobile">
-                    {data[0]?.status === "Aluguel" ?
+                    {data[0].status === "Aluguel" ?
                     <>
-                     {data[0]?.priceRent === "" ? "Consultar valor" :
+                    {data[0].priceRent === "" ? 
+                     <div className="pricing">
+                     <h5>Aluguel / <span>Mensal</span></h5>
+                     <h2><span>Preço não definido</span></h2>
+                 </div>
+                  :
                     <div className="pricing">
-                        <h5>{data[0]?.status} / <span> {data[0]?.textRent}</span></h5>
-                        <h2>R$ <span>{data[0]?.priceRent}</span></h2>
+                        <h5>Aluguel / <span> {data[0].textRent}</span></h5>
+                        <h2>R$ <span>{data[0].priceRent}</span></h2>
                     </div>
                     }
-                     {data[0]?.condominium === "" || data[0]?.condominium === "0,00" ? ""  :
+                    {data[0].condominium === "" || data[0].condominium === "0,00" ? ""  :
                     <div className="otherPrincings">
                         <h5>Condomínio</h5>
-                        <h5>R$ {data[0]?.condominium}</h5>
+                        <h5>R$ {data[0].condominium}</h5>
                     </div>
                         }
-                     {data[0]?.iptu === "" || data[0]?.iptu === "0,00" ? "" :
+                     {data[0].iptu === "" || data[0].iptu === "0,00" ? "" :
                     <div className="otherPrincings">
                         <h5>IPTU</h5>
-                        <h5>R$ {data[0]?.iptu}</h5>
+                        <h5>R$ {data[0].iptu}</h5>
                     </div>
                      }
-                     {data[0]?.otherPrices === "" || data[0]?.otherPrices === "0,00" ? ""  :
+                     {data[0].otherPrices === "" || data[0].otherPrices === "0,00" ? ""  :
                     <div className="otherPrincings">
                         <h5>Outros encargos</h5>
-                        <h5>R$ {data[0]?.otherPrices}</h5>
+                        <h5>R$ {data[0].otherPrices}</h5>
                     </div>
                      }
-                      {ResultBRL === "" || ResultBRL === "R$ 0,00" ? "" :
+                      {ResultBRL === "" ? "" :
                     <div className="pricingTotal">
-                        <h4>Total</h4>
+                        <h4>Total encargos</h4>
                          <h4>{ResultBRL}</h4>
                      </div>
                     }
-                     {data[0]?.priceSale === "" ? "" :
+                     {data[0].priceSale === "" ? 
+                        ""
+                     :
                      <div className="pricing">
                          <h5>Venda</h5>
-                         <h2>R$ <span>{data[0]?.priceSale}</span></h2>
+                         <h2>R$ <span>{data[0].priceSale}</span></h2>
                      </div>
                      }
+                  
                     </>
-                    :
+                    : data[0].status === "Venda" ?
                     <>
-                    {data[0]?.priceSale === "" ? "Consultar valor" :
-                    <div className="pricing">
-                        <h5>Venda</h5>
-                        <h2>R$ <span>{data[0]?.priceSale}</span></h2>
-                    </div>
+                       {data[0].priceSale === "" ? 
+                        <div className="pricing">
+                            <h5>Venda</h5>
+                            <h2><span>Preço não definido</span></h2>
+                        </div>
+                     :
+                     <div className="pricing">
+                         <h5>Venda</h5>
+                         <h2>R$ <span>{data[0].priceSale}</span></h2>
+                     </div>
+                     }
+                  
+                   {data[0].condominium === "" || data[0].condominium === "0,00" ? ""  :
+                   <div className="otherPrincings">
+                       <h5>Condomínio</h5>
+                       <h5>R$ {data[0].condominium}</h5>
+                   </div>
+                       }
+                    {data[0].iptu === "" || data[0].iptu === "0,00" ? ""  :
+                   <div className="otherPrincings">
+                       <h5>IPTU</h5>
+                       <h5>R$ {data[0].iptu}</h5>
+                   </div>
                     }
-                    {data[0]?.condominium === "" || data[0]?.condominium === "0,00" ? ""  :
-                    <div className="otherPrincings">
-                        <h5>Condomínio</h5>
-                        <h5>R$ {data[0]?.condominium}</h5>
-                    </div>
-                        }
-                     {data[0]?.iptu === "" || data[0]?.iptu === "0,00" ? "" :
-                    <div className="otherPrincings">
-                        <h5>IPTU</h5>
-                        <h5>R$ {data[0]?.iptu}</h5>
-                    </div>
-                     }
-                     {data[0]?.otherPrices === "" || data[0]?.otherPrices === "0,00" ? ""  :
-                    <div className="otherPrincings">
-                        <h5>Outros encargos</h5>
-                        <h5>R$ {data[0]?.otherPrices}</h5>
-                    </div>
-                     }
-                     {ResultBRLCharges === "" || ResultBRLCharges === "R$ 0,00" ? "" :
+                    {data[0].otherPrices === "" || data[0].otherPrices === "0,00" ? ""  :
+                   <div className="otherPrincings">
+                       <h5>Outros encargos</h5>
+                       <h5>R$ {data[0].otherPrices}</h5>
+                   </div>
+                    }
+                     {ResultBRL === "" ? "" :
                    <div className="pricingTotal">
                        <h4>Total encargos</h4>
-                        <h4>{ResultBRLCharges}</h4>
+                        <h4>{ResultBRL}</h4>
                     </div>
                    }
                   
                    </>
+                   : data[0].status === "Aluguel e Venda" ?
+                   <>
+                     {data[0].priceRent === "" ? 
+                     <div className="pricing">
+                     <h5>Aluguel / <span>Mensal</span></h5>
+                     <h2><span>Preço não definido</span></h2>
+                 </div>
+                  :
+                    <div className="pricing">
+                        <h5>Aluguel / <span> {data[0].textRent}</span></h5>
+                        <h2>R$ <span>{data[0].priceRent}</span></h2>
+                    </div>
+                    }
+                    {data[0].condominium === "" || data[0].condominium === "0,00" ? ""  :
+                    <div className="otherPrincings">
+                        <h5>Condomínio</h5>
+                        <h5>R$ {data[0].condominium}</h5>
+                    </div>
+                        }
+                     {data[0].iptu === "" || data[0].iptu === "0,00" ? "" :
+                    <div className="otherPrincings">
+                        <h5>IPTU</h5>
+                        <h5>R$ {data[0].iptu}</h5>
+                    </div>
+                     }
+                     {data[0].otherPrices === "" || data[0].otherPrices === "0,00" ? ""  :
+                    <div className="otherPrincings">
+                        <h5>Outros encargos</h5>
+                        <h5>R$ {data[0].otherPrices}</h5>
+                    </div>
+                     }
+                      {ResultBRL === "" ? "" :
+                    <div className="pricingTotal">
+                        <h4>Total encargos</h4>
+                         <h4>{ResultBRL}</h4>
+                     </div>
+                    }
+                     {data[0].priceSale === "" ? 
+                        <div className="pricing">
+                            <h5>Venda</h5>
+                            <h2><span>Preço não definido</span></h2>
+                        </div>
+                     :
+                     <div className="pricing">
+                         <h5>Venda</h5>
+                         <h2>R$ <span>{data[0].priceSale}</span></h2>
+                     </div>
+                     }
+                  
+              
+                 
+                  </>
+                  : ""
+                   
                     }
                     <CompanyInfo idProperty={data[0]?.id} idCompany={data[0]?.idCompany} />
                     </div>
@@ -346,79 +414,147 @@ export function Property() {
                 </div>
 
                 <div className="infosCompany">
-                {data[0]?.status === "Aluguel" ?
+                {data[0].status === "Aluguel" ?
                     <>
-                     {data[0]?.priceRent === "" ? "Consultar valor" :
+                    {data[0].priceRent === "" ? 
+                     <div className="pricing">
+                     <h5>Aluguel / <span>Mensal</span></h5>
+                     <h2><span>Preço não definido</span></h2>
+                 </div>
+                  :
                     <div className="pricing">
-                        <h5>{data[0]?.status} / <span> {data[0]?.textRent}</span></h5>
-                        <h2>R$ <span>{data[0]?.priceRent}</span></h2>
+                        <h5>Aluguel / <span> {data[0].textRent}</span></h5>
+                        <h2>R$ <span>{data[0].priceRent}</span></h2>
                     </div>
                     }
-                    {data[0]?.condominium === "" || data[0]?.condominium === "0,00" ? ""  :
+                    {data[0].condominium === "" || data[0].condominium === "0,00" ? ""  :
                     <div className="otherPrincings">
                         <h5>Condomínio</h5>
-                        <h5>R$ {data[0]?.condominium}</h5>
+                        <h5>R$ {data[0].condominium}</h5>
                     </div>
                         }
-                     {data[0]?.iptu === "" || data[0]?.iptu === "0,00" ? "" :
+                     {data[0].iptu === "" || data[0].iptu === "0,00" ? "" :
                     <div className="otherPrincings">
                         <h5>IPTU</h5>
-                        <h5>R$ {data[0]?.iptu}</h5>
+                        <h5>R$ {data[0].iptu}</h5>
                     </div>
                      }
-                     {data[0]?.otherPrices === "" || data[0]?.otherPrices === "0,00" ? ""  :
+                     {data[0].otherPrices === "" || data[0].otherPrices === "0,00" ? ""  :
                     <div className="otherPrincings">
                         <h5>Outros encargos</h5>
-                        <h5>R$ {data[0]?.otherPrices}</h5>
+                        <h5>R$ {data[0].otherPrices}</h5>
                     </div>
                      }
-                      {ResultBRL === "" || ResultBRL === "R$ 0,00" ? "" :
+                      {ResultBRL === "" ? "" :
                     <div className="pricingTotal">
-                        <h4>Total</h4>
+                        <h4>Total encargos</h4>
                          <h4>{ResultBRL}</h4>
                      </div>
                     }
-                     {data[0]?.priceSale === "" ? "" :
+                     {data[0].priceSale === "" ? 
+                        ""
+                     :
                      <div className="pricing">
                          <h5>Venda</h5>
-                         <h2>R$ <span>{data[0]?.priceSale}</span></h2>
+                         <h2>R$ <span>{data[0].priceSale}</span></h2>
                      </div>
                      }
+                  
                     </>
-                    :
+                    : data[0].status === "Venda" ?
                     <>
-                    {data[0]?.priceSale === "" ? "Consultar valor" :
-                    <div className="pricing">
-                        <h5>Venda</h5>
-                        <h2>R$ <span>{data[0]?.priceSale}</span></h2>
-                    </div>
-                    }
-                   {data[0]?.condominium === "" || data[0]?.condominium === "0,00" ? ""  :
+                       {data[0].priceSale === "" ? 
+                        <div className="pricing">
+                            <h5>Venda</h5>
+                            <h2><span>Preço não definido</span></h2>
+                        </div>
+                     :
+                     <div className="pricing">
+                         <h5>Venda</h5>
+                         <h2>R$ <span>{data[0].priceSale}</span></h2>
+                     </div>
+                     }
+                  
+                   {data[0].condominium === "" || data[0].condominium === "0,00" ? ""  :
                    <div className="otherPrincings">
                        <h5>Condomínio</h5>
-                       <h5>R$ {data[0]?.condominium}</h5>
+                       <h5>R$ {data[0].condominium}</h5>
                    </div>
                        }
-                    {data[0]?.iptu === "" || data[0]?.iptu === "0,00" ? ""  :
+                    {data[0].iptu === "" || data[0].iptu === "0,00" ? ""  :
                    <div className="otherPrincings">
                        <h5>IPTU</h5>
-                       <h5>R$ {data[0]?.iptu}</h5>
+                       <h5>R$ {data[0].iptu}</h5>
                    </div>
                     }
-                    {data[0]?.otherPrices === "" || data[0]?.otherPrices === "0,00" ? ""  :
+                    {data[0].otherPrices === "" || data[0].otherPrices === "0,00" ? ""  :
                    <div className="otherPrincings">
                        <h5>Outros encargos</h5>
-                       <h5>R$ {data[0]?.otherPrices}</h5>
+                       <h5>R$ {data[0].otherPrices}</h5>
                    </div>
                     }
-                     {ResultBRLCharges === "" || ResultBRLCharges === "R$ 0,00" ? "" :
+                     {ResultBRL === "" ? "" :
                    <div className="pricingTotal">
                        <h4>Total encargos</h4>
-                        <h4>{ResultBRLCharges}</h4>
+                        <h4>{ResultBRL}</h4>
                     </div>
                    }
                   
                    </>
+                   : data[0].status === "Aluguel e Venda" ?
+                   <>
+                     {data[0].priceRent === "" ? 
+                     <div className="pricing">
+                     <h5>Aluguel / <span>Mensal</span></h5>
+                     <h2><span>Preço não definido</span></h2>
+                 </div>
+                  :
+                    <div className="pricing">
+                        <h5>Aluguel / <span> {data[0].textRent}</span></h5>
+                        <h2>R$ <span>{data[0].priceRent}</span></h2>
+                    </div>
+                    }
+                    {data[0].condominium === "" || data[0].condominium === "0,00" ? ""  :
+                    <div className="otherPrincings">
+                        <h5>Condomínio</h5>
+                        <h5>R$ {data[0].condominium}</h5>
+                    </div>
+                        }
+                     {data[0].iptu === "" || data[0].iptu === "0,00" ? "" :
+                    <div className="otherPrincings">
+                        <h5>IPTU</h5>
+                        <h5>R$ {data[0].iptu}</h5>
+                    </div>
+                     }
+                     {data[0].otherPrices === "" || data[0].otherPrices === "0,00" ? ""  :
+                    <div className="otherPrincings">
+                        <h5>Outros encargos</h5>
+                        <h5>R$ {data[0].otherPrices}</h5>
+                    </div>
+                     }
+                      {ResultBRL === "" ? "" :
+                    <div className="pricingTotal">
+                        <h4>Total encargos</h4>
+                         <h4>{ResultBRL}</h4>
+                     </div>
+                    }
+                     {data[0].priceSale === "" ? 
+                        <div className="pricing">
+                            <h5>Venda</h5>
+                            <h2><span>Preço não definido</span></h2>
+                        </div>
+                     :
+                     <div className="pricing">
+                         <h5>Venda</h5>
+                         <h2>R$ <span>{data[0].priceSale}</span></h2>
+                     </div>
+                     }
+                  
+              
+                 
+                  </>
+                  : ""
+                   
                     }
                 <CompanyInfo idProperty={data[0]?.id} idCompany={data[0]?.idCompany} />
                 </div>

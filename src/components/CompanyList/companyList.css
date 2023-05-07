@@ -63,29 +63,31 @@
     width: 600px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     background-color: var(--White);
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    margin: 10px 20px;
-        height: 105px;
+    border-radius: 50px;
+    margin:5px;
+    border: 1px solid var(--Border);
+    padding: 10px;
 }
 
 .CompanyList .listProperties .propertyUnicFavorite .image {
-    width: 105px; 
-    height: 105px;
-    border-radius: 20px 0 0 20px;
+    width:90px; 
+    height:90px;
+    border-radius: 50px;
     object-fit: cover;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--Border);
+    background-color: var(--White);
 }
 .CompanyList .listProperties .propertyUnicFavorite .image img {
-    width: 100px; 
-    height: 100px;
-    border-radius: 20px 0 0 20px;
+    width: 85px; 
+    height: 85px;
+    border-radius: 50px;
     object-fit: contain;
     margin: 3px;
 }
@@ -317,7 +319,7 @@
                     width: 100%;
                 }
 
-                .CompanyList .listProperties .propertyUnicFavorite .image {
+                /* .CompanyList .listProperties .propertyUnicFavorite .image {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
@@ -328,7 +330,7 @@
                 .CompanyList .listProperties .propertyUnicFavorite .image img {
                     height: 50px;
                     margin: 0px 15px -15px 15px;
-                }
+                } */
 
                 .CompanyList .listProperties .propertyUnicFavorite .text h4 {
                     color: var(--Primary);
@@ -363,7 +365,7 @@
                     }
                     
 
-                    .CompanyList .listProperties .propertyUnicFavorite  {
+                    /* .CompanyList .listProperties .propertyUnicFavorite  {
                         width: 98%;
                         display: flex;
                         flex-direction: column;
@@ -388,7 +390,7 @@
 
                     .CompanyList .listProperties .propertyUnicFavorite .text h2 {
                         font-size: 24px;
-                    }
+                    } */
 
 
                     @media (max-width: 450px) {
