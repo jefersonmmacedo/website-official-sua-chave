@@ -35,7 +35,7 @@ export function Pricing() {
                 <h5><IoCheckmarkCircleOutline /> Taxa de adesão gratuita</h5>
                 </div>
                 <div className="infosContent">
-                    <h5>* Apartir do plano Start</h5>
+                    <h5>* Apartir do plano Lite</h5>
                 </div>
             </div>
             {/* <div className="future">
