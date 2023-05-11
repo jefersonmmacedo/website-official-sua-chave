@@ -202,11 +202,11 @@ const RightNav = ({ open }) => {
             Planos
             </a>
           </li>
-          <li className='nav-item'>
+          {/* <li className='nav-item'>
             <a href='#' >
             Blog
             </a>
-          </li>
+          </li> */}
           {user === "" || user === null || user === undefined ? 
             <>
             <button onClick={() => HandleOpenLink("/sobre")}>

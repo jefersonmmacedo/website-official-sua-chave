@@ -31,7 +31,7 @@ export function Pricing() {
                 <h5><IoCheckmarkCircleOutline /> Acesso a busca de imóveis dos clientes<span>*</span></h5>
                 <h5><IoCheckmarkCircleOutline /> Solicitação para avaliação de imóveis<span>*</span></h5>
                 <h5><IoCheckmarkCircleOutline /> Captação de leads</h5>
-                <h5><IoCheckmarkCircleOutline /> Hospedagem inclusa<span>*</span></h5>
+                <h5><IoCheckmarkCircleOutline /> Página/perfil com seus dados e imóveis</h5>
                 <h5><IoCheckmarkCircleOutline /> Taxa de adesão gratuita</h5>
                 </div>
                 <div className="infosContent">

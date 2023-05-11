@@ -41,8 +41,8 @@ export function Plains() {
         {
             breakpoint: 1210,
             settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4
+                slidesToShow: 3,
+                slidesToScroll: 3
             }
         },
         {
