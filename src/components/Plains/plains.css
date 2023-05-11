@@ -1,5 +1,5 @@
 ﻿.Plains {
-    width: 95%;
+    width: 1200px !important;
     margin: 20px 0 20px 0;
 }
 
@@ -385,10 +385,14 @@
 }
 
 
+@media (max-width: 1220px) {
+    .Plains {
+        width: 95% !important;
+        margin: 20px 0 20px 0;
+    }
 @media (max-width: 650px) {
     .Plains {
         width: 100%;
     }
-
 }
-
+}

@@ -120,7 +120,7 @@ export function Plains() {
                 } */}
 
                 {/* <a href={"https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre os planos e serviços que a Sua Chave pode me oferecer"}>Falar com time comercial</a> */}
-                <a href={`https://adm.suachave.com.br/cadastro/novocadastro`} target="_blank" rel="noreferrer">Teste por 7 dias grátis</a>
+                <a href={`https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre o plano ${plain?.name} e os serviços que a Sua Chave pode me oferecer`} target="_blank" rel="noreferrer">Teste por 7 dias grátis</a>
                 {/* <a href={`http://adm.suachave.com.br/cadastrar/${plain?.id}`} target="_blank" rel="noreferrer">Contratar</a> */}
 
                     <p>{plain?.note}</p>
