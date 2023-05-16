@@ -36,6 +36,10 @@ export function NewSearchClient() {
   const [districtAll, setDistrictAll] = useState([]);
 
 
+  const newName =  name.toLowerCase().replace(/(?:^|\s)(?!da|de|do)\S/g, l => l.toUpperCase());
+  const newDistrict =  district.toLowerCase().replace(/(?:^|\s)(?!da|de|do)\S/g, l => l.toUpperCase());
+
+
   function handleClickClient() {
       setIsOpenModa(true)
 
@@ -43,7 +47,7 @@ export function NewSearchClient() {
   
   function handleNewSearch() {
 
-    handleNewSearchClient({name, email, whatsapp: phone, status, district, city, uf, type, subType, bedroom, suite, restroom, garage, pets, furnished})
+    handleNewSearchClient({name: newName, email, whatsapp: phone, status, district: newDistrict, city, uf, type, subType, bedroom, suite, restroom, garage, pets, furnished})
     setIsOpenModa(false);
   }
   
@@ -259,7 +263,7 @@ Modal.setAppElement('#root');
                       <div className="dataItemSearch">
                         <h6>Estado</h6>
                         
-                        <select value={uf} onChange={handleSetectUf}> 
+                        <select value={uf} onChange={handleSetectUf} className={uf === "" ? "" : "select"}> 
                             <option value="">Escolha seu estado</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -294,7 +298,7 @@ Modal.setAppElement('#root');
  
                         <div className="dataItemSearch">
                         <h6>Cidade</h6>
-                        <select value={city} onChange={handleSetectCity}> 
+                        <select value={city} onChange={handleSetectCity} className={city === "" ? "" : "select"}> 
                     {districtAll.length === 0 ?
                     <option value={city}>{city}</option>
                     :
@@ -311,7 +315,7 @@ Modal.setAppElement('#root');
                         </div>
                         <div className="dataItemSearch">
                         <h6>Bairro</h6>
-                        <input type="text" placeholder="Digite" value={district} onChange={e => setDistrict(e.target.value)}/>
+                        <input type="text" placeholder="Digite" value={district} onChange={e => setDistrict(e.target.value)} className={district === "" ? "" : "select"}/>
                         </div>
 
                       </div>

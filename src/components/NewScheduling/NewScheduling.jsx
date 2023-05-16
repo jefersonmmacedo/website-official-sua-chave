@@ -24,7 +24,6 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
     const [isOpenModalLogin, setIsOpenModaLogin] = useState(false);
     const [isOpenModalLogin2, setIsOpenModaLogin2] = useState(false);
 
-
     const [dateSelected, setDateSelected] = useState();
     const [shift, setShift] = useState();
     const [hour, setHour] = useState();

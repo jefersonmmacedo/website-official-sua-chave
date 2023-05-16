@@ -12,6 +12,7 @@ import {RiStore2Line} from "react-icons/ri";
 import {MdOutlineMapsHomeWork} from "react-icons/md";
 import {TbTractor, TbMap2, TbBuildingFactory} from "react-icons/tb";
 import { AuthContext } from "../../contexts/Auth";
+import {HiOutlineIdentification} from 'react-icons/hi'
 
 export function Company() {
     const Local = localStorage.getItem("suachave");
@@ -132,6 +133,7 @@ export function Company() {
                         </div>
                         <div className="textTitle">
                     <h2>{data[0].fantasyName}</h2>
+                    <h5><HiOutlineIdentification /> CRECI: {data[0].creci}</h5>
                     {data[0].viewAddress === false ? "" :
                     <h5><IoLocationOutline /> {data[0].road}, Nº {data[0].number} - {data[0].district} - {data[0].city} - {data[0].uf}</h5>
                     }
