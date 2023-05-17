@@ -12,6 +12,66 @@
     width: 100%;
 }
 
+.SearchPropertyHomeTop .search3 {
+    display: none;
+}
+.SearchPropertyHomeTop .search2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+.SearchPropertyHomeTop .search2 .listAdress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 43%;
+    border-radius: 10px;
+    border: 1px solid var(--Border);
+    background-color: var(--White);
+    padding:7px;
+    margin-right: 13%;
+    overflow: auto;
+    max-height: 150px;
+}
+
+.SearchPropertyHomeTop .search2 .listAdress h6 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 98%;
+    margin: 3px;
+    padding: 5px 10px;
+    background-color: var(--BorderHover);
+    font-size: 14px;
+    border-radius: 20px;
+    color: var(--Gray2);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.SearchPropertyHomeTop .search2 .listAdress::-webkit-scrollbar {
+    width: 12px;  
+    border-radius: 50px;              /* width of the entire scrollbar */
+  }
+  
+  .SearchPropertyHomeTop .search2 .listAdress::-webkit-scrollbar-track {
+    background: var(--BorderHover);
+    border-radius: 50px;         /* color of the tracking area */
+  }
+  
+  .SearchPropertyHomeTop .search2 .listAdress::-webkit-scrollbar-thumb {
+    background-color: var(--Border);    /* color of the scroll thumb */
+    border-radius: 50px;       /* roundness of the scroll thumb */
+    border: 3px solid var(--BorderHover);  /* creates padding around scroll thumb */
+  }
+
+
 .SearchPropertyHomeTop .search {
     display: flex;
     flex-direction: row;
@@ -23,6 +83,18 @@
     background-color: var(--White);
     padding:7px;
     margin-bottom: 5px;
+}
+
+.SearchPropertyHomeTop .search .btnClear {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--Border);
+    padding: 3px;
+    color: var(--Gray2);
 }
 .SearchPropertyHomeTop .search h3 {
     display: none;
@@ -394,6 +466,71 @@
                 z-index: 1;
                 position: relative;
             }
+
+
+            .SearchPropertyHomeTop .search2 {
+                display: none;
+            }
+
+            .SearchPropertyHomeTop .search3 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                width: 95%;
+                margin-bottom: 5px;
+            }
+
+            
+
+            .SearchPropertyHomeTop .search3 .listAdress {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+                border-radius: 10px;
+                border: 1px solid var(--Border);
+                background-color: var(--White);
+                padding:7px;
+                margin-right: 0%;
+                overflow: auto;
+                max-height: 150px;
+            }
+            
+            .SearchPropertyHomeTop .search3 .listAdress h6 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                width: 95%;
+                margin: 3px;
+                padding: 5px 10px;
+                background-color: var(--BorderHover);
+                font-size: 14px;
+                border-radius: 20px;
+                color: var(--Gray2);
+                font-weight: 700;
+                cursor: pointer;
+            }
+            
+            .SearchPropertyHomeTop .search3 .listAdress::-webkit-scrollbar {
+                width: 12px;  
+                border-radius: 50px;              /* width of the entire scrollbar */
+              }
+              
+              .SearchPropertyHomeTop .search3 .listAdress::-webkit-scrollbar-track {
+                background: var(--BorderHover);
+                border-radius: 50px;         /* color of the tracking area */
+              }
+              
+              .SearchPropertyHomeTop .search3 .listAdress::-webkit-scrollbar-thumb {
+                background-color: var(--Border);    /* color of the scroll thumb */
+                border-radius: 50px;       /* roundness of the scroll thumb */
+                border: 3px solid var(--BorderHover);  /* creates padding around scroll thumb */
+              }
+            
+            
 
 
           

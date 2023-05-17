@@ -1,6 +1,6 @@
 import "./searchPropertyHomeTop.css";
 import { useState } from "react";
-import {IoSearch, IoAddOutline, IoRemoveOutline} from "react-icons/io5";
+import {IoSearch, IoAddOutline, IoRemoveOutline, IoClose} from "react-icons/io5";
 import { useFetch } from "../../hooks/useFetch";
 import { toast } from "react-toastify";
 import { TbBone, TbSofa } from "react-icons/tb";
@@ -25,6 +25,9 @@ export function SearchPropertyHomeTop() {
     const [restroom, setRestroom] = useState("0");
     const [viewFilter, setViewFilter] = useState(true);
     const [filter, setFilter] = useState(false);
+
+    const [search, setSearch] = useState("");
+    const searchLower = search.toLowerCase();
 
     const [AdressSelected, setAdressSelected] = useState("");
 
@@ -52,7 +55,6 @@ export function SearchPropertyHomeTop() {
 
 
     var districtList = [];
-    var cityList = [];
     var subTypeList = [];
 
     data?.forEach((item) => {
@@ -64,15 +66,7 @@ export function SearchPropertyHomeTop() {
             districtList.push(item);
         }
     });
-    data?.forEach((item) => {
-        var duplicated  = cityList.findIndex(redItem => {
-            return item.city === redItem.city ;
-        }) > -1;
-    
-        if(!duplicated) {
-            cityList.push(item);
-        }
-    });
+
     data?.forEach((item) => {
         var duplicated  = subTypeList.findIndex(redItem => {
             return item.type === redItem.type && item.subType === redItem.subType;
@@ -93,15 +87,6 @@ export function SearchPropertyHomeTop() {
             }
         })
         }
-    if(cityList) {
-        cityList.sort(function(a,b) {
-            if(a.uf < b.uf ) {
-                return -1
-            } else {
-                return true
-            }
-        })
-        }
     if(subTypeList) {
         subTypeList.sort(function(a,b) {
             if(a.uf < b.uf ) {
@@ -111,6 +96,11 @@ export function SearchPropertyHomeTop() {
             }
         })
         }
+
+   
+        const searchFilter = districtList?.filter((address) => address.district.toLowerCase().includes(searchLower)
+                                                            || address.city.toLowerCase().includes(searchLower)
+                                                            || address.uf.toLowerCase().includes(searchLower))
 
         function handleType(e) {
             setType(e.target.value)
@@ -145,9 +135,9 @@ export function SearchPropertyHomeTop() {
         setViewFilter(filter)
       }
 
-      function handleSelectAddress(e) {
-        setAdressSelected(e.target.value)
-        console.log(e.target.value)    
+      function handleSelectAddress(data) {
+        setAdressSelected(data)
+        console.log(data)    
       }
 
 
@@ -177,6 +167,11 @@ export function SearchPropertyHomeTop() {
         }
         console.log(furnished)
       };
+
+      function handleClearAdress() {
+        setAdressSelected("")
+        setSearch("")
+      }
     
       function handleLinkSearchProperty(e) {
         if(code === true) {
@@ -236,24 +231,23 @@ export function SearchPropertyHomeTop() {
                         }
                     </select>
 
+     
+                    <input type="text" placeholder="Digite bairro, cidade ou estado" value={AdressSelected === "" ? search : AdressSelected} onChange={e => setSearch(e.target.value)} />
+                    {AdressSelected === "" ? "" :
+                    <button onClick={handleClearAdress} className="btnClear"><IoClose /></button>
+                    }
 
-                    <input type="text" placeholder="Digite bairro, cidade ou estado" list="brow" value={AdressSelected} onChange={handleSelectAddress} />
-                    <datalist id="brow" >
-                    {districtList?.map((district) => {
-                            return (
-                                <>
-                                <option autocomplete="off" key={district.id} value={`${district.district} - ${district.city} - ${district.uf}`}></option>
-                                </>
-                            )
-                        })}
-                    {cityList?.map((district) => {
-                            return (
-                                <>
-                                <option autocomplete="off" key={district.id} value={`${district.city} - ${district.uf}`}></option>
-                                </>
-                            )
-                        })}
-                    </datalist>
+                    {search === "" || searchFilter.length === 0 || AdressSelected !== "" ? "" :
+                                <div className="search3">
+                                    <div className="listAdress">
+                                        {searchFilter.map((adress) => {
+                                            return (
+                                                <h6 key={adress.id} onClick={() => handleSelectAddress(`${adress.district} - ${adress.city} - ${adress.uf}`)}>{adress.district} - {adress.city} - {adress.uf}</h6>
+                                            )
+                                        })}      
+                                    </div>
+                                </div>
+                                }
                 </>
                     :
                     <>
@@ -273,6 +267,17 @@ export function SearchPropertyHomeTop() {
                     }
                     <button className="mobile" onClick={handleLinkSearchProperty}><IoSearch /></button>
             </div>
+            {search === "" || searchFilter.length === 0 || AdressSelected !== "" ? "" :
+            <div className="search2">
+                <div className="listAdress">
+                    {searchFilter.map((adress) => {
+                        return (
+                            <h6 key={adress.id} onClick={() => handleSelectAddress(`${adress.district} - ${adress.city} - ${adress.uf}`)}>{adress.district} - {adress.city} - {adress.uf}</h6>
+                        )
+                    })}      
+                </div>
+            </div>
+             }
 
             {filter === true ? 
             <div className="viewFilter">
