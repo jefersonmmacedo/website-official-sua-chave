@@ -36,8 +36,8 @@ export function NewSearchClient() {
   const [districtAll, setDistrictAll] = useState([]);
 
 
-  const newName =  name.toLowerCase().replace(/(?:^|\s)(?!da|de|do)\S/g, l => l.toUpperCase());
-  const newDistrict =  district.toLowerCase().replace(/(?:^|\s)(?!da|de|do)\S/g, l => l.toUpperCase());
+  const newName =  name?.toLowerCase().replace(/(?:^|\s)(?!da|de|do)\S/g, l => l.toUpperCase());
+  const newDistrict =  district?.toLowerCase().replace(/(?:^|\s)(?!da|de|do)\S/g, l => l.toUpperCase());
 
 
   function handleClickClient() {
