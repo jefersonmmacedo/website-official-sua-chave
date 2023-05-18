@@ -360,7 +360,7 @@ async function newVisit(idAccount, username, idFriend) {
             if(type === "Ligação") {
                 window.open(`tel:+55${phoneCompany}`, "_self");
             } else {
-                window.open(`https://wa.me/55${whatsappCompany}?text=Olá. Gostaria de saber mais detalhes sobre o imóvel:%20 ${link}`)
+                window.open(`https://wa.me/55${whatsappCompany}?text=Olá. Me chamo ${name}, gostaria de saber mais detalhes sobre o imóvel:%20 ${link}`)
             }
 
         }).catch((error) => {
