@@ -60,14 +60,14 @@ export function CompanyInfo({idProperty, idCompany}) {
 
     function handleNewContactButton(type) {
         newContact({
-        idProperty: idProperty, idCompany: idCompany, idClient: user.id, name: user.name,
+        idProperty: idProperty, idCompany: idCompany, idClient: user.id, name: user.name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
         email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: type, origin: "Portal", latitude, longitude,
         link: `http://www.suachave.com.br/imovel/${idProperty}`})
     }
 
     function handleNewContactModal(type) {
         newContact({
-        idProperty: idProperty, idCompany: idCompany, idClient: "User Sem cadastro", name: name,
+        idProperty: idProperty, idCompany: idCompany, idClient: "User Sem cadastro", name: name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
         email: email, phone: phone, whatsapp: phone, type: type, origin: "Portal", latitude, longitude,
         link: `http://www.suachave.com.br/imovel/${idProperty}`})
 

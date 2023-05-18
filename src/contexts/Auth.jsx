@@ -351,16 +351,16 @@ async function newVisit(idAccount, username, idFriend) {
         })
     }
     async function newContact({
-        idProperty, idCompany, idClient, name, email, phone, whatsapp, origin, type, latitude, longitude, link
+        idProperty, idCompany, idClient, name, email, phone, whatsapp, origin, type, latitude, longitude, link, whatsappCompany, phoneCompany
     }) {
         const data = {idProperty, idCompany, idClient, name, email, phone, whatsapp, origin, type, latitude, longitude}
 
         await api.post("/contact/", data).then((res) => {
 
             if(type === "Ligação") {
-                window.open(`tel:+55${phone}`, "_self");
+                window.open(`tel:+55${phoneCompany}`, "_self");
             } else {
-                window.open(`https://wa.me/55${whatsapp}?text=Olá. Gostaria de saber mais detalhes sobre o imóvel:%20 ${link}`)
+                window.open(`https://wa.me/55${whatsappCompany}?text=Olá. Gostaria de saber mais detalhes sobre o imóvel:%20 ${link}`)
             }
 
         }).catch((error) => {
@@ -368,16 +368,16 @@ async function newVisit(idAccount, username, idFriend) {
         })
     }
     async function newContactCompany({
-        idProperty, idCompany, idClient, name, email, phone, whatsapp, type
+        idProperty, idCompany, idClient, name, email, phone, whatsapp, type, whatsappCompany, phoneCompany
     }) {
         const data = {idProperty, idCompany, idClient, name, email, phone, whatsapp, type}
 
         await api.post("/contact/", data).then((res) => {
 
             if(type === "Ligação") {
-                window.open(`tel:+55${phone}`, "_self");
+                window.open(`tel:+55${phoneCompany}`, "_self");
             } else {
-                window.open(`https://wa.me/55${whatsapp}?text=Olá. Me chamo ${name}, gostaria de atendimento`)
+                window.open(`https://wa.me/55${whatsappCompany}?text=Olá. Me chamo ${name}, gostaria de atendimento`)
             }
 
         }).catch((error) => {
