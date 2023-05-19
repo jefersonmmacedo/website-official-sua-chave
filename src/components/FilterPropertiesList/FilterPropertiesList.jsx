@@ -17,10 +17,9 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
     const [suite, setSuite] = useState(suítes === "0" ? "0" : suítes);
     const [restroom, setRestroom] = useState(banheiro === "0" ? "0" : banheiro);
     const [statusProperty, setStatusProperty] = useState(status);
-    // const [pets, setPets] = useState(petsProperty);
-    // const [furnished, setFurnished] = useState(furnishedProperty);
 
-    console.log(restroom);
+    const [search, setSearch] = useState("");
+    const searchLower = search.toLowerCase();
 
     const statusSelected = statusProperty === "" ? status : statusProperty;
     console.log({city, uf, district});
@@ -48,7 +47,6 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
 
 
     var districtList = [];
-    var cityList = [];
     var subTypeList = [];
 
     data?.forEach((item) => {
@@ -60,15 +58,7 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
             districtList.push(item);
         }
     });
-    data?.forEach((item) => {
-        var duplicated  = cityList.findIndex(redItem => {
-            return item.city === redItem.city;
-        }) > -1;
-    
-        if(!duplicated) {
-            cityList.push(item);
-        }
-    });
+
     data?.forEach((item) => {
         var duplicated  = subTypeList.findIndex(redItem => {
             return item.type === redItem.type && item.subType === redItem.subType;
@@ -88,15 +78,7 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
             }
         })
         }
-    if(cityList) {
-        cityList.sort(function(a,b) {
-            if(a.uf < b.uf ) {
-                return -1
-            } else {
-                return true
-            }
-        })
-        }
+
         if(subTypeList) {
             subTypeList.sort(function(a,b) {
                 if(a.uf < b.uf ) {
@@ -107,9 +89,14 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
             })
             }
 
-        function handleSelectAddress(e) {
-            setAdressSelected(e.target.value)
-            console.log(e.target.value)    
+
+            const searchFilter = districtList?.filter((address) => address.district.toLowerCase().includes(searchLower)
+                                                                || address.city.toLowerCase().includes(searchLower)
+                                                                || address.uf.toLowerCase().includes(searchLower))
+
+        function handleSelectAddress(data) {
+            setAdressSelected(data)
+            console.log(data)    
           }
     
     function handleFiltro(e) {
@@ -184,6 +171,12 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
         setGarage("0")
     }
 
+    function handleClearAdress() {
+        setAdressSelected("")
+        setSearch("")
+      }
+    
+
 
     return (
         <div className="FilterPropertiesList">
@@ -201,24 +194,25 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
              </div>
              
             
-             <div className="dataSelects">
-             <input type="text" placeholder="Digite a cidade" list="brow" value={AdressSelected} onChange={handleSelectAddress} />
-             <datalist id="brow" >
-                    {districtList?.map((district) => {
-                            return (
-                                <>
-                                <option autocomplete="off" key={district.id} value={`${district.district} - ${district.city} - ${district.uf}`}></option>
-                                </>
-                            )
-                        })}
-                    {cityList?.map((district) => {
-                            return (
-                                <>
-                                <option autocomplete="off" key={district.id} value={`${district.city} - ${district.uf}`}></option>
-                                </>
-                            )
-                        })}
-                    </datalist>
+             <div className="dataSelects2">
+                <div className="search">
+             <input type="text" placeholder="Digite bairro, cidade ou estado" value={AdressSelected === "" ? search : AdressSelected} onChange={e => setSearch(e.target.value)} />
+                    {AdressSelected === "" ? "" :
+                    <button onClick={handleClearAdress} className="btnClear"><IoClose /></button>
+                    }
+                </div>
+
+                    {search === "" || searchFilter.length === 0 || AdressSelected !== "" ? "" :
+                        <div className="search3">
+                            <div className="listAdress">
+                                {searchFilter.map((adress) => {
+                                    return (
+                                        <h6 key={adress.id} onClick={() => handleSelectAddress(`${adress.district} - ${adress.city} - ${adress.uf}`)}>{adress.district} - {adress.city} - {adress.uf}</h6>
+                                    )
+                                })}      
+                            </div>
+                        </div>
+                    }
             </div>
              
              <div className="dataSelects">
