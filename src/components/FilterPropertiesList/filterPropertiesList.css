@@ -420,6 +420,23 @@
 
     
     @media(max-width: 450px) { 
+
+        .FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelects2 .search .btnClear {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            border: none;
+            background-color: var(--Border);
+            padding: 3px;
+            color: var(--Gray2);
+            margin: 0px 10px;
+            width: 20px;
+            height: 20px;
+        }
+
+        
 .FilterPropertiesList .searchItens .searchOptions {
             width: 100%;
             display: flex;
