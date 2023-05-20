@@ -61,10 +61,6 @@ export function Property() {
 
     const valuesRent =[
         {
-        id: "rent",
-        value: data[0]?.priceRent === "" ? "0,00" : parseInt(valueTextFormat)
-        },
-        {
             id: "condominium",
             value: data[0]?.condominium === "" ? "0,00" : valueTextconcominiumFormat
             },
