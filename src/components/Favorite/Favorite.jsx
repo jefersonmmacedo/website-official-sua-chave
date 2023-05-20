@@ -14,12 +14,16 @@ export function Favorite() {
             <h5>Carregando...</h5>
         )
     }
+    if(data) {
+       console.log(data)
+    }
 
     return (
         <div className="Favorite">
             <div className="listFavorite">
             {data?.map((property) => {
                     return (
+                        property.idCompany === null || property.idProperty === null ? "" :
                         <PropertyUnicBlock id={property.idProperty} key={property.id}/>
                     )
                 })}

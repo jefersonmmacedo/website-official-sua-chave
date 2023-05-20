@@ -465,7 +465,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
         const status = "Pendente"
         newScheduling({
             idClient: user.id, idProperty, idCompany, titleProperty: title, imageProperty: image, email: user.email, phone: user.phone,
-            whatsapp: user.whatsapp, status, meet,
+            whatsapp: user.whatsapp, status, meet, nameClient: user.name,
             day: new Date(dateSelected).getDate(), month: new Date(dateSelected).getMonth()+1, year: new Date(dateSelected).getFullYear(),
             shift, hour, ownACar, location: meet === "Imobiliária" ? company.fantasyName : "No local do imóvel",
             address: meet === "Imobiliária" ? `${company.road} - Nº ${company.number} - ${company.district} - ${company.city} - ${company.uf}` : `${property.road} - ${property.district} - ${property.city} - ${property.uf}`,

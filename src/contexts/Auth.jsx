@@ -334,11 +334,11 @@ async function newVisit(idAccount, username, idFriend) {
     }
 
     async function newScheduling({
-        idClient, idProperty, idCompany, titleProperty, imageProperty, email, phone, whatsapp, status, meet, 
-      day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted
+        idClient, idProperty, idCompany, titleProperty, imageProperty, email, phone, whatsapp, status, meet, nameClient,
+      day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted, type
     }) {
-        const data = {idClient, idProperty, idCompany, titleProperty, imageProperty, email, phone, whatsapp, status, meet, 
-            day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted}
+        const data = {idClient, idProperty, idCompany, titleProperty, imageProperty, email, phone, whatsapp, status, meet, nameClient,
+            day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted, type}
 
         await api.post("/scheduling/", data).then((res) => {
             
@@ -350,6 +350,7 @@ async function newVisit(idAccount, username, idFriend) {
             console.log(error)
         })
     }
+
     async function newContact({
         idProperty, idCompany, idClient, name, email, phone, whatsapp, origin, type, latitude, longitude, link, whatsappCompany, phoneCompany
     }) {

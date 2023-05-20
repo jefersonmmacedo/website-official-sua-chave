@@ -183,10 +183,6 @@ export function SearchPropertyHomeTop() {
             toast.error("Venda ou aluguel?");
             return
         }
-        if(type === "" || subType === "") {
-            toast.error("Selecione tipo de imóvel");
-            return
-        }
         if(cityNew === "" || ufNew === "") {
             toast.error("Selecione o local desejado");
             return
