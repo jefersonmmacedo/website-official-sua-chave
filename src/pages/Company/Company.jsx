@@ -70,13 +70,13 @@ export function Company() {
 
     function handlenewContactCompanyButton(typeButton) {
         newContactCompany({
-        idProperty: "Contato direto", idCompany: data[0]?.id, idClient: user.id, name: user.name,
+        idProperty: "Contato direto", idCompany: data[0]?.id, idClient: user.id, name: user.name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
         email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: typeButton})
     }
 
     function handlenewContactCompanyModal(typeButton) {
         newContactCompany({
-        idProperty: "Contato direto", idCompany: data[0]?.id, idClient: "User Sem cadastro", name: name,
+        idProperty: "Contato direto", idCompany: data[0]?.id, idClient: "User Sem cadastro", name: name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
         email: email, phone: phone, whatsapp: phone, type: typeButton})
 
         if(typeButton === "WhatsApp") {
