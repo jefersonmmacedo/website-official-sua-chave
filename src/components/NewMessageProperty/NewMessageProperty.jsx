@@ -67,6 +67,10 @@ export function NewMessageProperty({idProperty, idCompany, imageProperty}) {
         setIsOpenModaLogin(true);
         setIsOpenModa(false);
         }
+
+        function handleOpenModalLogin3(e) {
+          window.open("/cadastrar", "_self")
+          }
       
         function handleCloseModalLogin(e) {
           e.preventDefault();
@@ -102,7 +106,11 @@ export function NewMessageProperty({idProperty, idCompany, imageProperty}) {
 
                     <h4>Entre em sua conta ou cadastre-se para para poder mandar mensagens e ter mais detalhes sobre os anúncios.</h4>
 
-                    <button onClick={handleOpenModalLogin}>Fazer login</button>
+                   
+                    <div className="buttons">
+                    <button className="button2" onClick={handleOpenModalLogin}>Fazer login</button>
+                    <button className="button1" onClick={handleOpenModalLogin3}>Criar conta</button>
+                </div>
 
             </div>
             </div>

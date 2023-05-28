@@ -1,5 +1,5 @@
 ﻿import "./companyInfo.css";
-import {IoCall,IoMail, IoLocationOutline, IoLogoWhatsapp, IoMailOutline, IoChatboxEllipsesOutline, IoCloseOutline} from 'react-icons/io5'
+import {IoCall,IoMail, IoLocationOutline, IoLogoWhatsapp, IoMailOutline, IoChatboxEllipsesOutline, IoCloseOutline, IoInformationOutline, IoAlertCircle} from 'react-icons/io5'
 import {FaIdCard} from 'react-icons/fa'
 import {HiOutlineIdentification} from 'react-icons/hi'
 import imobiliária from "../../assets/images/imob1.png";
@@ -9,6 +9,7 @@ import { useFetch } from "../../hooks/useFetch";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
 import { useEffect } from "react";
+import ReactTooltip from 'react-tooltip';
 
 export function CompanyInfo({idProperty, idCompany}) {
     const Local = localStorage.getItem("suachave");
@@ -164,6 +165,11 @@ export function CompanyInfo({idProperty, idCompany}) {
                         <input type="text" placeholder="seuemail@provedor.com" value={email} onChange={e => setEmail(e.target.value)}/>
                     </form>
 
+                    <p>Porque pedimos essas informações? <IoAlertCircle data-tip data-for='Novo Cliente' size={22}/></p>
+                    <ReactTooltip id='Novo Cliente' place="bottom" type="dark" effect="solid">
+                      <span>Passar essas informações permite que a imobiliária ou corretor  consiga  <br /> retomar o contato em caso de um eventual problema de comunicação</span>
+                    </ReactTooltip>
+
                     <button onClick={() => handleNewContactModal("Whatsapp")}>Ir para Whatsapp</button>
 
             </div>
@@ -188,7 +194,13 @@ export function CompanyInfo({idProperty, idCompany}) {
                         <input type="text" placeholder="seuemail@provedor.com" value={email} onChange={e => setEmail(e.target.value)}/>
                     </form>
 
+                    <p>Porque pedimos essas informações? <IoAlertCircle data-tip data-for='Novo Cliente' size={22}/></p>
+                    <ReactTooltip id='Novo Cliente' place="bottom" type="dark" effect="solid">
+                      <span>Passar essas informações permite que a imobiliária ou corretor  consiga  <br /> retomar o contato em caso de um eventual problema de comunicação</span>
+                    </ReactTooltip>
+
                     <button onClick={() => handleNewContactModal("Ligação")}>Ir para Ligação</button>
+
 
             </div>
             </div>

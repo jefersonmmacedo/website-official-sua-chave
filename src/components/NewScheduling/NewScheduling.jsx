@@ -503,6 +503,9 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
         setIsOpenModaLogin2(true);
         setIsOpenModaLogin(false);
         }
+      function handleOpenModalLogin3(e) {
+        window.open("/cadastrar", "_self")
+        }
       
         function handleCloseModalLogin2(e) {
           e.preventDefault();
@@ -773,7 +776,11 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
 
                     <h4>Entre em sua conta ou cadastre-se para para poder agendar visitas, conhecer os anúncios e ver cada detalhe.</h4>
 
-                    <button onClick={handleOpenModalLogin2}>Fazer login</button>
+
+                    <div className="buttons">
+                    <button className="button2" onClick={handleOpenModalLogin2}>Fazer login</button>
+                    <button className="button1" onClick={handleOpenModalLogin3}>Criar conta</button>
+                </div>
 
             </div>
             </div>
