@@ -21,7 +21,7 @@ export function SignIn() {
     }
     function handleRedirectToPage(e) {
         e.preventDefault();
-        window.open("https://adm.suachave.com.br/")
+        window.open("https://adm.suachave.com.br")
     }
 
     function handleLogin(e) {
@@ -55,7 +55,7 @@ export function SignIn() {
                             <p> <a className="link" href="/recuperar">Recuperar senha</a></p>
                         </div>
                         <button onClick={handleLogin}>Entrar</button>
-                        <a href="/cadastrar">Cadastre-se aqui!</a>
+                        <a href="/escolha-sua-conta">Cadastre-se aqui!</a>
                     </>
                     :
                     <>

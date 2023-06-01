@@ -35,6 +35,7 @@ import { Announce } from '../pages/Announce/Announce';
 import { ConfirmedAccount } from '../pages/ConfirmedAccount/ConfirmedAccount';
 import { ConfirmedSend } from '../pages/ConfirmedSend/ConfirmedSend';
 import { UploadImagesAWS } from '../pages/UploadImagesAWS/UploadImagesAWS';
+import { ChooseYourAccount } from '../pages/ChooseYourAccount/ChooseYourAccount';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -55,6 +56,7 @@ function PrivateRoute({children} ) {
             <Routes>
             {/* Rotas abertas */}
             <Route path="*" element={<NotFound />}/>
+            <Route path="/escolha-sua-conta" element={<ChooseYourAccount />}/>
             <Route path="/confirmacao" element={<ConfirmedAccount />}/>
             <Route path="/envio-completo" element={<ConfirmedSend />}/>
             <Route path="/em-breve" element={<ComingSoon />}/>

@@ -4,11 +4,11 @@ export function ChooseYourAccount() {
 
     function handleRedirect(e) {
         e.preventDefault();
-        window.open("http://adm.suachave.com.br/cadastrar");
+        window.open("http://adm.suachave.com.br/cadastro/cliente-site");
     }
     function handleRedirectClient(e) {
         e.preventDefault();
-        window.open("/cadastro-cliente", "_self")
+        window.open("/cadastrar", "_self")
     }
     return (
         <div className="ChooseYourAccount">

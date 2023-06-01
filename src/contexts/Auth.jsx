@@ -378,7 +378,7 @@ async function newVisit(idAccount, username, idFriend) {
             if(type === "Ligação") {
                 window.open(`tel:+55${phoneCompany}`, "_self");
             } else {
-                window.open(`https://wa.me/55${whatsappCompany}?text=Olá. Me chamo ${name}, gostaria de atendimento`)
+                window.open(`https://api.whatsapp.com/send?phone=55${whatsappCompany}&text=Olá. Me chamo ${name}, gostaria de atendimento`)
             }
 
         }).catch((error) => {
