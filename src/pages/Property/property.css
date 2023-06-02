@@ -340,7 +340,7 @@
 .Property .main .data .propertyUnic .text .pricingTotal {
     width: 600px;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-between;
     flex-direction: row;
     padding: 5px 0;
@@ -350,6 +350,16 @@
 .Property .main .data .propertyUnic .text .pricingTotal h4 {
     color: var(--Paragraph);
     font-weight: 800;
+    margin: 5px 10px;
+}
+.Property .main .data .propertyUnic .text .pricingTotal h5 {
+    color: var(--Paragraph);
+    font-weight: 600;
+    margin: 5px 10px;
+}
+.Property .main .data .propertyUnic .text .pricingTotal h6 {
+    color: var(--Paragraph);
+    font-weight: 600;
     margin: 5px 10px;
 }
 
@@ -431,7 +441,7 @@
 .Property .main .data .infosCompany .pricingTotal {
     width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-between;
     flex-direction: row;
     padding: 5px 0;
@@ -440,6 +450,18 @@
 .Property .main .data .infosCompany .pricingTotal h4 {
     color: var(--Paragraph);
     font-weight: 800;
+    margin: 5px 10px;
+    margin-bottom: 20px;
+}
+.Property .main .data .infosCompany .pricingTotal h5 {
+    color: var(--Paragraph);
+    font-weight: 600;
+    margin: 5px 10px;
+    margin-bottom: 20px;
+}
+.Property .main .data .infosCompany .pricingTotal h6 {
+    color: var(--Paragraph);
+    font-weight: 600;
     margin: 5px 10px;
     margin-bottom: 20px;
 }

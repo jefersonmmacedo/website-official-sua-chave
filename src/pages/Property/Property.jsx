@@ -57,7 +57,7 @@ export function Property() {
               const valueTextOtherPrices = valueOtherPrices.toString()
               const valueTextOtherPricesFormat = valueTextOtherPrices?.replace("00", "")
             
-
+              
 
     const valuesRent =[
         {
@@ -268,7 +268,12 @@ export function Property() {
                         <h5>R$ {data[0].otherPrices}</h5>
                     </div>
                      }
-                      {ResultBRL === "" ? "" :
+                      {data[0]?.condominium ===  "" && data[0]?.iptu === "" && data[0]?.otherPrices === "" ?     
+                        <div className="pricingTotal">
+                            <h4>Encargos</h4>
+                            <h5>Solicite informações</h5>
+                        </div>
+                      :
                     <div className="pricingTotal">
                         <h4>Total encargos</h4>
                          <h4>{ResultBRL}</h4>
@@ -316,7 +321,7 @@ export function Property() {
                        <h5>R$ {data[0].otherPrices}</h5>
                    </div>
                     }
-                     {ResultBRL === "" ? "" :
+                     {data[0]?.condominium ===  "" && data[0]?.iptu === "" && data[0]?.otherPrices === "" ? "" :
                    <div className="pricingTotal">
                        <h4>Total encargos</h4>
                         <h4>{ResultBRL}</h4>
@@ -355,7 +360,12 @@ export function Property() {
                         <h5>R$ {data[0].otherPrices}</h5>
                     </div>
                      }
-                      {ResultBRL === "" ? "" :
+                      {data[0]?.condominium ===  "" && data[0]?.iptu === "" && data[0]?.otherPrices === "" ? 
+                        <div className="pricingTotal">
+                        <h4>Encargos</h4>
+                         <h5>Solicite informações</h5>
+                     </div>
+                     :
                     <div className="pricingTotal">
                         <h4>Total encargos</h4>
                          <h4>{ResultBRL}</h4>
@@ -441,7 +451,12 @@ export function Property() {
                         <h5>R$ {data[0].otherPrices}</h5>
                     </div>
                      }
-                      {ResultBRL === "" ? "" :
+                      {data[0]?.condominium ===  "" && data[0]?.iptu === "" && data[0]?.otherPrices === "" ? 
+                        <div className="pricingTotal">
+                          <h4>Encargos</h4>
+                          <h5>Solicite informações</h5>
+                        </div>
+                                            :
                     <div className="pricingTotal">
                         <h4>Total encargos</h4>
                          <h4>{ResultBRL}</h4>
@@ -489,7 +504,7 @@ export function Property() {
                        <h5>R$ {data[0].otherPrices}</h5>
                    </div>
                     }
-                     {ResultBRL === "" ? "" :
+                     {data[0]?.condominium ===  "" && data[0]?.iptu === "" && data[0]?.otherPrices === "" ? "" :
                    <div className="pricingTotal">
                        <h4>Total encargos</h4>
                         <h4>{ResultBRL}</h4>
@@ -528,7 +543,12 @@ export function Property() {
                         <h5>R$ {data[0].otherPrices}</h5>
                     </div>
                      }
-                      {ResultBRL === "" ? "" :
+                      {data[0]?.condominium ===  "" && data[0]?.iptu === "" && data[0]?.otherPrices === "" ?
+                        <div className="pricingTotal">
+                          <h4>Encargos</h4>
+                          <h5>Solicite informações</h5>
+                        </div>
+                      :
                     <div className="pricingTotal">
                         <h4>Total encargos</h4>
                          <h4>{ResultBRL}</h4>
