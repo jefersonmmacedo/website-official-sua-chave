@@ -11,7 +11,7 @@ import { AuthContext } from "../../contexts/Auth";
 import { useEffect } from "react";
 import ReactTooltip from 'react-tooltip';
 
-export function CompanyInfo({idProperty, idCompany}) {
+export function CompanyInfo({idProperty, idCompany, nameCompany}) {
     const Local = localStorage.getItem("suachave");
     const user = JSON.parse(Local);
 
@@ -61,14 +61,14 @@ export function CompanyInfo({idProperty, idCompany}) {
 
     function handleNewContactButton(type) {
         newContact({
-        idProperty: idProperty, idCompany: idCompany, idClient: user.id, name: user.name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
+        idProperty: idProperty, idCompany: idCompany, nameCompany:nameCompany, idClient: user.id, name: user.name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
         email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: type, origin: "Portal", latitude, longitude,
         link: `http://www.suachave.com.br/imovel/${idProperty}`})
     }
 
     function handleNewContactModal(type) {
         newContact({
-        idProperty: idProperty, idCompany: idCompany, idClient: "User Sem cadastro", name: name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
+        idProperty: idProperty, idCompany: idCompany, nameCompany:nameCompany, idClient: "User Sem cadastro", name: name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
         email: email, phone: phone, whatsapp: phone, type: type, origin: "Portal", latitude, longitude,
         link: `http://www.suachave.com.br/imovel/${idProperty}`})
 

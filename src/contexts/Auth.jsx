@@ -352,9 +352,9 @@ async function newVisit(idAccount, username, idFriend) {
     }
 
     async function newContact({
-        idProperty, idCompany, idClient, name, email, phone, whatsapp, origin, type, latitude, longitude, link, whatsappCompany, phoneCompany
+        idProperty, idCompany, nameCompany, idClient, name, email, phone, whatsapp, origin, type, latitude, longitude, link, whatsappCompany, phoneCompany
     }) {
-        const data = {idProperty, idCompany, idClient, name, email, phone, whatsapp, origin, type, latitude, longitude}
+        const data = {idProperty, idCompany, nameCompany, idClient, name, email, phone, whatsapp, origin, type, latitude, longitude}
 
         await api.post("/contact/", data).then((res) => {
 
@@ -369,9 +369,9 @@ async function newVisit(idAccount, username, idFriend) {
         })
     }
     async function newContactCompany({
-        idProperty, idCompany, idClient, name, email, phone, whatsapp, type, whatsappCompany, phoneCompany
+        idProperty, idCompany, nameCompany, idClient, name, email, phone, whatsapp, type, whatsappCompany, phoneCompany
     }) {
-        const data = {idProperty, idCompany, idClient, name, email, phone, whatsapp, type}
+        const data = {idProperty, idCompany, nameCompany, idClient, name, email, phone, whatsapp, type}
 
         await api.post("/contact/", data).then((res) => {
 

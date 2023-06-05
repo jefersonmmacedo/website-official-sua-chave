@@ -389,7 +389,7 @@ export function Property() {
                   : ""
                    
                     }
-                    <CompanyInfo idProperty={data[0]?.id} idCompany={data[0]?.idCompany} />
+                    <CompanyInfo idProperty={data[0]?.id} idCompany={data[0]?.idCompany} nameCompany={data[0]?.fantasyName}/>
                     </div>
 
                     {data[0]?.video === "" ? "" :
@@ -572,7 +572,7 @@ export function Property() {
                   : ""
                    
                     }
-                <CompanyInfo idProperty={data[0]?.id} idCompany={data[0]?.idCompany} />
+                <CompanyInfo idProperty={data[0]?.id} idCompany={data[0]?.idCompany} nameCompany={data[0]?.fantasyName}/>
                 </div>
                 </div>
         </div>
