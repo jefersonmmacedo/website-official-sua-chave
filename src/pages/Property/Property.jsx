@@ -149,7 +149,22 @@ export function Property() {
                 <div className="text">
                     <h2>{data[0]?.title}</h2>
                     <h5><IoHomeOutline />{data[0]?.status} - {data[0]?.type} - {data[0]?.subType}</h5>
-                    <h5><IoLocationOutline />{data[0]?.road}{data[0]?.road !== "" ? ", " : ""} {data[0]?.number} {data[0]?.complement} {data[0]?.number !== "" ? " - " : ""} {data[0]?.district} - {data[0]?.city} - {data[0]?.uf} {data[0]?.reference !== "" ? " - " : ""} {data[0]?.reference}</h5>
+                    <h5>{data[0]?.district === "" && data[0]?.city === "" && data[0]?.uf === ""?
+                    <>
+                    <IoLocationOutline /> 
+                    Solicite a localização
+                    </>
+                    :
+                    <>
+                     <IoLocationOutline />{data[0]?.road !== "" || data[0]?.road === "undefined" ? `${data[0]?.road} - ` : ""}
+                     {/* {data[0]?.number === "" ? "" : `${data[0]?.number}, `} */}
+                     {/* {data[0]?.complement !== "" || data[0]?.complement === "undefined" ? `${data[0]?.complement} - ` : ""} */}
+                     {data[0]?.district} - {data[0]?.city} - {data[0]?.uf}
+                     {data[0]?.cep !== "" || data[0]?.cep === "undefined" ? ` - CEP: ${data[0]?.cep} ` : ""}
+                     {/* {data[0]?.reference !== "" || data[0]?.reference === "undefined" ? ` - ${data[0]?.reference} ` : ""} */}
+                    </>
+                    }
+                    </h5>
                     <h4>ID: {data[0]?.id}</h4>
                     {data[0]?.financing === "Sim" && data[0]?.availability === "Disponível"?
                     <div className="status">
@@ -242,7 +257,7 @@ export function Property() {
                     {data[0].priceRent === "" ? 
                      <div className="pricing">
                      <h5>Aluguel / <span>Mensal</span></h5>
-                     <h2><span>Preço não definido</span></h2>
+                     <h3><span>Valor não definido</span></h3>
                  </div>
                   :
                     <div className="pricing">
@@ -294,7 +309,7 @@ export function Property() {
                        {data[0].priceSale === "" ? 
                         <div className="pricing">
                             <h5>Venda</h5>
-                            <h2><span>Preço não definido</span></h2>
+                            <h3><span>Valor não definido</span></h3>
                         </div>
                      :
                      <div className="pricing">
@@ -334,7 +349,7 @@ export function Property() {
                      {data[0].priceRent === "" ? 
                      <div className="pricing">
                      <h5>Aluguel / <span>Mensal</span></h5>
-                     <h2><span>Preço não definido</span></h2>
+                     <h3><span>Valor não definido</span></h3>
                  </div>
                   :
                     <div className="pricing">
@@ -374,7 +389,7 @@ export function Property() {
                      {data[0].priceSale === "" ? 
                         <div className="pricing">
                             <h5>Venda</h5>
-                            <h2><span>Preço não definido</span></h2>
+                            <h3><span>Valor não definido</span></h3>
                         </div>
                      :
                      <div className="pricing">
@@ -425,7 +440,7 @@ export function Property() {
                     {data[0].priceRent === "" ? 
                      <div className="pricing">
                      <h5>Aluguel / <span>Mensal</span></h5>
-                     <h2><span>Preço não definido</span></h2>
+                     <h3><span>Valor não definido</span></h3>
                  </div>
                   :
                     <div className="pricing">
@@ -477,7 +492,7 @@ export function Property() {
                        {data[0].priceSale === "" ? 
                         <div className="pricing">
                             <h5>Venda</h5>
-                            <h2><span>Preço não definido</span></h2>
+                            <h3><span>Valor não definido</span></h3>
                         </div>
                      :
                      <div className="pricing">
@@ -517,7 +532,7 @@ export function Property() {
                      {data[0].priceRent === "" ? 
                      <div className="pricing">
                      <h5>Aluguel / <span>Mensal</span></h5>
-                     <h2><span>Preço não definido</span></h2>
+                     <h3><span>Valor não definido</span></h3>
                  </div>
                   :
                     <div className="pricing">
@@ -557,7 +572,7 @@ export function Property() {
                      {data[0].priceSale === "" ? 
                         <div className="pricing">
                             <h5>Venda</h5>
-                            <h2><span>Preço não definido</span></h2>
+                            <h3><span>Valor não definido</span></h3>
                         </div>
                      :
                      <div className="pricing">

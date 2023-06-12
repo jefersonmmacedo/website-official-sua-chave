@@ -293,6 +293,15 @@
     padding: 10px;
     margin-top: 20px;
 }
+.Property .main .data .propertyUnic .text .infosCompanyMobile .pricing h3 {
+    color: var(--Paragraph);
+    font-weight: 400;
+    margin: 0 10px;
+}
+.Property .main .data .propertyUnic .text .infosCompanyMobile .pricing h3 span {
+    color: var(--Paragraph);
+    font-weight: 800;
+}
 .Property .main .data .propertyUnic .text .pricing {
     width: 100%;
     display: flex;
@@ -317,6 +326,15 @@
     margin: 0 10px;
 }
 .Property .main .data .propertyUnic .text .pricing h2 span {
+    color: var(--Paragraph);
+    font-weight: 800;
+}
+.Property .main .data .propertyUnic .text .pricing h3 {
+    color: var(--Paragraph);
+    font-weight: 400;
+    margin: 0 10px;
+}
+.Property .main .data .propertyUnic .text .pricing h3 span {
     color: var(--Paragraph);
     font-weight: 800;
 }
@@ -418,6 +436,15 @@
     margin: 0 10px;
 }
 .Property .main .data .infosCompany .pricing h2 span {
+    color: var(--Paragraph);
+    font-weight: 800;
+}
+.Property .main .data .infosCompany .pricing h3 {
+    color: var(--Paragraph);
+    font-weight: 400;
+    margin: 0 10px;
+}
+.Property .main .data .infosCompany .pricing h3 span {
     color: var(--Paragraph);
     font-weight: 800;
 }

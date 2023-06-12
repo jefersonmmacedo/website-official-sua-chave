@@ -88,7 +88,21 @@ export function PropertyUnicBlock({id, style}) {
                         </a>
                     {/* <h5>{StatusProperty}</h5> */}
                     <h6><IoHomeOutline/>{titleProperty?.slice(0,39)}</h6>
-                    <h6><IoLocationOutline />{property?.district} - {property?.city} - {property?.uf}</h6>
+                    
+
+                    <h6>{property?.district === "" && property?.city === "" && property?.uf === ""?
+                    <>
+                    <IoLocationOutline /> 
+                    Solicite a localização
+                    </>
+                    :
+                    <>
+                          <IoLocationOutline />{property?.district} - {property?.city} - {property?.uf}
+                    </>
+                    }
+                   </h6>
+
+
                     </div>
                     <div className="iconsBox">
                     {property?.bedroom === "" || property?.bedroom === "0"? "" :
