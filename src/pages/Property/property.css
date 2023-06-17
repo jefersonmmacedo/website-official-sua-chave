@@ -215,10 +215,10 @@
 }
 
 .Property .main .data .propertyUnic .text .iconsBox .iconUnicBox {
-    width: 32%;
+    width: 29%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     padding: 10px 5px;
     color: var(--Gray);
@@ -230,8 +230,23 @@
     color: var(--Paragraph);
     font-weight: 700;
     font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
 }
 
+.Property .main .data .propertyUnic .text .iconsBox .iconUnicBox p sup {
+    vertical-align: top;
+    font-size: 10px;
+    margin-top: -7px;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
 .Property .main .data .propertyUnic .text .iconsBox .iconUnicBox svg {
     font-size: 22px;
     margin-right: 10px;
@@ -251,7 +266,7 @@
 
 .Property .main .data .propertyUnic .text .iconsBox .iconUnicBox .simbolBox svg {
     font-size: 20px;
-    margin-right: 10px;
+    margin-right: 5px;
     color: var(--Description);
 }
 
@@ -260,6 +275,11 @@
     color: var(--Paragraph);
     font-weight: 400;
     font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 
