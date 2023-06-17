@@ -6,6 +6,7 @@ import {TfiRulerAlt2} from 'react-icons/tfi';
 import {MdOutlineShower} from 'react-icons/md';
 import {TbBath, TbBone, TbSofa} from 'react-icons/tb';
 import {HiOutlineBellAlert} from 'react-icons/hi2';
+import {GiHomeGarage} from 'react-icons/gi';
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
 import { NewScheduling } from "../../components/NewScheduling/NewScheduling";
@@ -171,72 +172,83 @@ export function Property() {
                         <p>Aceita financiamento</p>
                     </div>
                     : ""}
+
+                   
+                    <h4>Sobre o imóvel</h4>
                    
                     <h4 className="description">{data[0]?.description}</h4>
 
                     <div className="iconsBox">
                     {data[0]?.bedroom === "0" ? "" :
                         <div className="iconUnicBox">
-                                <IoBedOutline />
                             <div className="simbolBox">
-                            <p>{data[0]?.bedroom} Quartos</p>
+                                <IoBedOutline />
+                            <p>Quartos</p>
                             </div>
+                            <p>{data[0]?.bedroom}</p>
                         </div>
                     }
                         {data[0]?.suite === "0" ? "" :
                         <div className="iconUnicBox">
-                                <TbBath />
                             <div className="simbolBox">
-                            <p>{data[0]?.suite} Suítes</p>
+                                <TbBath />
+                            <p>Suítes</p>
                             </div>
+                            <p>{data[0]?.suite}</p>
                         </div>
                         }
                         {data[0]?.restroom === "0" ? "" :
                         <div className="iconUnicBox">
-                                <MdOutlineShower />
                             <div className="simbolBox">
-                            <p>{data[0]?.restroom} Banheiro</p>
+                                <MdOutlineShower />
+                            <p>Banheiro</p>
                             </div>
+                            <p>{data[0]?.restroom}</p>
                         </div>
                         }
                         {data[0]?.garage === "0" ? "" :
                         <div className="iconUnicBox">
-                                <IoCarSportOutline />
                             <div className="simbolBox">
-                                <p>{data[0]?.garage} Vagas</p>
+                                <GiHomeGarage />
+                                <p>Vagas</p>
                             </div>
+                                <p>{data[0]?.garage}</p>
                         </div>
                         }
                           {data[0]?.pets === "Não" || data[0]?.pets === "" ? "" :
                         <div className="iconUnicBox">
-                                <TbBone />
                             <div className="simbolBox">
+                                <TbBone />
                             <p>Aceita pets</p>
                             </div>
+                            <p>{data[0]?.pets}</p>
                         </div>
                         }
                          {data[0]?.furnished === "Não" || data[0]?.furnished === ""? "" :
                         <div className="iconUnicBox">
-                                <TbSofa />
                             <div className="simbolBox">
+                                <TbSofa />
                                 <p>Mobilhado</p>
                             </div>
+                                <p>{data[0]?.furnished}</p>
                         </div>
                         }
                         {data[0]?.totalArea === "" ? "" :
                         <div className="iconUnicBox">
-                                <TfiRulerAlt2 />
                             <div className="simbolBox">
-                                <p>{data[0]?.totalArea} M<sup>2</sup></p>
+                                <TfiRulerAlt2 />
+                                <p>Área total</p>
                             </div>
+                                <p>{data[0]?.totalArea} M<sup>2</sup></p>
                         </div>
                             }
                         {data[0]?.buildingArea === "" ? "" :
                         <div className="iconUnicBox">
-                                <IoCrop />
                             <div className="simbolBox">
-                                <p>{data[0]?.buildingArea} M<sup>2</sup></p>
+                                <IoCrop />
+                                <p>Área construída</p>
                             </div>
+                                <p>{data[0]?.buildingArea} M<sup>2</sup></p>
                         </div>
                         }
                     </div>
