@@ -171,7 +171,7 @@ export function PropertyUnicBlock({id, style}) {
 
                     </div>
                     <div className="pricing">
-                        <h6>{property?.status} {property?.textRent !==  "" ? " " : "" }<span> {property?.textRent}</span></h6>
+                        <h6>{property?.status}</h6>
                         {property?.priceSale === "" && property?.priceRent === ""  ?
                         <h4><span>Consultar valor</span></h4>
                         :
