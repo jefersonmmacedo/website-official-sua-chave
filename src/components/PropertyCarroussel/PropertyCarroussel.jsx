@@ -85,7 +85,7 @@ export function PropertyCarroussel({status}) {
 
     return (
         <div>
-            <Slide slidesToScroll={3} slidesToShow={3} indicators={true} {...properties} responsive={responsiveSettings}>
+            <Slide slidesToScroll={3} slidesToShow={3} indicators={true} autoplay={false} {...properties} responsive={responsiveSettings}>
                 {data?.map((property) => {
                     return (
                         <PropertyUnicBlock id={property.id} key={property.id}/>

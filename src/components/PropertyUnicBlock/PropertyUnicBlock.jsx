@@ -11,6 +11,7 @@ import api from "../../services/api";
 import { useEffect, useState } from "react";
 import { NewShareBox } from "../NewShareBox/NewShareBox";
 import { TbBath, TbBone, TbSofa } from "react-icons/tb";
+import { GiHomeGarage } from "react-icons/gi";
 
 
 export function PropertyUnicBlock({id, style}) {
@@ -73,9 +74,9 @@ export function PropertyUnicBlock({id, style}) {
                         </div>
                     <div className="infosButtons">
                   
-                    <div className="share">
+                    {/* <div className="share">
                     <NewShareBox idProperty={property?.id} title={property?.title}/>
-                    </div>
+                    </div> */}
                     <div className="heart2">
                     <NewFavorite idProperty={property?.id} idCompany={property?.idCompany} page={"not"}/>
                     </div>
@@ -84,13 +85,25 @@ export function PropertyUnicBlock({id, style}) {
                     <div className="text">
                     <div className="textInfos">
                     <a href={`/imovel/${property?.id}`}>
-                    <h4>{StatusProperty !== undefined ? StatusProperty.slice(0,28) : StatusProperty}</h4>
+                    <h6>{property?.subType}</h6>
+                    {/* <h4>{StatusProperty !== undefined ? StatusProperty.slice(0,28) : StatusProperty}</h4> */}
                         </a>
+                    <h4>{property?.district === "" && property?.city === "" && property?.uf === ""?
+                    <>
+                     
+                    Solicite a localização
+                    </>
+                    :
+                    <>
+                          {property?.district} - {property?.city} - {property?.uf}
+                    </>
+                    }
+                   </h4>
                     {/* <h5>{StatusProperty}</h5> */}
-                    <h6><IoHomeOutline/>{titleProperty?.slice(0,39)}</h6>
+                    {/* <h6><IoHomeOutline/>{titleProperty?.slice(0,39)}</h6> */}
                     
 
-                    <h6>{property?.district === "" && property?.city === "" && property?.uf === ""?
+                    {/* <h6>{property?.district === "" && property?.city === "" && property?.uf === ""?
                     <>
                     <IoLocationOutline /> 
                     Solicite a localização
@@ -100,7 +113,7 @@ export function PropertyUnicBlock({id, style}) {
                           <IoLocationOutline />{property?.district} - {property?.city} - {property?.uf}
                     </>
                     }
-                   </h6>
+                   </h6> */}
 
 
                     </div>
@@ -121,23 +134,23 @@ export function PropertyUnicBlock({id, style}) {
                             </div>
                         </div>
                         }
-                        {property?.suite === "" || property?.suite === "0" ? "" :
+                        {/* {property?.suite === "" || property?.suite === "0" ? "" :
                         <div className="iconUnicBox">
                                 <TbBath />
                             <div className="simbolBox">
                                 <p>{property?.suite} Suítes</p>
                             </div>
                         </div>
-                        }
+                        } */}
                          {property?.garage === "" || property?.garage === "0" ? "" :
                         <div className="iconUnicBox">
-                                <IoCarSportOutline />
+                                <GiHomeGarage />
                             <div className="simbolBox">
                                 <p>{property?.garage} {property?.garage < 2 ? " Vaga" : " Vagas"}</p>
                             </div>
                         </div>
                         }
-                        {property?.pets === "Não" || property?.pets === "" ? "" :
+                        {/* {property?.pets === "Não" || property?.pets === "" ? "" :
                         <div className="iconUnicBox">
                                 <TbBone />
                             <div className="simbolBox">
@@ -152,20 +165,20 @@ export function PropertyUnicBlock({id, style}) {
                                 <p>Mobilhado</p>
                             </div>
                         </div>
-                        }
+                        } */}
 
 
 
                     </div>
                     <div className="pricing">
-                        <h6>{property?.status} {property?.textRent !==  "" ? "/" : "" }<span> {property?.textRent}</span></h6>
+                        <h6>{property?.status} {property?.textRent !==  "" ? " " : "" }<span> {property?.textRent}</span></h6>
                         {property?.priceSale === "" && property?.priceRent === ""  ?
-                        <h3><span>Consultar valor</span></h3>
+                        <h4><span>Consultar valor</span></h4>
                         :
                         property?.status === "Venda" ?
-                        <h3>R$ <span>{property?.priceSale}</span></h3>
+                        <h4>R$ <span>{property?.priceSale}</span></h4>
                         : property?.status === "Aluguel" ?
-                        <h3>R$ <span>{property?.priceRent}</span></h3>
+                        <h4>R$ <span>{property?.priceRent}</span></h4>
                         :  <h4>{property?.priceRent === "" ? "Consultar" : "R$"} <span>{property?.priceRent === "" ? "Consultar" : property?.priceRent}</span> /
                         {property?.priceSale === "" ? " Consultar" : " R$"} <span>{property?.priceSale === "" ? "Consultar" : property?.priceSale}</span></h4>
                         }

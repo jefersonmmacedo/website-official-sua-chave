@@ -15,6 +15,24 @@
 .NewFavorite svg:hover {
     color: var(--Primary);
 }
+.NewFavorite2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--White);
+    cursor: pointer;
+    border:none;
+    background-color: var(--Black);
+}
+.NewFavorite2 svg {
+    color: var(--Border);
+    font-size: 30px;
+    cursor: pointer;
+}
+.NewFavorite2 svg:hover {
+    color: var(--Primary);
+}
 
 
 .content-modal-Message {
