@@ -1,5 +1,5 @@
 import "./propertyUnicBlock.css";
-import { IoBedOutline, IoCarSportOutline, IoChevronForwardOutline, IoHome, IoHomeOutline, IoLocationOutline, IoPawOutline } from "react-icons/io5";
+import { IoBedOutline, IoCarSportOutline, IoChevronForwardOutline, IoCrop, IoHome, IoHomeOutline, IoLocationOutline, IoPawOutline } from "react-icons/io5";
 import { MdOutlineShower } from "react-icons/md";
 import slugify from 'react-slugify';
 import imageDefault from "../../assets/images/default.png"
@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { NewShareBox } from "../NewShareBox/NewShareBox";
 import { TbBath, TbBone, TbSofa } from "react-icons/tb";
 import { GiHomeGarage } from "react-icons/gi";
+import { TfiRulerAlt2 } from "react-icons/tfi";
 
 
 export function PropertyUnicBlock({id, style}) {
@@ -117,12 +118,93 @@ export function PropertyUnicBlock({id, style}) {
 
 
                     </div>
+
+                    {
+                    property?.type === "Terrenos e Lotes" ?
+                     <div className="iconsBox">                  
+                        {property?.totalArea === "" ? "" :
+                        <div className="iconUnicBox">
+                                <TfiRulerAlt2 />
+                            <div className="simbolBox">
+                                <p>{property?.totalArea} M<sup>2</sup></p>
+                            </div>
+                        </div>
+                            }
+                        {property?.buildingArea === "" ? "" :
+                        <div className="iconUnicBox">
+                                <IoCrop />
+                            <div className="simbolBox">
+                                <p>{property?.buildingArea} M<sup>2</sup></p>
+                            </div>
+                        </div>
+                        }
+
+                     </div>
+                     :
+                    property?.type === "Rural" ?
+                     <div className="iconsBox">  
+                      {property?.bedroom === "" || property?.bedroom === "0"? "" :
+                        <div className="iconUnicBox">
+                                <IoBedOutline />
+                            <div className="simbolBox">
+                                <p>{property?.bedroom} {property?.bedroom === "1" ? " Quarto" : " Quartos"}</p>
+                            </div>
+                        </div>
+                        }                
+                        {property?.totalArea === "" ? "" :
+                        <div className="iconUnicBox">
+                                <TfiRulerAlt2 />
+                            <div className="simbolBox">
+                                <p>{property?.totalArea} M<sup>2</sup></p>
+                            </div>
+                        </div>
+                            }
+                        {property?.buildingArea === "" ? "" :
+                        <div className="iconUnicBox">
+                                <IoCrop />
+                            <div className="simbolBox">
+                                <p>{property?.buildingArea} M<sup>2</sup></p>
+                            </div>
+                        </div>
+                        }
+
+                     </div>
+                     :
+                    property?.type === "Comercial" || property?.type === "Industrial" ?
+                     <div className="iconsBox">  
+                      {property?.restroom === "" || property?.restroom === "0"? "" :
+                        <div className="iconUnicBox">
+                                <MdOutlineShower />
+                            <div className="simbolBox">
+                                <p>{property?.restroom} {property?.restroom === "1"  ? " Banheiro" : " Banheiros"}</p>
+                            </div>
+                        </div>
+                        }               
+                        {property?.totalArea === "" ? "" :
+                        <div className="iconUnicBox">
+                                <TfiRulerAlt2 />
+                            <div className="simbolBox">
+                                <p>{property?.totalArea} M<sup>2</sup></p>
+                            </div>
+                        </div>
+                            }
+                        {property?.buildingArea === "" ? "" :
+                        <div className="iconUnicBox">
+                                <IoCrop />
+                            <div className="simbolBox">
+                                <p>{property?.buildingArea} M<sup>2</sup></p>
+                            </div>
+                        </div>
+                        }
+
+                     </div>
+                     :
                     <div className="iconsBox">
                     {property?.bedroom === "" || property?.bedroom === "0"? "" :
                         <div className="iconUnicBox">
                                 <IoBedOutline />
                             <div className="simbolBox">
-                                <p>{property?.bedroom} {property?.bedroom < 2 ? " Quarto" : " Quartos"}</p>
+                                <p>{property?.bedroom} {property?.bedroom === "1" ? " Quarto" : " Quartos"}</p>
                             </div>
                         </div>
                         }
@@ -130,7 +212,7 @@ export function PropertyUnicBlock({id, style}) {
                         <div className="iconUnicBox">
                                 <MdOutlineShower />
                             <div className="simbolBox">
-                                <p>{property?.restroom} {property?.restroom < 2 ? " Banheiro" : " Banheiros"}</p>
+                                <p>{property?.restroom} {property?.restroom === "1" ? " Banheiro" : " Banheiros"}</p>
                             </div>
                         </div>
                         }
@@ -146,7 +228,7 @@ export function PropertyUnicBlock({id, style}) {
                         <div className="iconUnicBox">
                                 <GiHomeGarage />
                             <div className="simbolBox">
-                                <p>{property?.garage} {property?.garage < 2 ? " Vaga" : " Vagas"}</p>
+                                <p>{property?.garage} {property?.garage === "1" ? " Vaga" : " Vagas"}</p>
                             </div>
                         </div>
                         }
@@ -170,6 +252,7 @@ export function PropertyUnicBlock({id, style}) {
 
 
                     </div>
+                    }
                     <div className="pricing">
                         <h6>{property?.status}</h6>
                         {property?.priceSale === "" && property?.priceRent === ""  ?
