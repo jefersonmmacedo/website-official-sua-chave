@@ -28,6 +28,7 @@ export function PropertyCarroussel({status}) {
     }, [])
     // const {data} = useFetch(
     //     `/property/lists/${availability}/${status}?emphasis=false&page=${currentPage}&limit=${perPage}`
+    //`/property/alllist/${availability}?page=${currentPage}&limit=${perPage}`
     //    );
 
     if(data.length === 0) {

@@ -17,6 +17,7 @@ import { useFetch } from "../../hooks/useFetch";
 import { NewShare } from "../../components/NewShare/NewShare";
 import api from "../../services/api";
 import { NewAlertClient } from "../../components/NewAlertClient/NewAlertClient";
+import { DownloadApp } from "../../components/DownloadApp/DownloadApp";
 
 
 export function Property() {
@@ -602,6 +603,7 @@ export function Property() {
                 <CompanyInfo idProperty={data[0]?.id} idCompany={data[0]?.idCompany} nameCompany={data[0]?.fantasyName}/>
                 </div>
                 </div>
+        <DownloadApp />
         </div>
         <Footer />
 

@@ -12,6 +12,8 @@ import { PropertyUnicBlock } from "../../components/PropertyUnicBlock/PropertyUn
 import { FilterPropertiesList } from "../../components/FilterPropertiesList/FilterPropertiesList";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
+import { DownloadApp } from "../../components/DownloadApp/DownloadApp";
+import { DownloadApp2 } from "../../components/DownloadApp2/DownloadApp2";
 
 export function Properties(){
     const {status} = useParams();
@@ -210,7 +212,7 @@ export function Properties(){
         <div className="Properties">
         <Navbar2 />
         <div className="listPage">
-          
+        {/* <DownloadApp2 /> */}
         <div className="ListProperty">
         <div className="topList">
         <div className="textItens">
