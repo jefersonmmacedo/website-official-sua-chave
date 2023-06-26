@@ -11,6 +11,7 @@ import { TopHeadHome } from "../../components/TopHeadHome/TopHeadHome";
 import { NewSearchClient } from "../../components/NewSearchClient/NewSearchClient";
 import { useState } from "react";
 import { Partners } from "../../components/Partners/Partners";
+import { Announce } from "../../components/Announce/Announce";
 
 
 export function Home() {
@@ -38,6 +39,7 @@ export function Home() {
             <PropertyCarroussel status={"Venda"}/>
             </div>
             
+            {/* <DownloadApp /> */}
             <div className="textFeature">
             <h3>Imóveis para alugar</h3>
             </div>
@@ -49,7 +51,6 @@ export function Home() {
             <NewSearchClient />
          
             {/* <Cities /> */}
-            {/* <DownloadApp /> */}
             {/* <ToHire /> */}
             <Footer />
         </div>

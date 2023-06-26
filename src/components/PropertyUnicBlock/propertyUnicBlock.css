@@ -631,11 +631,11 @@ margin-top: -20px;
     @media (max-width: 350px) {
         .PropertyUnicBlock {
             width: 90%;
-            height: 390px;
+            height: none;
         }
         .PropertyUnicEmphasis {
             width: 90%;
-            height: 390px;
+            height: none;
         }
     }
 }

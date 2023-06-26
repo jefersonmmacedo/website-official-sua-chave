@@ -265,6 +265,7 @@ export function Property() {
                         })}
                     </div>
                     <div className="infosCompanyMobile">
+
                     {data[0].status === "Aluguel" ?
                     <>
                     {data[0].priceRent === "" ? 
@@ -603,7 +604,7 @@ export function Property() {
                 <CompanyInfo idProperty={data[0]?.id} idCompany={data[0]?.idCompany} nameCompany={data[0]?.fantasyName}/>
                 </div>
                 </div>
-        <DownloadApp />
+        {/* <DownloadApp /> */}
         </div>
         <Footer />
 
