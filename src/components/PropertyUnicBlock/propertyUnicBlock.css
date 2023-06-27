@@ -299,14 +299,14 @@ margin-top: -20px;
 
 
 .PropertyUnicEmphasis {
-    width: 255px;
-    height: 300px;
+    width: 250px;
+    height: 235px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     background-color: var(--PrimaryEnphasis);
-    border: 1px solid var(--Primary);
+    /* border: 1px solid var(--Border); */
     border-radius: 15px;
     margin: 20px auto;
     padding-bottom: 5px;
@@ -321,13 +321,15 @@ margin-top: -20px;
     align-items: flex-start;
     justify-content: center;
     height: 130px;
-      border-radius: 15px 15px 0 0;
+      border-radius: 6px;
     background-color: var(--BorderInput2);
     object-fit: cover;
 }
 
 .PropertyUnicEmphasis .imageSliderEmphasis a {
     width: 100%;
+    color: var(--Primary);
+    text-decoration: none;
   }
   
   
@@ -335,9 +337,11 @@ margin-top: -20px;
     width: 100%;
     height: 130px;
     object-fit: cover;
-      border-radius: 15px 15px 0 0;
+      border-radius: 10px;
       
   }
+
+  
   
 
 .PropertyUnicEmphasis .featured {
@@ -480,7 +484,7 @@ margin-top: -20px;
 .PropertyUnicEmphasis .text .textInfos h4 {
     color: var(--Paragraph);
     font-weight: 700;
-    margin: 10px 9px 0px 9px;
+    margin: 0px 5px 0px 5px;
 }
 .PropertyUnicEmphasis .text .textInfos h5 {
     display: flex;
@@ -497,49 +501,52 @@ margin-top: -20px;
     align-items: flex-start;
     justify-content: flex-start;
     color: var(--Gray);
-    margin: 2px 8px 5px 8px; 
-    font-weight: 700;
+    margin: 15px 5px 0px 5px; 
+    font-weight: 600;
 }
+
+
 .PropertyUnicEmphasis .text .iconsBox {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
-    margin: 5px 0px; 
+    justify-content: space-between;
+    margin: 7px 5px 5px 5px; 
+    padding: 0px 5px 0px 0px;
     flex-wrap: wrap;
 
 }
 
 .PropertyUnicEmphasis .text .iconsBox .iconUnicBox {
-    width: 74px;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-start;
     text-align: center;
-    padding: 0px 5px;
-    margin: 0px 5px;
-    color: var(--Primary);
+    padding: 0px;
+    color: var(--Gray);
 }
 .PropertyUnicEmphasis .text .iconsBox .iconUnicBox svg {
-    font-size: 16px;
-    margin-right: 10px;
-    color: var(--Primary);
+    font-size: 18px;
+    margin-right: 5px;
+    color: var(--Paragraph);
+    margin-top: -2px;
+
 }
 
 .PropertyUnicEmphasis .text .iconsBox .iconUnicBox .simbolBox {
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-start;
     text-align: center;
     margin-top: 1px;
 }
 .PropertyUnicEmphasis .text .iconsBox .iconUnicBox .simbolBox  p {
-    color: var(--Gray2);
+    color: var(--Gray);
     font-weight: 600;
     font-size: 10px;
 }
@@ -547,17 +554,19 @@ margin-top: -20px;
 .PropertyUnicEmphasis .text .pricing {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     text-align: flex-start;
     margin-top: 5px;
+    padding: 0px 5px 0px 0px;
 }
 
 .PropertyUnicEmphasis .text .pricing h6 {
     color: var(--Gray);
     font-weight: 800;
-    margin: 0 10px;
+    margin: 0 5px;
+    text-align: flex-start;
 }
 .PropertyUnicEmphasis .text .pricing h6 span {
     font-weight: 500;
@@ -566,12 +575,34 @@ margin-top: -20px;
 .PropertyUnicEmphasis .text .pricing h3 {
     color: var(--Paragraph);
     font-weight: 400;
-    margin: 2px 10px 2px 10px;
+    margin: 2px 5px 2px 5px;
+    text-align: flex-end;
+        width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
 }
 .PropertyUnicEmphasis .text .pricing span {
     color: var(--Paragraph);
     font-weight: 800;
 }
+.PropertyUnicEmphasis .text .pricing h4 {
+    color: var(--Paragraph);
+    font-weight: 400;
+    margin: 0px 0px 0px 5px;
+    text-align: flex-end;
+        width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.PropertyUnicEmphasis .text .pricing h4 span {
+    color: var(--Paragraph);
+    font-weight: 800;
+}
+
 
 
 @media (max-width: 1090px) {
