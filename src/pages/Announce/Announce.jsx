@@ -8,7 +8,7 @@ import {IoLogoWhatsapp, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline
 import SmartPhone from "../../assets/images/iphone.png";
 import Modal from 'react-modal';
 import { useState } from "react";
-import imgFamily from "../../assets/images/background14.jpg"
+import imgFamily from "../../assets/images/background10.jpg"
 import model from "../../assets/images/model.png"
 import Mackbook from "../../assets/images/Mockup.png"
 import { FaPlay } from "react-icons/fa";
@@ -35,36 +35,36 @@ export function Announce() {
     function HandleOpen(e) {
         e.preventDefault();
       
-        window.open("https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre os planos e serviços que a Sua Chave pode me oferecer")
+        window.open("https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre os planos e serviços que a Sua Chave Auto pode me oferecer")
       }
 
     return (
-<div className="Announce">
+<div className="Anuncie">
     <Navbar2 />
-    <div className="MainAnnounce">
-            <div className="bloco">
-                <div className="imageAnnounce">
-                    <div className="imgBlock">
+    <div className="MainAnuncie">
+            <div className="blocoAnuncie">
+                <div className="imageAnuncie">
+                    <div className="imgBlockAnuncie">
                   <img src={imgFamily} alt="" />
                     </div>
                 </div>
-                <div className="textAnnounce">
+                <div className="textAnuncie">
                     <h1>A sua <span>imobiliária</span> <br />merece ser 100% <span>digital!</span></h1>
-                    <h3>Portal imobiliário + Sistema de gestão completo + Site para imobiliárias e corretores. <br /> Tudo preparado para conectar seus imóveis a novos clientes.</h3>
+                    <h3>Portal imobiliário + Sistema de gestão completo + Site para imobiliárias e corretores. <br /> Tudo preparado para conectar seus autos a novos clientes.</h3>
 
-                    <div className="buttonsText">
+                    <div className="buttonsTextAnuncie">
                         <button onClick={HandleOpen}><IoLogoWhatsapp /> Falar com time comercial</button>
                         {/* <a href="/cadastro-profissional" className="btn"><IoCheckboxOutline /> Criar minha conta agora</a> */}
-                        <a href="https://adm.suachave.com.br/cadastro/novocadastro" className="btn" target="_Blank"><IoCheckboxOutline /> Criar minha conta agora!</a>
+                        <a href="https://adm.suachaveauto.com.br/cadastro/novocadastro" className="btn" target="_Blank"><IoCheckboxOutline /> Criar minha conta agora!</a>
                     </div>
                 </div>
         </div>
-        <div className="movie">
+        <div className="movieAnuncie">
         <div className="textPricing">
-        <h2>Um <span>novo conceito </span>de vender e alugar imóveis</h2>
+        <h2>Um <span>novo conceito </span>de vender e alugar autos</h2>
         <h4>Assista e veja o que temos preparado para você.</h4>
     </div>
-            <div className="moviePlay">
+            <div className="moviePlayAnuncie">
                 <div className="box1"></div>
                 <div className="play">
                     <FaPlay onClick={handleOpenModal}/>
@@ -73,7 +73,7 @@ export function Announce() {
             </div>
         </div>
         <div className="textPricing">
-        <h2>Por que escolher a <span>Sua Chave</span>?</h2>
+        <h2>Por que escolher a <span>Sua Chave Auto</span>?</h2>
         <h4>Veja os motivos que faz nossos clientes nos escolherem e o que podemos agregar ao seu negócio.</h4>
     </div>
         <div className="WhyChoose">
@@ -116,7 +116,7 @@ export function Announce() {
                     </div>
                     <div className="IconsWhyText">
                         <h2>Sistema de Gestão</h2>
-                        <h4>Controle tudo sobre seu negócio: imóveis, contratos, clientes e etc...</h4>
+                        <h4>Controle tudo sobre seu negócio: autos, contratos, clientes e etc...</h4>
                     </div>
                 </div>
                 <div className="IconsWhyChooseUnic">
@@ -143,8 +143,8 @@ export function Announce() {
 
 
     <div className="howItWorks">
-        <h2>Como funciona o Sua Chave ?</h2>
-        <h4>Nossos serviços tem como foco conectar os imóveis de nossos parceiros a clientes interessados.
+        <h2>Como funciona o Sua Chave Auto ?</h2>
+        <h4>Nossos serviços tem como foco conectar os autos de nossos parceiros a clientes interessados.
             <br />
         Utilizando ferramentas de marketing, geolocalização e integrações, trazendo mais objetividade nas ofertas de propriedades.</h4>
         <div className="iconsWorks">
@@ -160,8 +160,8 @@ export function Announce() {
             </div>
             <div className="iconWork">
                 <IoHomeOutline />
-                <h3>Adicione seus imóveis</h3>
-                <h4>Cadastre seus imóveis e aproveite nossas ferramentas para alcancar mais clientes </h4>
+                <h3>Adicione seus autos</h3>
+                <h4>Cadastre seus autos e aproveite nossas ferramentas para alcancar mais clientes </h4>
             </div>
         </div>
     </div>
@@ -170,30 +170,30 @@ export function Announce() {
         <div className="imageDashboard">
             <img src={Mackbook} alt="" />
         </div>
-        <div className="textDashboardAnnounce">
+        <div className="textDashboardAnuncie">
         <h2>Gerencie sua <span>imobiliária</span>:</h2>
-                <div className="itensToHireAnnounce">
-                    <div className="ToHireUnicAnnounce">
+                <div className="itensToHireAnuncie">
+                    <div className="ToHireUnicAnuncie">
                     <IoHomeOutline />
-                        <h4>Gerencie seus imóveis</h4>
+                        <h4>Gerencie seus autos</h4>
                     </div>
-                    <div className="ToHireUnicAnnounce">
+                    <div className="ToHireUnicAnuncie">
                     <IoCalendarOutline />
                         <h4>Agenda de visitas</h4>
                     </div>
-                    <div className="ToHireUnicAnnounce">
+                    <div className="ToHireUnicAnuncie">
                         <IoOptionsOutline />
                         <h4>Controle de alugueis e vendas</h4>
                     </div>
-                    <div className="ToHireUnicAnnounce">
+                    <div className="ToHireUnicAnuncie">
                     <IoFunnelOutline />
                         <h4>Geração e captação de leads</h4>
                     </div>
-                    <div className="ToHireUnicAnnounce">
+                    <div className="ToHireUnicAnuncie">
                         <IoHomeOutline />
-                        <h4>Imóveis para avaliação</h4>
+                        <h4>Autos para avaliação</h4>
                     </div>
-                    <div className="ToHireUnicAnnounce">
+                    <div className="ToHireUnicAnuncie">
                     <IoChatboxEllipsesOutline />
                         <h4>Chat único por anúncio</h4>
                     </div>
@@ -201,7 +201,7 @@ export function Announce() {
                     {/* <a href="/cadastro-profissional">Quero digitalizar minha imobiliária</a> */}
                     {/* <a href="/cadastro-profissional">Quero digitalizar minha imobiliária</a> */}
                 </div>
-                <a href="https://adm.suachave.com.br/cadastro/novocadastro" className="linkText" target="_Blank"><IoCheckboxOutline /> Criar minha conta agora!</a>
+                <a href="https://adm.suachaveauto.com.br/cadastro/novocadastro" className="linkText" target="_Blank"><IoCheckboxOutline /> Criar minha conta agora!</a>
         </div>
     </div>
     <div className="textPricing">
@@ -211,7 +211,7 @@ export function Announce() {
     <div className="imageModel">
         <img src={model} alt="Modelo de sites" />
     </div>
-    <div className="buttonsPlainsAnnounce">
+    <div className="buttonsPlainsAnuncie">
         <a href="#"> Clique aqui e saiba mais </a>
     </div>
     <div className="textPricing">
@@ -224,7 +224,7 @@ export function Announce() {
         <h2>Escolha o <span>plano ideal</span> para o seu negócio</h2>
         <h4>Temos um plano cara cada momento do seu negócio. Acesse o link a abaixo e confira:</h4>
     </div>
-    <div className="buttonsPlainsAnnounce">
+    <div className="buttonsPlainsAnuncie">
         <a href="/planos"><IoQrCodeOutline /> Conheça nossos planos</a>
     </div>
 
