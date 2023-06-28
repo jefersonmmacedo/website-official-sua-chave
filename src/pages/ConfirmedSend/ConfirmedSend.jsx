@@ -19,7 +19,7 @@ export function ConfirmedSend() {
 
                 <div className="buttons">
                     <a href="/">Ir para a home</a>
-                    <a href="/minhaconta">Ir para a minha conta</a>
+                    {/* <a href="/minhaconta">Ir para a minha conta</a> */}
                 </div>
             </div>
             

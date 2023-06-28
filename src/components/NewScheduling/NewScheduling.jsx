@@ -673,7 +673,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
                     </div>
 
                 </div>
-                <div className="data">
+                {/* <div className="data">
 
                     <div className="infosData">
                     <div className="textModal-scheduling">
@@ -709,7 +709,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
                 </select>
                     </div>
 
-                </div>
+                </div> */}
 
 
                     <div className="data">
