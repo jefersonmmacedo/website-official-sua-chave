@@ -12,8 +12,7 @@ import { PropertyUnicBlock } from "../../components/PropertyUnicBlock/PropertyUn
 import { FilterPropertiesList } from "../../components/FilterPropertiesList/FilterPropertiesList";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
-import { DownloadApp } from "../../components/DownloadApp/DownloadApp";
-import { DownloadApp2 } from "../../components/DownloadApp2/DownloadApp2";
+
 
 export function Properties(){
     const {status} = useParams();
@@ -26,8 +25,6 @@ export function Properties(){
     const garage = query.get("garagem") === null ? "0" : query.get("garagem")
     const suite = query.get("suites") === null ? "0" : query.get("suites")
     const restroom = query.get("banheiros") === null ? "0" : query.get("banheiros")
-    // const pets = query.get("pets") === null ? "" : query.get("pets")
-    // const furnished = query.get("furnished") === null ? "" : query.get("furnished")
 
     const district = query.get("district") === null ? "" : query.get("district");
     const city = query.get("city") ;
@@ -35,18 +32,11 @@ export function Properties(){
 
     const [propertyNotFound, setPropertyNotFound] = useState(false);
 
-    // const [data, setData] = useState([]);
     const [properties, setProperties] = useState([]);
     const [enphasisProperties, setEnphasisProperties] = useState([]);
     const [ currentPage, setCurrentPage] = useState(0);
     const perPage = 12;
     const perPageEmphasis = 150;
-
-    console.log(type)
-    console.log(subType)
-    console.log(city)
-    console.log(uf)
-    console.log(district)
 
     useEffect(() => {
         async function loadproperties() {
@@ -85,44 +75,6 @@ export function Properties(){
         loadproperties()
     },[])
 
-    // useEffect(() => {
-    //     async function loadproperties() {
-    //         await api.get(
-    //             status !== undefined && subType !== "" && district !== "" && city !== "" && uf !== "" ?
-    //             `/property/listsadressfull/${availability}/${status}?type=${type}&subType=${subType}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
-    //             : type !== "" && status !== undefined  && district !== "" && city !== "" && uf !== "" ?
-    //           `/property/listsadresscityuf/${availability}/${status}?type=${type}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
-    //             : status !== undefined && subType !== "" && city !== "" && uf !== "" ?
-    //             `property/listsadress/${availability}/${status}?type=${type}&subType=${subType}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
-    //             :type !== "" && status !== undefined  && city !== "" && uf !== "" ?
-    //             `/property/listsadresstype/${availability}/${status}?type=${type}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
-    //             : status !== undefined &&  district !== "" && city !== "" && uf !== "" ?
-    //             `/property/listsadressstatuscomplete/${availability}/${status}?district=${district}&city=${city}&uf=${uf}&emphasis=false&page=${currentPage}&limit=${perPage}`
-    //             : status !== undefined  && city !== "" && uf !== "" ?
-    //             `/property/listsadressstatus/${availability}/${status}?city=${city}&uf=${uf}&emphasis=false&page=${currentPage}&limit=${perPage}`
-    //             : status !== undefined && subType !== "" ?
-    //             `/property/listtypesubstatus/${availability}/${status}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
-    //             : subType !== "" ?
-    //             `/property/listtypesubtype/${availability}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
-    //             : status !== undefined && type !== "" ?
-    //             `/property/listtypestatus/${availability}/${status}?type=${type}&emphasis=false&page=${currentPage}&limit=${perPage}`
-    //             : type !== "" ?
-    //             `property/listtype/${availability}?type=${type}&emphasis=false&page=${currentPage}&limit=${perPage}`
-    //             : status !== undefined ?
-    //             `/property/lists/${availability}/${status}?emphasis=false&page=${currentPage}&limit=${perPage}`
-    //             : status === undefined ?
-    //             `/property/all/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}`
-    //             :"").then((res) => {
-    //             setData(res.data)
-    //         }).catch((error) => {
-    //             console.error(error);
-    //         });
-    //     }
-
-    //     loadproperties()
-    // },[])
-
-
     const {data} = useFetch(
         status !== undefined && subType !== "" && district !== "" && city !== "" && uf !== "" ?
         `/property/listsadressfull/${availability}/${status}?type=${type}&subType=${subType}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
@@ -150,8 +102,6 @@ export function Properties(){
         `/property/all/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}`
         :"");
 
-   // const {data} = useFetch(`/property/all/${availability}?page=${currentPage}&limit=${perPage}`)
-        
     if(data) {
         console.log(data)
     }
@@ -162,7 +112,6 @@ export function Properties(){
             setPropertyNotFound(true)
         }
     }, "3000")
-
 
         useEffect(() => {
             if(data) {
@@ -200,35 +149,26 @@ export function Properties(){
         })
     }
 
-
-    const filterEmphasis = properties?.filter((property) => property.emphasis === "true")
-    const filterNotEmphasis = properties?.filter((property) => property.emphasis !== "true")
-
-    console.log(filterEmphasis)
-    console.log(filterNotEmphasis)
-    console.log(restroom)
-
     return (
         <div className="Properties">
         <Navbar2 />
         <div className="listPage">
         {/* <DownloadApp2 /> */}
         <div className="ListProperty">
-        <div className="topList">
-        <div className="textItens">
-            {properties?.length === 0 ?
-                ""                   
-            : properties?.length === 1 ?
-            <h3>{status === "Venda" ? `Imóvel à ${status}` : `Imóvel para ${status}`} {city !== "" && district !== "" ? `em ${district}, ${city} - ${uf}` : city !== "" && district === "" ? `em ${city} - ${uf}` : ""}</h3>
-            : status === undefined ?
-            <h3>Imóveis disponíveis</h3>
-            :
-            <h3>{status === "Venda" ? `Imóveis à ${status}` : `Imóveis para ${status}`} {city !== "" && district !== "" ? `em ${district}, ${city} - ${uf}` : city !== "" && district === "" ? `em ${city} - ${uf}` : ""}</h3>
-            }
+            <div className="topList">
+                <div className="textItens">
+                {properties?.length === 0 ?
+                  ""                   
+                : properties?.length === 1 ?
+                <h3>{status === "Venda" ? `Imóvel à ${status}` : `Imóvel para ${status}`} {city !== "" && district !== "" ? `em ${district}, ${city} - ${uf}` : city !== "" && district === "" ? `em ${city} - ${uf}` : ""}</h3>
+                : status === undefined ?
+                <h3>Imóveis disponíveis</h3>
+                :
+                <h3>{status === "Venda" ? `Imóveis à ${status}` : `Imóveis para ${status}`} {city !== "" && district !== "" ? `em ${district}, ${city} - ${uf}` : city !== "" && district === "" ? `em ${city} - ${uf}` : ""}</h3>
+                }
+                </div>
+                <FilterPropertiesList status={status} typeProperty={type} subTypeProperty={subType} district={district} city={city} uf={uf} quarto={bedroom} banheiro={restroom} suítes={suite} garagem={garage}/>
             </div>
-        <FilterPropertiesList status={status} typeProperty={type} subTypeProperty={subType} district={district} city={city} uf={uf} quarto={bedroom} banheiro={restroom} suítes={suite} garagem={garage}/>
-        {/* <FilterPropertiesList status={status} typeProperty={type} subTypeProperty={subType} district={district} city={city} uf={uf} quarto={bedroom} banheiro={restroom} suítes={suite} garagem={garage} petsProperty={pets} furnishedProperty={furnished}/> */}
-        </div>
 
         {properties?.length > 0 ?
          <div className="itens">
@@ -242,8 +182,6 @@ export function Properties(){
                         <PropertyUnicBlock id={property.id} key={property.id}/>
                     )
                 })}
-
-           
                           
             </div> 
             :
@@ -257,8 +195,6 @@ export function Properties(){
                 </div>
         }
 
-
-
                     {data?.length < 12 || data?.length === 0 ? "":
                 <div className="sentinela" id="sentinela"> 
                          <div className="itens">          
@@ -270,7 +206,6 @@ export function Properties(){
                         <img src={loader} alt="Gif LOader more posts" width={20}/>
                 </div>   
                 }
-
               
         </div>
             <button className="topScroll" onClick={handleTop}><FiArrowUpCircle /></button>
@@ -279,33 +214,3 @@ export function Properties(){
         </div>
     )
 }
-
-
-
-// let text = ""
-
-// if (status !== undefined && subType !== "" && district !== "" && city !== "" && uf !== "" -) {
-//     text = `${status} + ${subType} + ${district} + ${city} + ${uf}`
-// } else  if (type !== "" && status !== undefined  && district !== "" && city !== "" && uf !== "" -) {
-//     text = `${status} +${type} + ${district} + ${city} + ${uf}`
-// } else  if (status !== undefined && subType !== "" && city !== "" && uf !== "" -) {
-//     text = `${status} + ${subType} + ${city} + ${uf}`
-// } else  if (type !== "" && status !== undefined  && city !== "" && uf !== "" - ) {
-//     text = `${status} +${type} + ${city} + ${uf}`
-// } else if (status !== undefined &&  district !== "" && city !== "" && uf !== "" - ) {
-// text = `${status} + ${district} + ${city} + ${uf}`
-// } else if (status !== undefined  && city !== "" && uf !== ""-) {
-// text = `${status}  ${city} + ${uf}`
-// } else  if(status !== undefined && subType !== "" -) {
-// text = `${status} + ${type} & ${subType}`
-// } else if( subType !== "" -) {
-// text = `${type} & ${subType}`
-// } else if(status !== undefined && type !== "" -) {
-// text = `${status} + ${type}`
-// } else if(type !== "" -) {
-// text = `Type `
-// } else if (status !== undefined -) {
-// text = `${status}`
-// } else  if (status === undefined -) {
-// text = `Todos os imóveis`
-// }
