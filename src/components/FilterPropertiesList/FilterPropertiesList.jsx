@@ -47,6 +47,7 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
 
 
     var districtList = [];
+    var cityList = [];
     var subTypeList = [];
 
     data?.forEach((item) => {
@@ -58,6 +59,18 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
             districtList.push(item);
         }
     });
+
+    
+    data?.forEach((item) => {
+        var duplicated  = cityList.findIndex(redItem => {
+            return item.city === redItem.city && item.uf === redItem.uf;
+        }) > -1;
+    
+        if(!duplicated) {
+            cityList.push(item);
+        }
+    });
+
 
     data?.forEach((item) => {
         var duplicated  = subTypeList.findIndex(redItem => {
@@ -79,6 +92,16 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
         })
         }
 
+        if(cityList) {
+            cityList.sort(function(a,b) {
+                if(a.city < b.city ) {
+                    return -1
+                } else {
+                    return true
+                }
+            })
+            }
+
         if(subTypeList) {
             subTypeList.sort(function(a,b) {
                 if(a.uf < b.uf ) {
@@ -92,6 +115,9 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
 
             const searchFilter = districtList?.filter((address) => address.district.toLowerCase().includes(searchLower)
                                                                 || address.city.toLowerCase().includes(searchLower)
+                                                                || address.uf.toLowerCase().includes(searchLower))
+
+            const searchFilterCity = cityList?.filter((address) => address.city.toLowerCase().includes(searchLower)
                                                                 || address.uf.toLowerCase().includes(searchLower))
 
         function handleSelectAddress(data) {
@@ -202,12 +228,19 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
                     }
                 </div>
 
-                    {search === "" || searchFilter.length === 0 || AdressSelected !== "" ? "" :
+                    {search === "" || searchFilter.length === 0 || searchFilterCity.length === 0 || AdressSelected !== "" ? "" :
                         <div className="search3">
                             <div className="listAdress">
+                                <h6>Cidade:</h6>
+                                {searchFilterCity.map((adress) => {
+                                    return (
+                                        <h6 className="itemListAdress" key={adress.id} onClick={() => handleSelectAddress(`${adress.city} - ${adress.uf}`)}>{adress.city} - {adress.uf}</h6>
+                                    )
+                                })}
+                                <h6>Bairro:</h6>      
                                 {searchFilter.map((adress) => {
                                     return (
-                                        <h6 key={adress.id} onClick={() => handleSelectAddress(`${adress.district} - ${adress.city} - ${adress.uf}`)}>{adress.district} - {adress.city} - {adress.uf}</h6>
+                                        <h6 className="itemListAdress" key={adress.id} onClick={() => handleSelectAddress(`${adress.district} - ${adress.city} - ${adress.uf}`)}>{adress.district} - {adress.city} - {adress.uf}</h6>
                                     )
                                 })}      
                             </div>

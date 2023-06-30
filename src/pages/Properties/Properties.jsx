@@ -266,10 +266,6 @@ export function Properties(){
                          <PropertyUnicBlockLoader />
                          <PropertyUnicBlockLoader />
                          <PropertyUnicBlockLoader />
-                         <PropertyUnicBlockLoader />
-                         <PropertyUnicBlockLoader />
-                         <PropertyUnicBlockLoader />
-                         <PropertyUnicBlockLoader />
                         </div>  
                         <img src={loader} alt="Gif LOader more posts" width={20}/>
                 </div>   

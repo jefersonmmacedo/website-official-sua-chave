@@ -54,6 +54,7 @@ export function SearchPropertyHomeTop() {
     }, [])
 
 
+    var cityList = [];
     var districtList = [];
     var subTypeList = [];
 
@@ -64,6 +65,16 @@ export function SearchPropertyHomeTop() {
     
         if(!duplicated) {
             districtList.push(item);
+        }
+    });
+
+    data?.forEach((item) => {
+        var duplicated  = cityList.findIndex(redItem => {
+            return item.city === redItem.city && item.uf === redItem.uf;
+        }) > -1;
+    
+        if(!duplicated) {
+            cityList.push(item);
         }
     });
 
@@ -87,6 +98,15 @@ export function SearchPropertyHomeTop() {
             }
         })
         }
+    if(cityList) {
+        cityList.sort(function(a,b) {
+            if(a.city < b.city ) {
+                return -1
+            } else {
+                return true
+            }
+        })
+        }
     if(subTypeList) {
         subTypeList.sort(function(a,b) {
             if(a.uf < b.uf ) {
@@ -100,6 +120,8 @@ export function SearchPropertyHomeTop() {
    
         const searchFilter = districtList?.filter((address) => address.district.toLowerCase().includes(searchLower)
                                                             || address.city.toLowerCase().includes(searchLower)
+                                                            || address.uf.toLowerCase().includes(searchLower))
+        const searchFilterCity = cityList?.filter((address) => address.city.toLowerCase().includes(searchLower)
                                                             || address.uf.toLowerCase().includes(searchLower))
 
         function handleType(e) {
@@ -233,17 +255,25 @@ export function SearchPropertyHomeTop() {
                     <button onClick={handleClearAdress} className="btnClear"><IoClose /></button>
                     }
 
-                    {search === "" || searchFilter.length === 0 || AdressSelected !== "" ? "" :
+                    {search === "" || searchFilter.length === 0 || searchFilterCity.length === 0 || AdressSelected !== "" ? "" :
                                 <div className="search3">
                                     <div className="listAdress">
+                                        <h6>Cidade:</h6>
+                                    {searchFilterCity.map((adress) => {
+                                            return (
+                                                <h6 className="itemListAdress"  key={adress.id} onClick={() => handleSelectAddress(`${adress.city} - ${adress.uf}`)}>{adress.city} - {adress.uf}</h6>
+                                            )
+                                        })}  
+                                        <h6>Bairro:</h6>
                                         {searchFilter.map((adress) => {
                                             return (
-                                                <h6 key={adress.id} onClick={() => handleSelectAddress(`${adress.district} - ${adress.city} - ${adress.uf}`)}>{adress.district} - {adress.city} - {adress.uf}</h6>
+                                                <h6 className="itemListAdress"  key={adress.id} onClick={() => handleSelectAddress(`${adress.district} - ${adress.city} - ${adress.uf}`)}>{adress.district} - {adress.city} - {adress.uf}</h6>
                                             )
                                         })}      
                                     </div>
                                 </div>
                                 }
+
                 </>
                     :
                     <>
@@ -263,17 +293,28 @@ export function SearchPropertyHomeTop() {
                     }
                     <button className="mobile" onClick={handleLinkSearchProperty}><IoSearch /></button>
             </div>
-            {search === "" || searchFilter.length === 0 || AdressSelected !== "" ? "" :
+            {search === "" || searchFilter.length === 0 || searchFilterCity.length === 0 || AdressSelected !== "" ? "" :
             <div className="search2">
                 <div className="listAdress">
+                    <h6>Cidade:</h6>
+                    {searchFilterCity.map((adress) => {
+                        return (
+                            <h6 className="itemListAdress" key={adress.id} onClick={() => handleSelectAddress(`${adress.city} - ${adress.uf}`)}>{adress.city} - {adress.uf}</h6>
+                        )
+                    })} 
+                    <h6>Bairro:</h6>
                     {searchFilter.map((adress) => {
                         return (
-                            <h6 key={adress.id} onClick={() => handleSelectAddress(`${adress.district} - ${adress.city} - ${adress.uf}`)}>{adress.district} - {adress.city} - {adress.uf}</h6>
+                            <h6 className="itemListAdress"  key={adress.id} onClick={() => handleSelectAddress(`${adress.district} - ${adress.city} - ${adress.uf}`)}>{adress.district} - {adress.city} - {adress.uf}</h6>
                         )
-                    })}      
+                    })} 
+        
                 </div>
             </div>
+
+
              }
+             
 
             {filter === true ? 
             <div className="viewFilter">

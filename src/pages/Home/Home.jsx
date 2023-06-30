@@ -24,8 +24,6 @@ export function Home() {
     //       }
     // }, 1000);
 
-
-
     return (
         <div className="Home">
             <Navbar2 />
