@@ -255,10 +255,12 @@ export function SearchPropertyHomeTop() {
                     <button onClick={handleClearAdress} className="btnClear"><IoClose /></button>
                     }
 
-                    {search === "" || searchFilter.length === 0 || searchFilterCity.length === 0 || AdressSelected !== "" ? "" :
+                    {search === "" || searchFilter.length === 0 || AdressSelected !== "" ? "" :
                                 <div className="search3">
                                     <div className="listAdress">
-                                        <h6>Cidade:</h6>
+                                        {searchFilterCity.length === 0 ? "" : 
+                                <h6>Cidade:</h6>
+                                }
                                     {searchFilterCity.map((adress) => {
                                             return (
                                                 <h6 className="itemListAdress"  key={adress.id} onClick={() => handleSelectAddress(`${adress.city} - ${adress.uf}`)}>{adress.city} - {adress.uf}</h6>
@@ -293,10 +295,12 @@ export function SearchPropertyHomeTop() {
                     }
                     <button className="mobile" onClick={handleLinkSearchProperty}><IoSearch /></button>
             </div>
-            {search === "" || searchFilter.length === 0 || searchFilterCity.length === 0 || AdressSelected !== "" ? "" :
+            {search === "" || searchFilter.length === 0 || AdressSelected !== "" ? "" :
             <div className="search2">
                 <div className="listAdress">
-                    <h6>Cidade:</h6>
+                    {searchFilterCity.length === 0 ? "" : 
+                                <h6>Cidade:</h6>
+                                }
                     {searchFilterCity.map((adress) => {
                         return (
                             <h6 className="itemListAdress" key={adress.id} onClick={() => handleSelectAddress(`${adress.city} - ${adress.uf}`)}>{adress.city} - {adress.uf}</h6>

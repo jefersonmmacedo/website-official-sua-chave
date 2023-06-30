@@ -228,10 +228,12 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
                     }
                 </div>
 
-                    {search === "" || searchFilter.length === 0 || searchFilterCity.length === 0 || AdressSelected !== "" ? "" :
+                    {search === "" || searchFilter.length === 0 || AdressSelected !== "" ? "" :
                         <div className="search3">
                             <div className="listAdress">
+                                {searchFilterCity.length === 0 ? "" : 
                                 <h6>Cidade:</h6>
+                                }
                                 {searchFilterCity.map((adress) => {
                                     return (
                                         <h6 className="itemListAdress" key={adress.id} onClick={() => handleSelectAddress(`${adress.city} - ${adress.uf}`)}>{adress.city} - {adress.uf}</h6>
