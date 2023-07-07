@@ -2,7 +2,7 @@
 import { IoFolderOpenOutline } from "react-icons/io5";
 
 export function Notification({text, link}) {
-    console.log(link)
+    
     return (
         <div className="Notification">
             <div className="infos">

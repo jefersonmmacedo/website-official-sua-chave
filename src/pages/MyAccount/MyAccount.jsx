@@ -61,7 +61,7 @@ export function MyAccount() {
                 <button><IoCloseSharp /> Deletar minha conta</button>
                 </div>
                     <div className="indicators">
-                        <a href="/mensagens">
+                        {/* <a href="/mensagens">
                         <div className="indicatorUnic">
                             <IoChatboxEllipsesOutline />
                             <div className="textIndicator">
@@ -69,7 +69,7 @@ export function MyAccount() {
                                 <h4>Conversas</h4>
                             </div>
                         </div>
-                        </a>
+                        </a> */}
                         <a href="/favoritos">
                         <div className="indicatorUnic">
                             <IoHeartOutline />

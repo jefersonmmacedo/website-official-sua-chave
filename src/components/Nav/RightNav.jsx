@@ -30,7 +30,7 @@ const Ul = styled.ul`
     justify-content: center;
     padding: 5px 10px;
     background-color: var(--Primary);
-    border-radius: 6px;
+    border-radius: 20px;
     margin: 5px 0;
     color: var(--White);
     border: none;
@@ -55,7 +55,7 @@ const Ul = styled.ul`
     justify-content: center;
     padding: 5px 10px;
     background-color: rgba(237, 50, 55, 0.95);
-    border-radius: 6px;
+    border-radius: 20px;
     margin: 5px 0;
     color: var(--White);
     border: none;
@@ -74,9 +74,9 @@ const Ul = styled.ul`
   }
 
 
-  @media (max-width: 930px) {
+  @media (max-width: 900px) {
     flex-flow: column nowrap;
-    background: rgba(237, 50, 55, 0.95);
+    background: rgba(256, 256, 256, 0.95);
     backdrop-filter: blur(4px);
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -86,13 +86,15 @@ const Ul = styled.ul`
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
-
+    align-items: center;
+    border-left: 2px solid #f1f1f1;
+    
     li {
       padding: 5px;
       margin: 10px;
     }
     li a {
-      color: var(--White);
+      color: var(--Primary);
     }
     li a:hover {
       color: var(--Magenta);
@@ -103,10 +105,9 @@ const Ul = styled.ul`
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      background-color: var(--White);
-      color: var(--Primary);
-      margin-left: 10px;
-      margin-right: 10px;
+      background-color: var(--Primary);
+      color: var(--White);
+      width: 80%;
       padding: 10px 0;
     }
     button svg {
@@ -121,23 +122,23 @@ const Ul = styled.ul`
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      background-color:  rgba(237, 50, 55, 0.1);
-      margin-left: 10px;
-      margin-right: 10px;
+      background-color:  rgba(256, 256, 256, 0.1);
+      width: 80%;
       padding: 10px 0;
+      color: var(--Primary);
     }
     .btn svg {
       margin-right: 1px;
     }
 
     .btn:hover{
-      background-color: var(--Blue);
+      background-color: var(--PrimaryEnphasis);
+      color: var(--Primary);
     }
   }
 
   }
 `;
-
 
 
 

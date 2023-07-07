@@ -1,5 +1,5 @@
 ﻿import "./newScheduling.css"
-import { IoCalendar, IoCloseOutline, IoLocationOutline, IoBusinessOutline, IoHome, IoVideocam, IoPerson, IoAlertCircleOutline } from "react-icons/io5";
+import { IoCalendarOutline, IoCloseOutline, IoLocationOutline, IoBusinessOutline, IoHome, IoVideocam, IoPerson, IoAlertCircleOutline } from "react-icons/io5";
 import Modal from 'react-modal';
 import { useEffect, useState, useContext } from "react";
 import 'react-calendar/dist/Calendar.css';
@@ -9,7 +9,7 @@ import {IoArrowBackOutline, IoArrowForwardOutline} from "react-icons/io5";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
-export function NewScheduling({idProperty, idCompany, title, image, type, subType}) {
+export function NewScheduling({idAuto, idCompany, title, image, type, subType}) {
     const Local = localStorage.getItem("suachave");
     const user = JSON.parse(Local);
 
@@ -32,7 +32,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
     const [amountOfPeople, setAmountOfPeople] = useState();
     const [meet, setMeet] = useState();
 
-    const [property, setProperty] = useState();
+    const [Auto, setAuto] = useState();
     const [company, setCompany] = useState();
   
     const [nameNew, setNameNew] = useState("");
@@ -419,13 +419,13 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
 
 
     useEffect(() => {
-      async function loadProperty() {
-        await api.get(`/property/${idProperty}`).then((res) => {
-          setProperty(res.data[0])
+      async function loadAuto() {
+        await api.get(`/Auto/${idAuto}`).then((res) => {
+          setAuto(res.data[0])
         })
       }
 
-      loadProperty()
+      loadAuto()
 
       async function loadCompany() {
         await api.get(`/company/unic/${idCompany}`).then((res) => {
@@ -440,7 +440,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
   useEffect(() => {
     async function newView() {
       const data = {
-        idProperty,
+        idAuto,
         idCompany,
         idClient: user === null ? "00000000" : user.id,
         latitude: latitude,
@@ -450,7 +450,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
         subType,
     }
     console.log(data);
-     await api.post("/viewproperty", data).then((res) => {
+     await api.post("/viewAuto", data).then((res) => {
       return
     }).catch((err) => {
         console.log(err)
@@ -464,11 +464,11 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
     function handleNewScheduling() {
         const status = "Pendente"
         newScheduling({
-            idClient: user.id, idProperty, idCompany, titleProperty: title, imageProperty: image, email: user.email, phone: user.phone,
+            idClient: user.id, idAuto, idCompany, titleAuto: title, imageAuto: image, email: user.email, phone: user.phone,
             whatsapp: user.whatsapp, status, meet, nameClient: user.name, type: "Visita no imóvel",
             day: new Date(dateSelected).getDate(), month: new Date(dateSelected).getMonth()+1, year: new Date(dateSelected).getFullYear(),
             shift, hour, ownACar, location: meet === "Imobiliária" ? company.fantasyName : "No local do imóvel",
-            address: meet === "Imobiliária" ? `${company.road} - Nº ${company.number} - ${company.district} - ${company.city} - ${company.uf}` : `${property.road} - ${property.district} - ${property.city} - ${property.uf}`,
+            address: meet === "Imobiliária" ? `${company.road} - Nº ${company.number} - ${company.district} - ${company.city} - ${company.uf}` : `${Auto.road} - ${Auto.district} - ${Auto.city} - ${Auto.uf}`,
             amountOfPeople,
             similarProperties, dateCompleted: new Date(dateSelected)
         })
@@ -607,7 +607,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
     Modal.setAppElement('#root');
     return (
         <>
-        <button className="buttonScheduling" onClick={user === null ? handleOpenModalLogin : handleOpenModal}><IoCalendar/> Agendar visita</button>
+        <button className="buttonScheduling" onClick={user === null ? handleOpenModalLogin : handleOpenModal}><IoCalendarOutline/> Agendar visita</button>
 
         <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"
@@ -748,7 +748,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
                 </div>
                 : meet === "Endereço do imóvel" ?
                 <div className="address">
-                    <p><IoLocationOutline />{property.road} - {property.district} - {property.city} - {property.uf}</p>
+                    <p><IoLocationOutline />{Auto.road} - {Auto.district} - {Auto.city} - {Auto.uf}</p>
                 </div>
                 : ""
                   }
@@ -769,7 +769,7 @@ export function NewScheduling({idProperty, idCompany, title, image, type, subTyp
             </button>
             <div className="content-modal-Favorite">
             <div className="itensModalFavorite">
-                    <IoCalendar />
+                    <IoCalendarOutline />
 
                     <h1>Legal! <br />
                     Venha nos visitar.</h1>

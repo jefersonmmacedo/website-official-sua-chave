@@ -35,6 +35,7 @@ const user = JSON.parse(Local);
         multi: true,
           editor: {
             images: {
+              preview: true,
               crop: false,        
               // cropRatio: 4 / 3,
               // cropShape: "circ"

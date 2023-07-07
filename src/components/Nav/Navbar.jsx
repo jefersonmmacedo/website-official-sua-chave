@@ -106,7 +106,7 @@ const Nav = styled.nav`
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px;
     background-color: var(--Primary);
     font-weight:600;
@@ -216,7 +216,7 @@ const Navbar2 = () => {
         </>
       : user !== "" || user !== null || user !== undefined ?
         <>
-             <ChatCounter />
+             {/* <ChatCounter /> */}
              <SchedulingCounter />
               <NotificationCounter />
                 <button className='iconUnic' onClick={() => HandleOpenLink("/favoritos")} data-tip data-for='Favoritos'><IoHeartOutline/></button>

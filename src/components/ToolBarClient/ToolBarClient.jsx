@@ -31,11 +31,11 @@ export function ToolBarClient() {
                     </div>  
                     </a>
                 </div>
-                <div className="ToolUnicClient">
+                {/* <div className="ToolUnicClient">
                    <a href="/mensagens">
                     <IoChatboxEllipsesOutline /><p>Chat</p>
                     </a>
-                </div>
+                </div> */}
                 <div className="ToolUnicClient">
                    <a href="/agendamentos">
                     <IoCalendarOutline /><p>Agenda</p>
